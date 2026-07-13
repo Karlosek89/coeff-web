@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0F2D" />
+  <title>Zásady ochrany osobních údajů — Coeff</title>
+  <meta name="description" content="Zásady ochrany osobních údajů aplikace Coeff podle GDPR. Bez registrace, bez účtů — jak nakládáme s daty a jaká máš práva." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css?v=2026-07-14" />
+</head>
+<body>
+
+  <main class="privacy">
+    <a href="/" class="back-link">← Zpět na hlavní stránku</a>
+
+    <h1>Zásady ochrany osobních údajů</h1>
+    <p class="effective">Účinnost: <strong>14. července 2026</strong> · <a href="privacy.html">English version</a></p>
+
+    <p>
+      Tyto zásady popisují, jak mobilní aplikace <strong>Coeff</strong>
+      (dále jen „aplikace") nakládá s údaji. Zásady jsou v souladu
+      s nařízením EU 2016/679 (GDPR) a českým zákonem č. 110/2019 Sb.
+      o zpracování osobních údajů.
+    </p>
+
+    <div class="note">
+      <strong>Ve zkratce:</strong> Coeff nemá registraci ani účty.
+      Nevyžadujeme jméno, e-mail ani telefon. Tvá nastavení a tipy zůstávají
+      v tvém zařízení. Jediné, co aplikaci opouští, je anonymní technická
+      komunikace s Googlem (stažení dat, push notifikace, reklama).
+    </div>
+
+    <h2>1. Kdo je správce</h2>
+    <p>
+      Aplikaci provozuje <strong>Karel Zbíral</strong>, fyzická osoba se
+      sídlem v České republice.
+    </p>
+    <p>
+      <strong>Kontakt:</strong> <a href="mailto:info@coeff.app">info@coeff.app</a><br />
+      <strong>Web:</strong> <a href="https://coeff.app">https://coeff.app</a>
+    </p>
+    <p>
+      Pověřence pro ochranu osobních údajů (DPO) nemáme — jako fyzická osoba
+      této povinnosti nepodléháme.
+    </p>
+
+    <h2>2. Jaké údaje se zpracovávají</h2>
+
+    <h3>2.1 Data uložená jen v tvém zařízení</h3>
+    <ul>
+      <li><strong>Sledovaná země</strong> — kterou zemi chceš mít zvýrazněnou</li>
+      <li><strong>Jazyk aplikace a vzhled</strong></li>
+      <li><strong>Tipy a uložené scénáře</strong> kalkulačky „Co když…?"</li>
+    </ul>
+    <p>
+      Tato data se ukládají pouze lokálně (SharedPreferences) a nikam se
+      neodesílají. Smažeš je odinstalováním aplikace.
+    </p>
+
+    <h3>2.2 Stahování dat soutěží</h3>
+    <p>
+      Aplikace si stahuje veřejná data (výsledky zápasů, losy, žebříčky)
+      z Firebase Realtime Database společnosti Google (region
+      europe-west1, EU). Při každém takovém požadavku Google technicky
+      zpracuje <strong>IP adresu</strong> zařízení — jako u návštěvy
+      jakékoli webové stránky. My k IP adresám nemáme přístup a nijak je
+      nespojujeme s konkrétní osobou.
+    </p>
+    <p><strong>Právní základ:</strong> oprávněný zájem (doručení aktuálních dat).</p>
+
+    <h3>2.3 Push notifikace (volitelné)</h3>
+    <ul>
+      <li><strong>Anonymní FCM token zařízení</strong> (Firebase Cloud Messaging)</li>
+      <li><strong>Odebíraná témata</strong> — kód sledované země (např. „zeme_CZE")</li>
+    </ul>
+    <p>
+      Token není spojen s žádnou identitou — nevíme, komu zařízení patří.
+      Notifikace vypneš v Nastavení aplikace nebo v systémovém nastavení;
+      odinstalováním aplikace token zaniká.
+    </p>
+    <p><strong>Právní základ:</strong> plnění smlouvy (doručení funkce, kterou sis zapnul).</p>
+
+    <h3>2.4 Reklama (Google AdMob)</h3>
+    <ul>
+      <li><strong>Účel:</strong> zobrazování reklamy, z níž je provoz aplikace hrazen</li>
+      <li><strong>Data:</strong> anonymizované reklamní ID zařízení, IP adresa, zobrazené reklamy</li>
+      <li><strong>Souhlas:</strong> před personalizovanou reklamou se zobrazí souhlasový
+        dialog (Google UMP). Když souhlas odmítneš, uvidíš jen kontextovou
+        reklamu bez profilování.</li>
+      <li><strong>Více:</strong> <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></li>
+    </ul>
+    <p>
+      V aplikaci půjde reklamy dočasně vypnout přehráním krátkého videa
+      a plánujeme levné roční předplatné na jejich úplné vypnutí.
+    </p>
+    <p><strong>Právní základ:</strong> souhlas (personalizace), oprávněný zájem (kontextová reklama).</p>
+
+    <h2>3. Co nesbíráme</h2>
+    <ul>
+      <li>žádnou registraci, e-mail, jméno ani telefonní číslo,</li>
+      <li>žádnou polohu (GPS),</li>
+      <li>žádné kontakty, fotky ani soubory,</li>
+      <li>žádná data neprodáváme třetím stranám.</li>
+    </ul>
+
+    <h2>4. Zpracovatelé</h2>
+    <p>
+      Jediným zpracovatelem je <strong>Google</strong> (Firebase platform —
+      Realtime Database, Cloud Messaging; a AdMob pro reklamu). Data jsou
+      zpracovávána na EU serverech, mimo EU na základě standardních
+      smluvních doložek (SCC). Více:
+      <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a>.
+    </p>
+
+    <h2>5. Doba uchování</h2>
+    <ul>
+      <li><strong>Lokální data</strong> — dokud aplikaci neodinstaluješ.</li>
+      <li><strong>FCM token</strong> — dokud jsou notifikace zapnuté; zaniká odinstalováním.</li>
+      <li><strong>Reklamní data</strong> — dle zásad Google (viz odkazy výše).</li>
+    </ul>
+
+    <h2>6. Tvá práva podle GDPR</h2>
+    <p>
+      Máš právo na přístup, opravu, výmaz, omezení zpracování, přenositelnost
+      a námitku. Protože o tobě žádné osobní údaje neevidujeme, většinu práv
+      naplníš prostě odinstalováním aplikace. S čímkoli se ozvi na
+      <a href="mailto:info@coeff.app">info@coeff.app</a> — odpovíme do 30 dnů.
+      Stížnost můžeš podat u Úřadu pro ochranu osobních údajů
+      (<a href="https://uoou.gov.cz" target="_blank" rel="noopener">uoou.gov.cz</a>).
+    </p>
+
+    <h2>7. Děti</h2>
+    <p>
+      Aplikace není cílená na děti do 13 let. Nevědomě o nikom nesbíráme
+      osobní údaje — aplikace žádné nevyžaduje.
+    </p>
+
+    <h2>8. Změny zásad</h2>
+    <p>
+      Při podstatné změně (např. přidání nové funkce pracující s daty)
+      zásady aktualizujeme na této stránce a změníme datum účinnosti nahoře.
+    </p>
+  </main>
+
+</body>
+</html>
