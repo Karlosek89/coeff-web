@@ -58,6 +58,14 @@ a { color: var(--modra); }
   letter-spacing: 1px;
 }
 
+/* Nápis Coeff z aplikace (obrázek místo textu). */
+.hero-wordmark { margin-top: 22px; }
+.hero-wordmark img {
+  height: 46px;
+  max-width: 80vw;
+  object-fit: contain;
+}
+
 .hero .tagline {
   margin-top: 8px;
   font-size: 1.15rem;
