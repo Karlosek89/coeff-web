@@ -86,6 +86,20 @@ a { color: var(--modra); }
   font-weight: 700;
 }
 
+/* Tlačítko „hledáme testery" pod badge v hero. */
+.cta-tester {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: var(--modra);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 4px 18px #3D5AFE44;
+}
+.cta-tester:hover { filter: brightness(1.12); }
+
 .lang-switch {
   position: absolute;
   top: 16px;
