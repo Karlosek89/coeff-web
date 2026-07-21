@@ -134,6 +134,30 @@ section > h2 {
 .tecka.el { background: var(--el); }
 .tecka.kl { background: var(--kl); }
 
+/* — Náhledy aplikace (vodorovný pás screenshotů) — */
+.shots {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 6px 4px 18px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.shots img {
+  width: 220px;
+  border-radius: 18px;
+  border: 1px solid #ffffff1c;
+  box-shadow: 0 6px 24px #00000066;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+.shots-hint {
+  text-align: center;
+  color: var(--text-2);
+  font-size: 0.88rem;
+  margin-top: 2px;
+}
+
 .proc {
   background: var(--panel);
   border: 1px solid #ffffff14;
