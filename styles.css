@@ -110,9 +110,34 @@ a { color: var(--modra); }
   top: 16px;
   right: 18px;
   font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 .lang-switch a { color: var(--text-2); text-decoration: none; }
 .lang-switch a:hover { color: var(--text); }
+
+/* Odkaz na profil na X — orámovaná pilulka, ať je nahoře vidět. */
+.x-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.x-link:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+}
+.x-link svg { width: 14px; height: 14px; fill: currentColor; }
+
+/* Na úzkém displeji zůstane jen ikonka, ať se to nemačká s vlajkou. */
+@media (max-width: 520px) {
+  .x-link span { display: none; }
+  .x-link { padding: 6px 9px; }
+}
 
 /* — Sekce — */
 section { max-width: 960px; margin: 0 auto; padding: 48px 20px 8px; }
