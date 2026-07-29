@@ -14,8 +14,41 @@
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
   <link rel="stylesheet" href="styles.css?v=2026-07-21c" />
+  <!-- Jazykové varianty pro vyhledávače: Googlu tím říkáme, že jde
+       o tutéž stránku ve dvou jazycích, a komu kterou nabídnout.
+       x-default = pro všechny ostatní jazyky (tedy angličtina). -->
+  <link rel="canonical" href="https://coeff.app/" />
+  <link rel="alternate" hreflang="cs" href="https://coeff.app/" />
+  <link rel="alternate" hreflang="en" href="https://coeff.app/en.html" />
+  <link rel="alternate" hreflang="x-default" href="https://coeff.app/en.html" />
 </head>
 <body>
+
+  <script>
+    // Kdo nemá v prohlížeči češtinu ani slovenštinu, tomu ukážeme
+    // anglickou verzi. Ruční volba jazyka (odkazy nesou ?lang=…) má vždy
+    // přednost a uloží se, aby se návštěvník nepřesměrovával pořád dokola.
+    (function () {
+      try {
+        var volba = new URL(window.location.href).searchParams.get('lang');
+        if (volba) {
+          localStorage.setItem('coeff-jazyk', volba);
+          return;
+        }
+        if (localStorage.getItem('coeff-jazyk')) return;
+        var jazyk =
+          (navigator.languages && navigator.languages[0]) ||
+          navigator.language ||
+          '';
+        if (/^(cs|sk)/i.test(jazyk)) return;
+        localStorage.setItem('coeff-jazyk', 'en');
+        window.location.replace('en.html');
+      } catch (e) {
+        // Bez localStorage (soukromý režim, starý prohlížeč) necháme
+        // češtinu — odkaz na English je v hlavičce.
+      }
+    })();
+  </script>
 
   <header class="hero">
     <nav class="lang-switch"><a href="en.html">🇬🇧 English</a></nav>
