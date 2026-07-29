@@ -117,26 +117,32 @@ a { color: var(--modra); }
 .lang-switch a { color: var(--text-2); text-decoration: none; }
 .lang-switch a:hover { color: var(--text); }
 
-/* Odkaz na profil na X — orámovaná pilulka, ať je nahoře vidět. */
+/* Odkaz na profil na X — výrazná pilulka, ať si jí lidi všimnou. */
 .x-link {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 5px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  gap: 9px;
+  padding: 10px 18px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--text) !important;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 999px;
   white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease;
 }
 .x-link:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.2);
 }
-.x-link svg { width: 14px; height: 14px; fill: currentColor; }
+.x-link svg { width: 19px; height: 19px; fill: currentColor; }
 
 /* Na úzkém displeji zůstane jen ikonka, ať se to nemačká s vlajkou. */
 @media (max-width: 520px) {
   .x-link span { display: none; }
-  .x-link { padding: 6px 9px; }
+  .x-link { padding: 10px 13px; }
+  .x-link svg { width: 21px; height: 21px; }
 }
 
 /* — Sekce — */
