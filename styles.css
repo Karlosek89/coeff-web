@@ -75,6 +75,17 @@ a { color: var(--modra); }
   margin-right: auto;
 }
 
+/* Dvě hlášky vedle sebe (Play + iOS); na mobilu se zalomí pod sebe.
+   Odsazení nese obal, ať zalomená hláška nedostane mezeru dvakrát. */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+.badges .badge { margin-top: 0; }
+
 .badge {
   display: inline-block;
   margin-top: 22px;
