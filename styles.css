@@ -338,3 +338,26 @@ footer .radek { margin-top: 6px; }
   text-align: center;
 }
 .clanek-cta p { margin: 0 0 14px; color: var(--text-2); }
+
+/* Hlavička článků: vlevo zpět, vpravo značka vedoucí na titulku. */
+.clanek-hlavicka {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.clanek-hlavicka .back-link { margin-bottom: 0; }
+
+.znacka {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+.znacka:hover { opacity: 1; }
+.znacka img { margin: 0; }
+.znacka .ikona { width: 26px; height: 26px; border-radius: 7px; }
+.znacka .napis { height: 15px; }
