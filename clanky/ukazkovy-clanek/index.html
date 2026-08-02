@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0F2D" />
+
+  <!-- ŠABLONA ČLÁNKU — zkopíruj celou složku, přejmenuj ji na adresu
+       článku (bez diakritiky, slova spojená pomlčkami) a přepiš:
+         1. <title> a description (ty se ukazují ve vyhledávání)
+         2. og:title, og:description, og:url
+         3. canonical
+         4. datum v <time> na dvou místech
+         5. nadpis, perex a text
+       Adresa pak bude coeff.app/clanky/nazev-clanku/ — bez .html. -->
+
+  <title>Nadpis článku — Coeff</title>
+  <meta name="description" content="Jedna věta, o čem článek je. Ukazuje se ve výsledcích vyhledávání, takže ať dává smysl i bez zbytku stránky (ideálně do 155 znaků)." />
+  <meta property="og:title" content="Nadpis článku" />
+  <meta property="og:description" content="Jedna věta, o čem článek je." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://coeff.app/clanky/ukazkovy-clanek/" />
+  <meta property="og:image" content="https://coeff.app/app_icon.png" />
+  <link rel="icon" type="image/png" href="../../favicon.png" />
+  <link rel="apple-touch-icon" href="../../favicon.png" />
+  <link rel="stylesheet" href="../../styles.css?v=2026-08-02" />
+  <link rel="canonical" href="https://coeff.app/clanky/ukazkovy-clanek/" />
+</head>
+<body>
+
+  <main class="clanek">
+    <a href="/clanky/" class="back-link">← Všechny články</a>
+
+    <h1>Nadpis článku</h1>
+    <p class="datum"><time datetime="2026-08-02">2. srpna 2026</time></p>
+
+    <p class="perex">Perex: dvě až tři věty, které shrnou pointu. Kdo
+      dočte jen tohle, má vědět, co se stalo a proč ho to má zajímat.</p>
+
+    <p>Odstavec textu. Pište krátké odstavce — na mobilu se dlouhý blok
+      špatně čte.</p>
+
+    <h2>Mezinadpis</h2>
+
+    <p>Další text. Odkazy uvnitř textu jsou dobré pro čtenáře i pro
+      vyhledávače — třeba na <a href="/clanky/">ostatní články</a>.</p>
+
+    <!-- Tabulka: nepovinná. Na mobilu se posouvá do stran sama. -->
+    <div class="tabulka-obal">
+      <table>
+        <thead>
+          <tr><th>Země</th><th>Před</th><th>Po</th><th>Změna</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🇨🇿 Česko</td><td>43,225</td><td>43,625</td><td>+0,400</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Obrázek: nepovinný. Sdílená karta z appky sem sedne dobře. -->
+    <!-- <img src="obrazek.png" alt="Popis, co je na obrázku" loading="lazy" /> -->
+
+    <div class="clanek-cta">
+      <p>Žebříček v reálném čase máš v aplikaci Coeff — zdarma,
+        bez registrace.</p>
+      <a class="cta-tester" href="/">Zjistit víc o aplikaci</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="radek"><a href="/">coeff.app</a> ·
+      <a href="/clanky/">Články</a> ·
+      <a href="/soukromi.html">Zásady ochrany osobních údajů</a></div>
+    <div class="radek">© 2026 Karel Zbíral · Coeff není přidružený k UEFA.</div>
+  </footer>
+
+</body>
+</html>

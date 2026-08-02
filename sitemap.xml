@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mapa webu pro vyhledávače. PŘI KAŽDÉM NOVÉM ČLÁNKU sem přidej <url>
+     a uprav lastmod. Odkázáno z robots.txt. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://coeff.app/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/en.html"/>
+  </url>
+
+  <url>
+    <loc>https://coeff.app/en.html</loc>
+    <lastmod>2026-08-02</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/en.html"/>
+  </url>
+
+  <url>
+    <loc>https://coeff.app/clanky/</loc>
+    <lastmod>2026-08-02</lastmod>
+  </url>
+
+  <url>
+    <loc>https://coeff.app/soukromi.html</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+
+  <url>
+    <loc>https://coeff.app/privacy.html</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+
+</urlset>
