@@ -359,5 +359,11 @@ footer .radek { margin-top: 6px; }
 }
 .znacka:hover { opacity: 1; }
 .znacka img { margin: 0; }
-.znacka .ikona { width: 26px; height: 26px; border-radius: 7px; }
-.znacka .napis { height: 15px; }
+.znacka .ikona { width: 64px; height: 64px; border-radius: 16px; }
+.znacka .napis { height: 38px; }
+
+/* Na mobilu o kus mensi, at se vejde vedle odkazu zpet. */
+@media (max-width: 520px) {
+  .znacka .ikona { width: 44px; height: 44px; border-radius: 11px; }
+  .znacka .napis { height: 26px; }
+}
