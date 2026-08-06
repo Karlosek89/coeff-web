@@ -97,6 +97,19 @@ a { color: var(--modra); }
   font-weight: 700;
 }
 
+/* Odznak, který vede do obchodu (iOS). Vypadá jako ostatní odznaky,
+   jen reaguje na najetí a klávesnici — jinak by nebylo poznat,
+   že se dá kliknout. */
+a.badge {
+  text-decoration: none;
+  transition: border-color .15s ease, transform .15s ease;
+}
+a.badge:hover,
+a.badge:focus-visible {
+  border-color: var(--zlata);
+  transform: translateY(-1px);
+}
+
 /* Tlačítko „hledáme testery" pod badge v hero. */
 .cta-tester {
   display: inline-block;
