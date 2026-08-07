@@ -352,6 +352,26 @@ footer .radek { margin-top: 6px; }
 }
 .clanek-cta p { margin: 0 0 14px; color: var(--text-2); }
 
+/* Dvě tlačítka pod článkem (App Store + info o appce). Na mobilu se
+   zalomí pod sebe, proto gap místo marginů. */
+.cta-tlacitka {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.cta-tlacitka .cta-tester { margin-top: 0; }
+
+/* Vedlejší akce: stejný tvar, ale bez plné barvy — ať je zřejmé,
+   které tlačítko je to hlavní. */
+.cta-vedlejsi {
+  background: transparent;
+  border: 1px solid #ffffff33;
+  box-shadow: none;
+  color: var(--text-2);
+}
+.cta-vedlejsi:hover { border-color: var(--zlata); color: var(--zlata); }
+
 /* Hlavička článků: vlevo zpět, vpravo značka vedoucí na titulku. */
 .clanek-hlavicka {
   display: flex;
