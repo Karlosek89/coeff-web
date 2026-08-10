@@ -6,7 +6,7 @@
 
   <url>
     <loc>https://coeff.app/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/en.html"/>
@@ -22,7 +22,12 @@
 
   <url>
     <loc>https://coeff.app/clanky/</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-08</lastmod>
+  </url>
+
+  <url>
+    <loc>https://coeff.app/clanky/jak-se-pocita-koeficient-uefa/</loc>
+    <lastmod>2026-08-08</lastmod>
   </url>
 
   <url>
