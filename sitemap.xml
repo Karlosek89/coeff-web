@@ -22,7 +22,12 @@
 
   <url>
     <loc>https://coeff.app/clanky/</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-11</lastmod>
+  </url>
+
+  <url>
+    <loc>https://coeff.app/clanky/sparta-lyon-boj-o-postup/</loc>
+    <lastmod>2026-08-11</lastmod>
   </url>
 
   <url>
@@ -30,10 +35,8 @@
     <lastmod>2026-08-08</lastmod>
   </url>
 
-  <url>
-    <loc>https://coeff.app/clanky/polsky-vzestup-v-koeficientu-uefa/</loc>
-    <lastmod>2026-08-08</lastmod>
-  </url>
+  <!-- polsky-vzestup-v-koeficientu-uefa: docasne vyrazeno ze sitemap
+       11. 8. 2026 (noindex), dokud je clanek skryty. -->
 
   <url>
     <loc>https://coeff.app/clanky/treti-predkolo-cesko-polsko/</loc>
