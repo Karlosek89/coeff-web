@@ -299,6 +299,7 @@ footer .radek { margin-top: 6px; }
 .clanky h1,
 .clanek h1 { font-size: 1.9rem; line-height: 1.25; margin: 18px 0 10px; }
 .clanek h2 { font-size: 1.25rem; margin: 32px 0 10px; }
+.clanek h3 { font-size: 1.05rem; margin: 22px 0 6px; }
 
 .clanek .datum { color: var(--text-2); font-size: 0.92rem; margin: 0 0 24px; }
 
