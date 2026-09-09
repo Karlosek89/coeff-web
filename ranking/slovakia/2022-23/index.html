@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/slovakia/" class="back-link">← Full ranking</a>
+    <a href="/ranking/slovakia/" class="back-link">← Slovakia</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/slovensko/2022-23/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,10 +99,10 @@
     <p>Slovan Bratislava contributed the most: 16.5 of 24 points, 69 % of everything Slovakia earned in 2022/23. Next came DAC Dunajska Streda (4) and Spartak Trnava (2). Clubs by their main competition that season: 4 in the Conference League. Compared with <a href="/ranking/slovakia/2021-22/">2021/22</a> (4.125), Slovakia had a coefficient 1.875 higher and climbed from 27th to 17th place in the season ranking. It is the country's best season since 2004/05.</p>
     <h2>Clubs 2022/23</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Slovan Bratislava</td><td>UECL</td><td>6–7–3 <span class="drobne">(incl. qual. 3–3–2)</span></td><td class="cislo"><strong>16.5</strong></td></tr>
-<tr><td>DAC Dunajska Streda</td><td>UECL</td><td>4–0–2 <span class="drobne">(incl. qual. 4–0–2)</span></td><td class="cislo"><strong>4</strong></td></tr>
-<tr><td>Spartak Trnava</td><td>UECL</td><td>2–0–2 <span class="drobne">(incl. qual. 2–0–2)</span></td><td class="cislo"><strong>2</strong></td></tr>
-<tr><td>MFK Ruzomberok</td><td>UECL</td><td>1–1–2 <span class="drobne">(incl. qual. 1–1–2)</span></td><td class="cislo"><strong>1.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/slovakia/2022-23/slovan-bratislava/">Slovan Bratislava</a></td><td>UECL</td><td>6–7–3 <span class="drobne">(incl. qual. 3–3–2)</span></td><td class="cislo"><strong>16.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/slovakia/2022-23/dac-dunajska-streda/">DAC Dunajska Streda</a></td><td>UECL</td><td>4–0–2 <span class="drobne">(incl. qual. 4–0–2)</span></td><td class="cislo"><strong>4</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/slovakia/2022-23/spartak-trnava/">Spartak Trnava</a></td><td>UECL</td><td>2–0–2 <span class="drobne">(incl. qual. 2–0–2)</span></td><td class="cislo"><strong>2</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/slovakia/2022-23/mfk-ruzomberok/">MFK Ruzomberok</a></td><td>UECL</td><td>1–1–2 <span class="drobne">(incl. qual. 1–1–2)</span></td><td class="cislo"><strong>1.5</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

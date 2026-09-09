@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/portugalsko/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/portugalsko/" class="back-link">← Portugalsko</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/portugal/2025-26/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,11 +99,11 @@
     <p>Nejvíc bodů přinesl klub Sporting Braga: 32,25 z 102,5, tedy 31 % všeho, co Portugalsko v sezoně 2025/26 uhrálo. Za ním Sporting CP Lisbon (27,5) a FC Porto (24). Kluby podle hlavní soutěže sezony: 2 v Lize mistrů, 2 v Evropské lize, 1 v Konferenční lize. Proti sezoně <a href="/zebricek/portugalsko/2024-25/">2024/25</a> (16,25) mělo Portugalsko koeficient o 4,25 vyšší a v pořadí sezony se posunulo z 6. na 4. místo. Je to nejlepší sezona země od 2004/05.</p>
     <h2>Kluby 2025/26</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Sporting Braga</td><td>EL</td><td>13–4–3 <span class="drobne">(z toho kval. 5–1–0)</span></td><td class="cislo"><strong>32,25</strong></td></tr>
-<tr><td>Sporting CP Lisbon</td><td>LM</td><td>6–2–4</td><td class="cislo"><strong>27,5</strong></td></tr>
-<tr><td>FC Porto</td><td>EL</td><td>7–3–2</td><td class="cislo"><strong>24</strong></td></tr>
-<tr><td>Benfica</td><td>LM</td><td>6–1–7 <span class="drobne">(z toho kval. 3–1–0)</span></td><td class="cislo"><strong>15,75</strong></td></tr>
-<tr><td>CD Santa Clara</td><td>KL</td><td>2–2–2 <span class="drobne">(z toho kval. 2–2–2)</span></td><td class="cislo"><strong>3</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/portugalsko/2025-26/sporting-braga/">Sporting Braga</a></td><td>EL</td><td>13–4–3 <span class="drobne">(z toho kval. 5–1–0)</span></td><td class="cislo"><strong>32,25</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/portugalsko/2025-26/sporting-cp-lisbon/">Sporting CP Lisbon</a></td><td>LM</td><td>6–2–4</td><td class="cislo"><strong>27,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/portugalsko/2025-26/fc-porto/">FC Porto</a></td><td>EL</td><td>7–3–2</td><td class="cislo"><strong>24</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/portugalsko/2025-26/benfica/">Benfica</a></td><td>LM</td><td>6–1–7 <span class="drobne">(z toho kval. 3–1–0)</span></td><td class="cislo"><strong>15,75</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/portugalsko/2025-26/cd-santa-clara/">CD Santa Clara</a></td><td>KL</td><td>2–2–2 <span class="drobne">(z toho kval. 2–2–2)</span></td><td class="cislo"><strong>3</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

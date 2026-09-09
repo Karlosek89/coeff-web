@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/dansko/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/dansko/" class="back-link">← Dánsko</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/denmark/2021-22/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,11 +99,11 @@
     <p>Nejvíc bodů přinesl klub FC København: 18,5 z 39, tedy 47 % všeho, co Dánsko v sezoně 2021/22 uhrálo. Za ním FC Midtjylland (10,5) a Randers FC (7,5). Kluby podle hlavní soutěže sezony: 1 v Evropské lize, 4 v Konferenční lize. Proti sezoně <a href="/zebricek/dansko/2020-21/">2020/21</a> (4,125) mělo Dánsko koeficient o 3,675 vyšší a v pořadí sezony se posunulo z 21. na 12. místo. V historii země od 2004/05 je to 5. nejlepší sezona z 22; nejvíc mělo Dánsko v sezoně <a href="/zebricek/dansko/2025-26/">2025/26</a> (12,25).</p>
     <h2>Kluby 2021/22</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>FC København</td><td>KL</td><td>10–2–2 <span class="drobne">(z toho kval. 5–1–0)</span></td><td class="cislo"><strong>18,5</strong></td></tr>
-<tr><td>FC Midtjylland</td><td>KL</td><td>4–4–4 <span class="drobne">(z toho kval. 1–1–2)</span></td><td class="cislo"><strong>10,5</strong></td></tr>
-<tr><td>Randers FC</td><td>KL</td><td>1–5–4 <span class="drobne">(z toho kval. 0–1–1)</span></td><td class="cislo"><strong>7,5</strong></td></tr>
-<tr><td>Brøndby IF</td><td>EL</td><td>0–2–6 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>2</strong></td></tr>
-<tr><td>AGF Aarhus</td><td>KL</td><td>0–1–1 <span class="drobne">(z toho kval. 0–1–1)</span></td><td class="cislo"><strong>0,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/dansko/2021-22/fc-kobenhavn/">FC København</a></td><td>KL</td><td>10–2–2 <span class="drobne">(z toho kval. 5–1–0)</span></td><td class="cislo"><strong>18,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/dansko/2021-22/fc-midtjylland/">FC Midtjylland</a></td><td>KL</td><td>4–4–4 <span class="drobne">(z toho kval. 1–1–2)</span></td><td class="cislo"><strong>10,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/dansko/2021-22/randers-fc/">Randers FC</a></td><td>KL</td><td>1–5–4 <span class="drobne">(z toho kval. 0–1–1)</span></td><td class="cislo"><strong>7,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/dansko/2021-22/brondby-if/">Brøndby IF</a></td><td>EL</td><td>0–2–6 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>2</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/dansko/2021-22/agf-aarhus/">AGF Aarhus</a></td><td>KL</td><td>0–1–1 <span class="drobne">(z toho kval. 0–1–1)</span></td><td class="cislo"><strong>0,5</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

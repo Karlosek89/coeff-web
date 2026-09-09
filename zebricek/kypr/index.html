@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -112,10 +119,10 @@
 
     <h2 id="kluby">Kluby 2026/27</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th class="cislo">Bonus</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Omonia Nicosia</td><td>LM, EL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">3,5</td></tr>
-<tr><td>Apollon Limassol</td><td>KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">3</td></tr>
-<tr><td>Pafos FC</td><td>EL, KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">3</td></tr>
-<tr><td>AEK Larnaca</td><td>KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">1</td></tr>
+<tr><td><a class="sezona" href="/zebricek/kypr/2026-27/omonia-nicosia/">Omonia Nicosia</a></td><td>LM, EL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">3,5</td></tr>
+<tr><td><a class="sezona" href="/zebricek/kypr/2026-27/apollon-limassol/">Apollon Limassol</a></td><td>KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">3</td></tr>
+<tr><td><a class="sezona" href="/zebricek/kypr/2026-27/pafos-fc/">Pafos FC</a></td><td>EL, KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">3</td></tr>
+<tr><td><a class="sezona" href="/zebricek/kypr/2026-27/aek-larnaca/">AEK Larnaca</a></td><td>KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">1</td></tr>
 </tbody></table></div><p class="note">Body = celkem za sezonu (zápasy, v předkolech půlené, plus bonusy). Bonus = kolik z toho je za jistou účast v ligové fázi Ligy mistrů (+6), později i za pořadí a vyřazovací fázi. Koeficient země = součet bodů ÷ počet klubů.</p>
     <h2>Historie od 2004/05</h2>
     <p>Nejlepší sezona: <a href="/zebricek/kypr/2025-26/">2025/26</a> (12,156, 10. místo) · nejslabší: <a href="/zebricek/kypr/2004-05/">2004/05</a> (1,333, 36. místo). Klepnutím na sezonu v tabulce se zobrazí kluby a jejich body.</p>

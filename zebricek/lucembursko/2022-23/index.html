@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/lucembursko/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/lucembursko/" class="back-link">← Lucembursko</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/luxembourg/2022-23/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,10 +99,10 @@
     <p>Nejvíc bodů přinesl klub F91 Dudelange: 4 z 4,5, tedy 89 % všeho, co Lucembursko v sezoně 2022/23 uhrálo. Za ním Differdange 03 (0,5) a CS Fola Esch (0). Kluby podle hlavní soutěže sezony: 4 v Konferenční lize. Proti sezoně <a href="/zebricek/lucembursko/2021-22/">2021/22</a> (1,25) mělo Lucembursko koeficient o 0,125 nižší a v pořadí sezony zůstalo na 48. místě. V historii země od 2004/05 je to 9. nejlepší sezona z 22; nejvíc mělo Lucembursko v sezoně <a href="/zebricek/lucembursko/2019-20/">2019/20</a> (3).</p>
     <h2>Kluby 2022/23</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>F91 Dudelange</td><td>KL</td><td>3–2–3 <span class="drobne">(z toho kval. 3–2–3)</span></td><td class="cislo"><strong>4</strong></td></tr>
-<tr><td>Differdange 03</td><td>KL</td><td>0–1–1 <span class="drobne">(z toho kval. 0–1–1)</span></td><td class="cislo"><strong>0,5</strong></td></tr>
-<tr><td>CS Fola Esch</td><td>KL</td><td>0–0–2 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
-<tr><td>Racing Union Luxembourg</td><td>KL</td><td>0–0–2 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/lucembursko/2022-23/f91-dudelange/">F91 Dudelange</a></td><td>KL</td><td>3–2–3 <span class="drobne">(z toho kval. 3–2–3)</span></td><td class="cislo"><strong>4</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/lucembursko/2022-23/differdange-03/">Differdange 03</a></td><td>KL</td><td>0–1–1 <span class="drobne">(z toho kval. 0–1–1)</span></td><td class="cislo"><strong>0,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/lucembursko/2022-23/cs-fola-esch/">CS Fola Esch</a></td><td>KL</td><td>0–0–2 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/lucembursko/2022-23/racing-union-luxembourg/">Racing Union Luxembourg</a></td><td>KL</td><td>0–0–2 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

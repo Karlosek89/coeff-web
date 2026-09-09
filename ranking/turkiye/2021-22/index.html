@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/turkiye/" class="back-link">← Full ranking</a>
+    <a href="/ranking/turkiye/" class="back-link">← Türkiye</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/turecko/2021-22/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,11 +99,11 @@
     <p>Galatasaray contributed the most: 18 of 33.5 points, 54 % of everything Türkiye earned in 2021/22. Next came Fenerbahçe (7) and Besiktas (4). Clubs by their main competition that season: 1 in the Champions League, 1 in the Europa League, 3 in the Conference League. Compared with <a href="/ranking/turkiye/2020-21/">2020/21</a> (3.1), Türkiye had a coefficient 3.6 higher and climbed from 26th to 16th place in the season ranking. Since 2004/05 it ranks 12th of 22 seasons; the country's best was <a href="/ranking/turkiye/2023-24/">2023/24</a> (12).</p>
     <h2>Clubs 2021/22</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Galatasaray</td><td>UEL</td><td>5–6–3 <span class="drobne">(incl. qual. 2–2–2)</span></td><td class="cislo"><strong>18</strong></td></tr>
-<tr><td>Fenerbahçe</td><td>UECL</td><td>3–3–4 <span class="drobne">(incl. qual. 2–0–0)</span></td><td class="cislo"><strong>7</strong></td></tr>
-<tr><td>Besiktas</td><td>UCL</td><td>0–0–6</td><td class="cislo"><strong>4</strong></td></tr>
-<tr><td>Sivasspor</td><td>UECL</td><td>3–1–2 <span class="drobne">(incl. qual. 3–1–2)</span></td><td class="cislo"><strong>3.5</strong></td></tr>
-<tr><td>Trabzonspor</td><td>UECL</td><td>0–2–2 <span class="drobne">(incl. qual. 0–2–2)</span></td><td class="cislo"><strong>1</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/turkiye/2021-22/galatasaray/">Galatasaray</a></td><td>UEL</td><td>5–6–3 <span class="drobne">(incl. qual. 2–2–2)</span></td><td class="cislo"><strong>18</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/turkiye/2021-22/fenerbahce/">Fenerbahçe</a></td><td>UECL</td><td>3–3–4 <span class="drobne">(incl. qual. 2–0–0)</span></td><td class="cislo"><strong>7</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/turkiye/2021-22/besiktas/">Besiktas</a></td><td>UCL</td><td>0–0–6</td><td class="cislo"><strong>4</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/turkiye/2021-22/sivasspor/">Sivasspor</a></td><td>UECL</td><td>3–1–2 <span class="drobne">(incl. qual. 3–1–2)</span></td><td class="cislo"><strong>3.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/turkiye/2021-22/trabzonspor/">Trabzonspor</a></td><td>UECL</td><td>0–2–2 <span class="drobne">(incl. qual. 0–2–2)</span></td><td class="cislo"><strong>1</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

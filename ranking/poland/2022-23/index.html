@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/poland/" class="back-link">← Full ranking</a>
+    <a href="/ranking/poland/" class="back-link">← Poland</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/polsko/2022-23/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,10 +99,10 @@
     <p>Lech Poznan contributed the most: 22 of 31 points, 71 % of everything Poland earned in 2022/23. Next came Raków Czestochowa (5) and Lechia Gdansk (2.5). Clubs by their main competition that season: 4 in the Conference League. Compared with <a href="/ranking/poland/2021-22/">2021/22</a> (4.625), Poland had a coefficient 3.125 higher and climbed from 23rd to 11th place in the season ranking. Since 2004/05 it ranks 3rd of 22 seasons; the country's best was <a href="/ranking/poland/2025-26/">2025/26</a> (15.75).</p>
     <h2>Clubs 2022/23</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Lech Poznan</td><td>UECL</td><td>10–6–4 <span class="drobne">(incl. qual. 4–2–2)</span></td><td class="cislo"><strong>22</strong></td></tr>
-<tr><td>Raków Czestochowa</td><td>UECL</td><td>5–0–1 <span class="drobne">(incl. qual. 5–0–1)</span></td><td class="cislo"><strong>5</strong></td></tr>
-<tr><td>Lechia Gdansk</td><td>UECL</td><td>2–1–1 <span class="drobne">(incl. qual. 2–1–1)</span></td><td class="cislo"><strong>2.5</strong></td></tr>
-<tr><td>Pogon Szczecin</td><td>UECL</td><td>1–1–2 <span class="drobne">(incl. qual. 1–1–2)</span></td><td class="cislo"><strong>1.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/poland/2022-23/lech-poznan/">Lech Poznan</a></td><td>UECL</td><td>10–6–4 <span class="drobne">(incl. qual. 4–2–2)</span></td><td class="cislo"><strong>22</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/poland/2022-23/rakow-czestochowa/">Raków Czestochowa</a></td><td>UECL</td><td>5–0–1 <span class="drobne">(incl. qual. 5–0–1)</span></td><td class="cislo"><strong>5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/poland/2022-23/lechia-gdansk/">Lechia Gdansk</a></td><td>UECL</td><td>2–1–1 <span class="drobne">(incl. qual. 2–1–1)</span></td><td class="cislo"><strong>2.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/poland/2022-23/pogon-szczecin/">Pogon Szczecin</a></td><td>UECL</td><td>1–1–2 <span class="drobne">(incl. qual. 1–1–2)</span></td><td class="cislo"><strong>1.5</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

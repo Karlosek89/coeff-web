@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/anglie/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/anglie/" class="back-link">← Anglie</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/england/2023-24/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,14 +99,14 @@
     <p>Nejvíc bodů přinesl klub Manchester City: 28 z 139, tedy 20 % všeho, co Anglie v sezoně 2023/24 uhrála. Za ním Arsenal (22) a Liverpool (20). Kluby podle hlavní soutěže sezony: 4 v Lize mistrů, 3 v Evropské lize, 1 v Konferenční lize. Proti sezoně <a href="/zebricek/anglie/2022-23/">2022/23</a> (23) měla Anglie koeficient o 5,625 nižší a v pořadí sezony klesla z 1. na 3. místo. V historii země od 2004/05 je to 12. nejlepší sezona z 22; nejvíc měla Anglie v sezoně <a href="/zebricek/anglie/2024-25/">2024/25</a> (29,464).</p>
     <h2>Kluby 2023/24</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Manchester City</td><td>LM</td><td>8–2–0</td><td class="cislo"><strong>28</strong></td></tr>
-<tr><td>Arsenal</td><td>LM</td><td>5–2–3</td><td class="cislo"><strong>22</strong></td></tr>
-<tr><td>Liverpool</td><td>EL</td><td>7–0–3</td><td class="cislo"><strong>20</strong></td></tr>
-<tr><td>West Ham United</td><td>EL</td><td>6–1–3</td><td class="cislo"><strong>19</strong></td></tr>
-<tr><td>Aston Villa</td><td>KL</td><td>8–2–4 <span class="drobne">(z toho kval. 2–0–0)</span></td><td class="cislo"><strong>19</strong></td></tr>
-<tr><td>Brighton &amp; Hove Albion</td><td>EL</td><td>5–1–2</td><td class="cislo"><strong>16</strong></td></tr>
-<tr><td>Newcastle United</td><td>LM</td><td>1–2–3</td><td class="cislo"><strong>8</strong></td></tr>
-<tr><td>Manchester United</td><td>LM</td><td>1–1–4</td><td class="cislo"><strong>7</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2023-24/manchester-city/">Manchester City</a></td><td>LM</td><td>8–2–0</td><td class="cislo"><strong>28</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2023-24/arsenal/">Arsenal</a></td><td>LM</td><td>5–2–3</td><td class="cislo"><strong>22</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2023-24/liverpool/">Liverpool</a></td><td>EL</td><td>7–0–3</td><td class="cislo"><strong>20</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2023-24/west-ham-united/">West Ham United</a></td><td>EL</td><td>6–1–3</td><td class="cislo"><strong>19</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2023-24/aston-villa/">Aston Villa</a></td><td>KL</td><td>8–2–4 <span class="drobne">(z toho kval. 2–0–0)</span></td><td class="cislo"><strong>19</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2023-24/brighton-hove-albion/">Brighton &amp; Hove Albion</a></td><td>EL</td><td>5–1–2</td><td class="cislo"><strong>16</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2023-24/newcastle-united/">Newcastle United</a></td><td>LM</td><td>1–2–3</td><td class="cislo"><strong>8</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2023-24/manchester-united/">Manchester United</a></td><td>LM</td><td>1–1–4</td><td class="cislo"><strong>7</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

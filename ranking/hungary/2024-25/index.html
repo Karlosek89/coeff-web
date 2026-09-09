@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/hungary/" class="back-link">← Full ranking</a>
+    <a href="/ranking/hungary/" class="back-link">← Hungary</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/madarsko/2024-25/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,10 +99,10 @@
     <p>Ferencváros contributed the most: 15.5 of 26.5 points, 58 % of everything Hungary earned in 2024/25. Next came Paksi FC (5) and Puskás Akadémia (4.5). Clubs by their main competition that season: 1 in the Europa League, 3 in the Conference League. Compared with <a href="/ranking/hungary/2023-24/">2023/24</a> (4.5), Hungary had a coefficient 2.125 higher and stayed 22nd in the season ranking. Since 2004/05 it ranks 2nd of 22 seasons; the country's best was <a href="/ranking/hungary/2025-26/">2025/26</a> (7.437).</p>
     <h2>Clubs 2024/25</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Ferencváros</td><td>UEL</td><td>7–3–6 <span class="drobne">(incl. qual. 2–3–1)</span></td><td class="cislo"><strong>15.5</strong></td></tr>
-<tr><td>Paksi FC</td><td>UECL</td><td>4–2–2 <span class="drobne">(incl. qual. 4–2–2)</span></td><td class="cislo"><strong>5</strong></td></tr>
-<tr><td>Puskás Akadémia</td><td>UECL</td><td>3–3–0 <span class="drobne">(incl. qual. 3–3–0)</span></td><td class="cislo"><strong>4.5</strong></td></tr>
-<tr><td>FC Fehérvár</td><td>UECL</td><td>1–1–2 <span class="drobne">(incl. qual. 1–1–2)</span></td><td class="cislo"><strong>1.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/hungary/2024-25/ferencvaros/">Ferencváros</a></td><td>UEL</td><td>7–3–6 <span class="drobne">(incl. qual. 2–3–1)</span></td><td class="cislo"><strong>15.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/hungary/2024-25/paksi-fc/">Paksi FC</a></td><td>UECL</td><td>4–2–2 <span class="drobne">(incl. qual. 4–2–2)</span></td><td class="cislo"><strong>5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/hungary/2024-25/puskas-akademia/">Puskás Akadémia</a></td><td>UECL</td><td>3–3–0 <span class="drobne">(incl. qual. 3–3–0)</span></td><td class="cislo"><strong>4.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/hungary/2024-25/fc-fehervar/">FC Fehérvár</a></td><td>UECL</td><td>1–1–2 <span class="drobne">(incl. qual. 1–1–2)</span></td><td class="cislo"><strong>1.5</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

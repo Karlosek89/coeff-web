@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/srbsko/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/srbsko/" class="back-link">← Srbsko</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/serbia/2022-23/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,10 +99,10 @@
     <p>Nejvíc bodů přinesl klub Partizan Belgrade: 12 z 21,5, tedy 56 % všeho, co Srbsko v sezoně 2022/23 uhrálo. Za ním Red Star Belgrade (6,5) a Cukaricki Belgrade (2). Kluby podle hlavní soutěže sezony: 1 v Evropské lize, 3 v Konferenční lize. Proti sezoně <a href="/zebricek/srbsko/2021-22/">2021/22</a> (9,5) mělo Srbsko koeficient o 4,125 nižší a v pořadí sezony kleslo z 9. na 22. místo. V historii země od 2004/05 je to 7. nejlepší sezona z 22; nejvíc mělo Srbsko v sezoně <a href="/zebricek/srbsko/2021-22/">2021/22</a> (9,5).</p>
     <h2>Kluby 2022/23</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Partizan Belgrade</td><td>KL</td><td>4–5–3 <span class="drobne">(z toho kval. 1–2–1)</span></td><td class="cislo"><strong>12</strong></td></tr>
-<tr><td>Red Star Belgrade</td><td>EL</td><td>4–1–5 <span class="drobne">(z toho kval. 2–1–1)</span></td><td class="cislo"><strong>6,5</strong></td></tr>
-<tr><td>Cukaricki Belgrade</td><td>KL</td><td>2–0–2 <span class="drobne">(z toho kval. 2–0–2)</span></td><td class="cislo"><strong>2</strong></td></tr>
-<tr><td>Radnicki Nis</td><td>KL</td><td>0–2–0 <span class="drobne">(z toho kval. 0–2–0)</span></td><td class="cislo"><strong>1</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/srbsko/2022-23/partizan-belgrade/">Partizan Belgrade</a></td><td>KL</td><td>4–5–3 <span class="drobne">(z toho kval. 1–2–1)</span></td><td class="cislo"><strong>12</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/srbsko/2022-23/red-star-belgrade/">Red Star Belgrade</a></td><td>EL</td><td>4–1–5 <span class="drobne">(z toho kval. 2–1–1)</span></td><td class="cislo"><strong>6,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/srbsko/2022-23/cukaricki-belgrade/">Cukaricki Belgrade</a></td><td>KL</td><td>2–0–2 <span class="drobne">(z toho kval. 2–0–2)</span></td><td class="cislo"><strong>2</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/srbsko/2022-23/radnicki-nis/">Radnicki Nis</a></td><td>KL</td><td>0–2–0 <span class="drobne">(z toho kval. 0–2–0)</span></td><td class="cislo"><strong>1</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

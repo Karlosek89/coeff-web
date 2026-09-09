@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/italie/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/italie/" class="back-link">← Itálie</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/italy/2022-23/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,13 +99,13 @@
     <p>Nejvíc bodů přinesl klub Internazionale: 29 z 156,5, tedy 19 % všeho, co Itálie v sezoně 2022/23 uhrála. Za ním Fiorentina (25,5) a Napoli (25). Kluby podle hlavní soutěže sezony: 3 v Lize mistrů, 2 v Evropské lize, 2 v Konferenční lize. Proti sezoně <a href="/zebricek/italie/2021-22/">2021/22</a> (15,714) měla Itálie koeficient o 6,643 vyšší a v pořadí sezony se posunula z 6. na 2. místo. Je to nejlepší sezona země od 2004/05.</p>
     <h2>Kluby 2022/23</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Internazionale</td><td>LM</td><td>7–3–3</td><td class="cislo"><strong>29</strong></td></tr>
-<tr><td>Fiorentina</td><td>KL</td><td>11–2–4 <span class="drobne">(z toho kval. 1–1–0)</span></td><td class="cislo"><strong>25,5</strong></td></tr>
-<tr><td>Napoli</td><td>LM</td><td>7–1–2</td><td class="cislo"><strong>25</strong></td></tr>
-<tr><td>AC Milan</td><td>LM</td><td>5–3–4</td><td class="cislo"><strong>24</strong></td></tr>
-<tr><td>AS Roma</td><td>EL</td><td>7–4–4</td><td class="cislo"><strong>24</strong></td></tr>
-<tr><td>Juventus</td><td>EL</td><td>5–3–6</td><td class="cislo"><strong>20</strong></td></tr>
-<tr><td>Lazio</td><td>KL</td><td>3–3–4</td><td class="cislo"><strong>9</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/italie/2022-23/internazionale/">Internazionale</a></td><td>LM</td><td>7–3–3</td><td class="cislo"><strong>29</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/italie/2022-23/fiorentina/">Fiorentina</a></td><td>KL</td><td>11–2–4 <span class="drobne">(z toho kval. 1–1–0)</span></td><td class="cislo"><strong>25,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/italie/2022-23/napoli/">Napoli</a></td><td>LM</td><td>7–1–2</td><td class="cislo"><strong>25</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/italie/2022-23/ac-milan/">AC Milan</a></td><td>LM</td><td>5–3–4</td><td class="cislo"><strong>24</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/italie/2022-23/as-roma/">AS Roma</a></td><td>EL</td><td>7–4–4</td><td class="cislo"><strong>24</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/italie/2022-23/juventus/">Juventus</a></td><td>EL</td><td>5–3–6</td><td class="cislo"><strong>20</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/italie/2022-23/lazio/">Lazio</a></td><td>KL</td><td>3–3–4</td><td class="cislo"><strong>9</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

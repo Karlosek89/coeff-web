@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/scotland/" class="back-link">← Full ranking</a>
+    <a href="/ranking/scotland/" class="back-link">← Scotland</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/skotsko/2022-23/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,11 +99,11 @@
     <p>Glasgow Rangers contributed the most: 6.5 of 17.5 points, 37 % of everything Scotland earned in 2022/23. Next came Celtic (6) and Hearts FC (4). Clubs by their main competition that season: 2 in the Champions League, 3 in the Conference League. Compared with <a href="/ranking/scotland/2021-22/">2021/22</a> (7.9), Scotland had a coefficient 4.4 lower and dropped from 11th to 29th place in the season ranking. Since 2004/05 it ranks 17th of 22 seasons; the country's best was <a href="/ranking/scotland/2007-08/">2007/08</a> (10.25).</p>
     <h2>Clubs 2022/23</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Glasgow Rangers</td><td>UCL</td><td>2–1–7 <span class="drobne">(incl. qual. 2–1–1)</span></td><td class="cislo"><strong>6.5</strong></td></tr>
-<tr><td>Celtic</td><td>UCL</td><td>0–2–4</td><td class="cislo"><strong>6</strong></td></tr>
-<tr><td>Hearts FC</td><td>UECL</td><td>2–0–6 <span class="drobne">(incl. qual. 0–0–2)</span></td><td class="cislo"><strong>4</strong></td></tr>
-<tr><td>Dundee United</td><td>UECL</td><td>1–0–1 <span class="drobne">(incl. qual. 1–0–1)</span></td><td class="cislo"><strong>1</strong></td></tr>
-<tr><td>Motherwell</td><td>UECL</td><td>0–0–2 <span class="drobne">(incl. qual. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/scotland/2022-23/glasgow-rangers/">Glasgow Rangers</a></td><td>UCL</td><td>2–1–7 <span class="drobne">(incl. qual. 2–1–1)</span></td><td class="cislo"><strong>6.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/scotland/2022-23/celtic/">Celtic</a></td><td>UCL</td><td>0–2–4</td><td class="cislo"><strong>6</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/scotland/2022-23/hearts-fc/">Hearts FC</a></td><td>UECL</td><td>2–0–6 <span class="drobne">(incl. qual. 0–0–2)</span></td><td class="cislo"><strong>4</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/scotland/2022-23/dundee-united/">Dundee United</a></td><td>UECL</td><td>1–0–1 <span class="drobne">(incl. qual. 1–0–1)</span></td><td class="cislo"><strong>1</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/scotland/2022-23/motherwell/">Motherwell</a></td><td>UECL</td><td>0–0–2 <span class="drobne">(incl. qual. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

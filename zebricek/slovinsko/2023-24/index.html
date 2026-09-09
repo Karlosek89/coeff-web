@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/slovinsko/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/slovinsko/" class="back-link">← Slovinsko</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/slovenia/2023-24/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,10 +99,10 @@
     <p>Nejvíc bodů přinesl klub Olimpija Ljubljana: 8 z 15,5, tedy 52 % všeho, co Slovinsko v sezoně 2023/24 uhrálo. Za ním NK Celje (3,5) a NK Maribor (3). Kluby podle hlavní soutěže sezony: 4 v Konferenční lize. Proti sezoně <a href="/zebricek/slovinsko/2022-23/">2022/23</a> (2,125) mělo Slovinsko koeficient o 1,75 vyšší a v pořadí sezony se posunulo z 40. na 26. místo. V historii země od 2004/05 je to 5. nejlepší sezona z 22; nejvíc mělo Slovinsko v sezoně <a href="/zebricek/slovinsko/2024-25/">2024/25</a> (9,093).</p>
     <h2>Kluby 2023/24</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Olimpija Ljubljana</td><td>KL</td><td>5–2–7 <span class="drobne">(z toho kval. 3–2–3)</span></td><td class="cislo"><strong>8</strong></td></tr>
-<tr><td>NK Celje</td><td>KL</td><td>3–1–2 <span class="drobne">(z toho kval. 3–1–2)</span></td><td class="cislo"><strong>3,5</strong></td></tr>
-<tr><td>NK Maribor</td><td>KL</td><td>2–2–2 <span class="drobne">(z toho kval. 2–2–2)</span></td><td class="cislo"><strong>3</strong></td></tr>
-<tr><td>NK Domzale</td><td>KL</td><td>1–0–1 <span class="drobne">(z toho kval. 1–0–1)</span></td><td class="cislo"><strong>1</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/slovinsko/2023-24/olimpija-ljubljana/">Olimpija Ljubljana</a></td><td>KL</td><td>5–2–7 <span class="drobne">(z toho kval. 3–2–3)</span></td><td class="cislo"><strong>8</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/slovinsko/2023-24/nk-celje/">NK Celje</a></td><td>KL</td><td>3–1–2 <span class="drobne">(z toho kval. 3–1–2)</span></td><td class="cislo"><strong>3,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/slovinsko/2023-24/nk-maribor/">NK Maribor</a></td><td>KL</td><td>2–2–2 <span class="drobne">(z toho kval. 2–2–2)</span></td><td class="cislo"><strong>3</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/slovinsko/2023-24/nk-domzale/">NK Domzale</a></td><td>KL</td><td>1–0–1 <span class="drobne">(z toho kval. 1–0–1)</span></td><td class="cislo"><strong>1</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

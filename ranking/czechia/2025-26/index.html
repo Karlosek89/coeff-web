@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/czechia/" class="back-link">← Full ranking</a>
+    <a href="/ranking/czechia/" class="back-link">← Czechia</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/cesko/2025-26/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,11 +99,11 @@
     <p>Viktoria Plzen contributed the most: 17.75 of 55.125 points, 32 % of everything Czechia earned in 2025/26. Next came Sparta Praha (16.75) and Sigma Olomouc (9.625). Clubs by their main competition that season: 1 in the Champions League, 1 in the Europa League, 3 in the Conference League. Compared with <a href="/ranking/czechia/2024-25/">2024/25</a> (10.55), Czechia had a coefficient 0.475 higher and climbed from 14th to 13th place in the season ranking. Since 2004/05 it ranks 2nd of 22 seasons; the country's best was <a href="/ranking/czechia/2023-24/">2023/24</a> (13.5).</p>
     <h2>Clubs 2025/26</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Viktoria Plzen</td><td>UEL</td><td>5–7–2 <span class="drobne">(incl. qual. 2–0–2)</span></td><td class="cislo"><strong>17.75</strong></td></tr>
-<tr><td>Sparta Praha</td><td>UECL</td><td>8–1–5 <span class="drobne">(incl. qual. 4–0–2)</span></td><td class="cislo"><strong>16.75</strong></td></tr>
-<tr><td>Sigma Olomouc</td><td>UECL</td><td>3–3–6 <span class="drobne">(incl. qual. 0–0–2)</span></td><td class="cislo"><strong>9.625</strong></td></tr>
-<tr><td>Slavia Praha</td><td>UCL</td><td>0–3–5</td><td class="cislo"><strong>9</strong></td></tr>
-<tr><td>Baník Ostrava</td><td>UECL</td><td>1–2–3 <span class="drobne">(incl. qual. 1–2–3)</span></td><td class="cislo"><strong>2</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/czechia/2025-26/viktoria-plzen/">Viktoria Plzen</a></td><td>UEL</td><td>5–7–2 <span class="drobne">(incl. qual. 2–0–2)</span></td><td class="cislo"><strong>17.75</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/czechia/2025-26/sparta-praha/">Sparta Praha</a></td><td>UECL</td><td>8–1–5 <span class="drobne">(incl. qual. 4–0–2)</span></td><td class="cislo"><strong>16.75</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/czechia/2025-26/sigma-olomouc/">Sigma Olomouc</a></td><td>UECL</td><td>3–3–6 <span class="drobne">(incl. qual. 0–0–2)</span></td><td class="cislo"><strong>9.625</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/czechia/2025-26/slavia-praha/">Slavia Praha</a></td><td>UCL</td><td>0–3–5</td><td class="cislo"><strong>9</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/czechia/2025-26/banik-ostrava/">Baník Ostrava</a></td><td>UECL</td><td>1–2–3 <span class="drobne">(incl. qual. 1–2–3)</span></td><td class="cislo"><strong>2</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

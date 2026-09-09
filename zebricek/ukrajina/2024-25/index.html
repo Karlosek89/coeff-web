@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/ukrajina/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/ukrajina/" class="back-link">← Ukrajina</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/ukraine/2024-25/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,11 +99,11 @@
     <p>Nejvíc bodů přinesl klub Shakhtar Donetsk: 11 z 18, tedy 61 % všeho, co Ukrajina v sezoně 2024/25 uhrála. Za ním Dynamo Kyiv (7) a SC Dnipro-1 (0). Kluby podle hlavní soutěže sezony: 1 v Lize mistrů, 1 v Evropské lize, 3 v Konferenční lize. Proti sezoně <a href="/zebricek/ukrajina/2023-24/">2023/24</a> (4,1) měla Ukrajina koeficient o 0,5 nižší a v pořadí sezony klesla z 25. na 33. místo. Je to nejslabší sezona země od 2004/05.</p>
     <h2>Kluby 2024/25</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Shakhtar Donetsk</td><td>LM</td><td>2–1–5</td><td class="cislo"><strong>11</strong></td></tr>
-<tr><td>Dynamo Kyiv</td><td>EL</td><td>4–3–7 <span class="drobne">(z toho kval. 3–2–1)</span></td><td class="cislo"><strong>7</strong></td></tr>
-<tr><td>SC Dnipro-1</td><td>KL</td><td>0–0–2 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
-<tr><td>Polissya Zhytomyr</td><td>KL</td><td>0–0–2 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
-<tr><td>Kryvbas Kryviy Rih</td><td>KL</td><td>0–0–4 <span class="drobne">(z toho kval. 0–0–4)</span></td><td class="cislo"><strong>0</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/ukrajina/2024-25/shakhtar-donetsk/">Shakhtar Donetsk</a></td><td>LM</td><td>2–1–5</td><td class="cislo"><strong>11</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/ukrajina/2024-25/dynamo-kyiv/">Dynamo Kyiv</a></td><td>EL</td><td>4–3–7 <span class="drobne">(z toho kval. 3–2–1)</span></td><td class="cislo"><strong>7</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/ukrajina/2024-25/sc-dnipro-1/">SC Dnipro-1</a></td><td>KL</td><td>0–0–2 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/ukrajina/2024-25/polissya-zhytomyr/">Polissya Zhytomyr</a></td><td>KL</td><td>0–0–2 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/ukrajina/2024-25/kryvbas-kryviy-rih/">Kryvbas Kryviy Rih</a></td><td>KL</td><td>0–0–4 <span class="drobne">(z toho kval. 0–0–4)</span></td><td class="cislo"><strong>0</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

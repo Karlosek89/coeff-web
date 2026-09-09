@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/netherlands/" class="back-link">← Full ranking</a>
+    <a href="/ranking/netherlands/" class="back-link">← Netherlands</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/nizozemsko/2025-26/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,12 +99,12 @@
     <p>AZ Alkmaar contributed the most: 21.375 of 59.875 points, 36 % of everything Netherlands earned in 2025/26. Next came PSV Eindhoven (12) and Ajax (10). Clubs by their main competition that season: 2 in the Champions League, 3 in the Europa League, 1 in the Conference League. Compared with <a href="/ranking/netherlands/2024-25/">2024/25</a> (15.25), Netherlands had a coefficient 5.271 lower and dropped from 8th to 14th place in the season ranking. Since 2004/05 it ranks 8th of 22 seasons; the country's best was <a href="/ranking/netherlands/2021-22/">2021/22</a> (19.2).</p>
     <h2>Clubs 2025/26</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>AZ Alkmaar</td><td>UECL</td><td>11–2–5 <span class="drobne">(incl. qual. 5–0–1)</span></td><td class="cislo"><strong>21.375</strong></td></tr>
-<tr><td>PSV Eindhoven</td><td>UCL</td><td>2–2–4</td><td class="cislo"><strong>12</strong></td></tr>
-<tr><td>Ajax</td><td>UCL</td><td>2–0–6</td><td class="cislo"><strong>10</strong></td></tr>
-<tr><td>FC Utrecht</td><td>UEL</td><td>5–2–7 <span class="drobne">(incl. qual. 5–1–0)</span></td><td class="cislo"><strong>6.5</strong></td></tr>
-<tr><td>Go Ahead Eagles</td><td>UEL</td><td>2–1–5</td><td class="cislo"><strong>5</strong></td></tr>
-<tr><td>Feyenoord</td><td>UEL</td><td>3–0–7 <span class="drobne">(incl. qual. 1–0–1)</span></td><td class="cislo"><strong>5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/netherlands/2025-26/az-alkmaar/">AZ Alkmaar</a></td><td>UECL</td><td>11–2–5 <span class="drobne">(incl. qual. 5–0–1)</span></td><td class="cislo"><strong>21.375</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/netherlands/2025-26/psv-eindhoven/">PSV Eindhoven</a></td><td>UCL</td><td>2–2–4</td><td class="cislo"><strong>12</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/netherlands/2025-26/ajax/">Ajax</a></td><td>UCL</td><td>2–0–6</td><td class="cislo"><strong>10</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/netherlands/2025-26/fc-utrecht/">FC Utrecht</a></td><td>UEL</td><td>5–2–7 <span class="drobne">(incl. qual. 5–1–0)</span></td><td class="cislo"><strong>6.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/netherlands/2025-26/go-ahead-eagles/">Go Ahead Eagles</a></td><td>UEL</td><td>2–1–5</td><td class="cislo"><strong>5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/netherlands/2025-26/feyenoord/">Feyenoord</a></td><td>UEL</td><td>3–0–7 <span class="drobne">(incl. qual. 1–0–1)</span></td><td class="cislo"><strong>5</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

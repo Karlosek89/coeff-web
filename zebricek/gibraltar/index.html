@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -111,9 +118,9 @@
 
     <h2 id="kluby">Kluby 2026/27</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th class="cislo">Bonus</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Lincoln Red Imps</td><td>LM, EL, KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">3,5</td></tr>
-<tr><td>St Joseph's FC</td><td>KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">0,5</td></tr>
-<tr><td>Europa FC</td><td>KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">0</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2026-27/lincoln-red-imps/">Lincoln Red Imps</a></td><td>LM, EL, KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">3,5</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2026-27/st-josephs-fc/">St Joseph's FC</a></td><td>KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">0,5</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2026-27/europa-fc/">Europa FC</a></td><td>KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">0</td></tr>
 </tbody></table></div><p class="note">Body = celkem za sezonu (zápasy, v předkolech půlené, plus bonusy). Bonus = kolik z toho je za jistou účast v ligové fázi Ligy mistrů (+6), později i za pořadí a vyřazovací fázi. Koeficient země = součet bodů ÷ počet klubů.</p>
     <h2>Historie od 2014/15</h2>
     <p>Nejlepší sezona: <a href="/zebricek/gibraltar/2025-26/">2025/26</a> (3,333, 36. místo) · nejslabší: <a href="/zebricek/gibraltar/2023-24/">2023/24</a> (0,166, 54. místo). Klepnutím na sezonu v tabulce se zobrazí kluby a jejich body.</p>

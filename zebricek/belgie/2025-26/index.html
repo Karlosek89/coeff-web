@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/belgie/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/belgie/" class="back-link">← Belgie</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/belgium/2025-26/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,11 +99,11 @@
     <p>Nejvíc bodů přinesl klub Racing Genk: 22 z 57, tedy 39 % všeho, co Belgie v sezoně 2025/26 uhrála. Za ním Club Brugge (19,5) a Union Saint-Gilloise (12). Kluby podle hlavní soutěže sezony: 2 v Lize mistrů, 1 v Evropské lize, 2 v Konferenční lize. Proti sezoně <a href="/zebricek/belgie/2024-25/">2024/25</a> (15,65) měla Belgie koeficient o 4,25 nižší a v pořadí sezony klesla z 7. na 11. místo. V historii země od 2004/05 je to 5. nejlepší sezona z 22; nejvíc měla Belgie v sezoně <a href="/zebricek/belgie/2024-25/">2024/25</a> (15,65).</p>
     <h2>Kluby 2025/26</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Racing Genk</td><td>EL</td><td>8–2–4 <span class="drobne">(z toho kval. 1–0–1)</span></td><td class="cislo"><strong>22</strong></td></tr>
-<tr><td>Club Brugge</td><td>LM</td><td>7–2–5 <span class="drobne">(z toho kval. 4–0–0)</span></td><td class="cislo"><strong>19,5</strong></td></tr>
-<tr><td>Union Saint-Gilloise</td><td>LM</td><td>3–0–5</td><td class="cislo"><strong>12</strong></td></tr>
-<tr><td>Anderlecht</td><td>KL</td><td>2–2–2 <span class="drobne">(z toho kval. 2–2–2)</span></td><td class="cislo"><strong>3</strong></td></tr>
-<tr><td>Charleroi</td><td>KL</td><td>0–1–1 <span class="drobne">(z toho kval. 0–1–1)</span></td><td class="cislo"><strong>0,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/belgie/2025-26/racing-genk/">Racing Genk</a></td><td>EL</td><td>8–2–4 <span class="drobne">(z toho kval. 1–0–1)</span></td><td class="cislo"><strong>22</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/belgie/2025-26/club-brugge/">Club Brugge</a></td><td>LM</td><td>7–2–5 <span class="drobne">(z toho kval. 4–0–0)</span></td><td class="cislo"><strong>19,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/belgie/2025-26/union-saint-gilloise/">Union Saint-Gilloise</a></td><td>LM</td><td>3–0–5</td><td class="cislo"><strong>12</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/belgie/2025-26/anderlecht/">Anderlecht</a></td><td>KL</td><td>2–2–2 <span class="drobne">(z toho kval. 2–2–2)</span></td><td class="cislo"><strong>3</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/belgie/2025-26/charleroi/">Charleroi</a></td><td>KL</td><td>0–1–1 <span class="drobne">(z toho kval. 0–1–1)</span></td><td class="cislo"><strong>0,5</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

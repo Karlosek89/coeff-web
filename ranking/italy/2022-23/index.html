@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/italy/" class="back-link">← Full ranking</a>
+    <a href="/ranking/italy/" class="back-link">← Italy</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/italie/2022-23/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,13 +99,13 @@
     <p>Internazionale contributed the most: 29 of 156.5 points, 19 % of everything Italy earned in 2022/23. Next came Fiorentina (25.5) and Napoli (25). Clubs by their main competition that season: 3 in the Champions League, 2 in the Europa League, 2 in the Conference League. Compared with <a href="/ranking/italy/2021-22/">2021/22</a> (15.714), Italy had a coefficient 6.643 higher and climbed from 6th to 2nd place in the season ranking. It is the country's best season since 2004/05.</p>
     <h2>Clubs 2022/23</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Internazionale</td><td>UCL</td><td>7–3–3</td><td class="cislo"><strong>29</strong></td></tr>
-<tr><td>Fiorentina</td><td>UECL</td><td>11–2–4 <span class="drobne">(incl. qual. 1–1–0)</span></td><td class="cislo"><strong>25.5</strong></td></tr>
-<tr><td>Napoli</td><td>UCL</td><td>7–1–2</td><td class="cislo"><strong>25</strong></td></tr>
-<tr><td>AC Milan</td><td>UCL</td><td>5–3–4</td><td class="cislo"><strong>24</strong></td></tr>
-<tr><td>AS Roma</td><td>UEL</td><td>7–4–4</td><td class="cislo"><strong>24</strong></td></tr>
-<tr><td>Juventus</td><td>UEL</td><td>5–3–6</td><td class="cislo"><strong>20</strong></td></tr>
-<tr><td>Lazio</td><td>UECL</td><td>3–3–4</td><td class="cislo"><strong>9</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/italy/2022-23/internazionale/">Internazionale</a></td><td>UCL</td><td>7–3–3</td><td class="cislo"><strong>29</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/italy/2022-23/fiorentina/">Fiorentina</a></td><td>UECL</td><td>11–2–4 <span class="drobne">(incl. qual. 1–1–0)</span></td><td class="cislo"><strong>25.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/italy/2022-23/napoli/">Napoli</a></td><td>UCL</td><td>7–1–2</td><td class="cislo"><strong>25</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/italy/2022-23/ac-milan/">AC Milan</a></td><td>UCL</td><td>5–3–4</td><td class="cislo"><strong>24</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/italy/2022-23/as-roma/">AS Roma</a></td><td>UEL</td><td>7–4–4</td><td class="cislo"><strong>24</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/italy/2022-23/juventus/">Juventus</a></td><td>UEL</td><td>5–3–6</td><td class="cislo"><strong>20</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/italy/2022-23/lazio/">Lazio</a></td><td>UECL</td><td>3–3–4</td><td class="cislo"><strong>9</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

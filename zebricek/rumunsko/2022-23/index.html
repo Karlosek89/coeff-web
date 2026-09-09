@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/rumunsko/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/rumunsko/" class="back-link">← Rumunsko</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/romania/2022-23/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,10 +99,10 @@
     <p>Nejvíc bodů přinesl klub CFR Cluj: 14,5 z 25, tedy 58 % všeho, co Rumunsko v sezoně 2022/23 uhrálo. Za ním FCSB (6) a Universitatea Craiova (3,5). Kluby podle hlavní soutěže sezony: 4 v Konferenční lize. Proti sezoně <a href="/zebricek/rumunsko/2021-22/">2021/22</a> (2,25) mělo Rumunsko koeficient o 4 vyšší a v pořadí sezony se posunulo z 37. na 16. místo. V historii země od 2004/05 je to 6. nejlepší sezona z 22; nejvíc mělo Rumunsko v sezoně <a href="/zebricek/rumunsko/2005-06/">2005/06</a> (16,833).</p>
     <h2>Kluby 2022/23</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>CFR Cluj</td><td>KL</td><td>6–7–3 <span class="drobne">(z toho kval. 3–5–0)</span></td><td class="cislo"><strong>14,5</strong></td></tr>
-<tr><td>FCSB</td><td>KL</td><td>4–2–6 <span class="drobne">(z toho kval. 4–0–2)</span></td><td class="cislo"><strong>6</strong></td></tr>
-<tr><td>Universitatea Craiova</td><td>KL</td><td>2–3–1 <span class="drobne">(z toho kval. 2–3–1)</span></td><td class="cislo"><strong>3,5</strong></td></tr>
-<tr><td>Sepsi OSK</td><td>KL</td><td>1–0–3 <span class="drobne">(z toho kval. 1–0–3)</span></td><td class="cislo"><strong>1</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/rumunsko/2022-23/cfr-cluj/">CFR Cluj</a></td><td>KL</td><td>6–7–3 <span class="drobne">(z toho kval. 3–5–0)</span></td><td class="cislo"><strong>14,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/rumunsko/2022-23/fcsb/">FCSB</a></td><td>KL</td><td>4–2–6 <span class="drobne">(z toho kval. 4–0–2)</span></td><td class="cislo"><strong>6</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/rumunsko/2022-23/universitatea-craiova/">Universitatea Craiova</a></td><td>KL</td><td>2–3–1 <span class="drobne">(z toho kval. 2–3–1)</span></td><td class="cislo"><strong>3,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/rumunsko/2022-23/sepsi-osk/">Sepsi OSK</a></td><td>KL</td><td>1–0–3 <span class="drobne">(z toho kval. 1–0–3)</span></td><td class="cislo"><strong>1</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

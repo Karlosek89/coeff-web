@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/finland/" class="back-link">← Full ranking</a>
+    <a href="/ranking/finland/" class="back-link">← Finland</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/finsko/2021-22/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,10 +99,10 @@
     <p>HJK Helsinki contributed the most: 8 of 15 points, 53 % of everything Finland earned in 2021/22. Next came KuPS Kuopio (4.5) and Honka Espoo (2). Clubs by their main competition that season: 4 in the Conference League. Compared with <a href="/ranking/finland/2020-21/">2020/21</a> (1.375), Finland had a coefficient 2.375 higher and climbed from 48th to 28th place in the season ranking. It is the country's best season since 2004/05.</p>
     <h2>Clubs 2021/22</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>HJK Helsinki</td><td>UECL</td><td>5–2–7 <span class="drobne">(incl. qual. 3–2–3)</span></td><td class="cislo"><strong>8</strong></td></tr>
-<tr><td>KuPS Kuopio</td><td>UECL</td><td>3–3–2 <span class="drobne">(incl. qual. 3–3–2)</span></td><td class="cislo"><strong>4.5</strong></td></tr>
-<tr><td>Honka Espoo</td><td>UECL</td><td>1–2–1 <span class="drobne">(incl. qual. 1–2–1)</span></td><td class="cislo"><strong>2</strong></td></tr>
-<tr><td>Inter Turku</td><td>UECL</td><td>0–1–1 <span class="drobne">(incl. qual. 0–1–1)</span></td><td class="cislo"><strong>0.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/finland/2021-22/hjk-helsinki/">HJK Helsinki</a></td><td>UECL</td><td>5–2–7 <span class="drobne">(incl. qual. 3–2–3)</span></td><td class="cislo"><strong>8</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/finland/2021-22/kups-kuopio/">KuPS Kuopio</a></td><td>UECL</td><td>3–3–2 <span class="drobne">(incl. qual. 3–3–2)</span></td><td class="cislo"><strong>4.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/finland/2021-22/honka-espoo/">Honka Espoo</a></td><td>UECL</td><td>1–2–1 <span class="drobne">(incl. qual. 1–2–1)</span></td><td class="cislo"><strong>2</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/finland/2021-22/inter-turku/">Inter Turku</a></td><td>UECL</td><td>0–1–1 <span class="drobne">(incl. qual. 0–1–1)</span></td><td class="cislo"><strong>0.5</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

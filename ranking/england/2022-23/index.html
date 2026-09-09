@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/england/" class="back-link">← Full ranking</a>
+    <a href="/ranking/england/" class="back-link">← England</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/anglie/2022-23/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,13 +99,13 @@
     <p>Manchester City contributed the most: 33 of 161 points, 20 % of everything England earned in 2022/23. Next came West Ham United (31) and Manchester United (22). Clubs by their main competition that season: 4 in the Champions League, 2 in the Europa League, 1 in the Conference League. Compared with <a href="/ranking/england/2021-22/">2021/22</a> (21), England had a coefficient 2 higher and stayed 1st in the season ranking. Since 2004/05 it ranks 4th of 22 seasons; the country's best was <a href="/ranking/england/2024-25/">2024/25</a> (29.464).</p>
     <h2>Clubs 2022/23</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Manchester City</td><td>UCL</td><td>8–5–0</td><td class="cislo"><strong>33</strong></td></tr>
-<tr><td>West Ham United</td><td>UECL</td><td>14–1–0 <span class="drobne">(incl. qual. 2–0–0)</span></td><td class="cislo"><strong>31</strong></td></tr>
-<tr><td>Manchester United</td><td>UEL</td><td>8–2–2</td><td class="cislo"><strong>22</strong></td></tr>
-<tr><td>Chelsea</td><td>UCL</td><td>5–1–4</td><td class="cislo"><strong>21</strong></td></tr>
-<tr><td>Liverpool</td><td>UCL</td><td>5–0–3</td><td class="cislo"><strong>19</strong></td></tr>
-<tr><td>Tottenham Hotspur</td><td>UCL</td><td>3–3–2</td><td class="cislo"><strong>18</strong></td></tr>
-<tr><td>Arsenal</td><td>UEL</td><td>5–2–1</td><td class="cislo"><strong>17</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/england/2022-23/manchester-city/">Manchester City</a></td><td>UCL</td><td>8–5–0</td><td class="cislo"><strong>33</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/england/2022-23/west-ham-united/">West Ham United</a></td><td>UECL</td><td>14–1–0 <span class="drobne">(incl. qual. 2–0–0)</span></td><td class="cislo"><strong>31</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/england/2022-23/manchester-united/">Manchester United</a></td><td>UEL</td><td>8–2–2</td><td class="cislo"><strong>22</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/england/2022-23/chelsea/">Chelsea</a></td><td>UCL</td><td>5–1–4</td><td class="cislo"><strong>21</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/england/2022-23/liverpool/">Liverpool</a></td><td>UCL</td><td>5–0–3</td><td class="cislo"><strong>19</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/england/2022-23/tottenham-hotspur/">Tottenham Hotspur</a></td><td>UCL</td><td>3–3–2</td><td class="cislo"><strong>18</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/england/2022-23/arsenal/">Arsenal</a></td><td>UEL</td><td>5–2–1</td><td class="cislo"><strong>17</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

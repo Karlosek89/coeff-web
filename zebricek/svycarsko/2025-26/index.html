@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/svycarsko/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/svycarsko/" class="back-link">← Švýcarsko</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/switzerland/2025-26/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,11 +99,11 @@
     <p>Nejvíc bodů přinesl klub Lausanne Sports: 15,5 z 31, tedy 50 % všeho, co Švýcarsko v sezoně 2025/26 uhrálo. Za ním Young Boys (8) a FC Basel (4,5). Kluby podle hlavní soutěže sezony: 2 v Evropské lize, 3 v Konferenční lize. Proti sezoně <a href="/zebricek/svycarsko/2024-25/">2024/25</a> (7,05) mělo Švýcarsko koeficient o 0,85 nižší a v pořadí sezony se posunulo z 21. na 20. místo. V historii země od 2004/05 je to 11. nejlepší sezona z 22; nejvíc mělo Švýcarsko v sezoně <a href="/zebricek/svycarsko/2005-06/">2005/06</a> (9,375).</p>
     <h2>Kluby 2025/26</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Lausanne Sports</td><td>KL</td><td>7–4–3 <span class="drobne">(z toho kval. 4–1–1)</span></td><td class="cislo"><strong>15,5</strong></td></tr>
-<tr><td>Young Boys</td><td>EL</td><td>5–0–5 <span class="drobne">(z toho kval. 2–0–0)</span></td><td class="cislo"><strong>8</strong></td></tr>
-<tr><td>FC Basel</td><td>EL</td><td>2–1–7 <span class="drobne">(z toho kval. 0–1–1)</span></td><td class="cislo"><strong>4,5</strong></td></tr>
-<tr><td>FC Lugano</td><td>KL</td><td>1–1–2 <span class="drobne">(z toho kval. 1–1–2)</span></td><td class="cislo"><strong>1,5</strong></td></tr>
-<tr><td>Servette FC Genève</td><td>KL</td><td>1–1–4 <span class="drobne">(z toho kval. 1–1–4)</span></td><td class="cislo"><strong>1,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/svycarsko/2025-26/lausanne-sports/">Lausanne Sports</a></td><td>KL</td><td>7–4–3 <span class="drobne">(z toho kval. 4–1–1)</span></td><td class="cislo"><strong>15,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/svycarsko/2025-26/young-boys/">Young Boys</a></td><td>EL</td><td>5–0–5 <span class="drobne">(z toho kval. 2–0–0)</span></td><td class="cislo"><strong>8</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/svycarsko/2025-26/fc-basel/">FC Basel</a></td><td>EL</td><td>2–1–7 <span class="drobne">(z toho kval. 0–1–1)</span></td><td class="cislo"><strong>4,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/svycarsko/2025-26/fc-lugano/">FC Lugano</a></td><td>KL</td><td>1–1–2 <span class="drobne">(z toho kval. 1–1–2)</span></td><td class="cislo"><strong>1,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/svycarsko/2025-26/servette-fc-geneve/">Servette FC Genève</a></td><td>KL</td><td>1–1–4 <span class="drobne">(z toho kval. 1–1–4)</span></td><td class="cislo"><strong>1,5</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

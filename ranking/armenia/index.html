@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -111,10 +118,10 @@
 
     <h2 id="kluby">Clubs 2026/27</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th class="cislo">Bonus</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Ararat-Armenia</td><td>UCL, UEL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">4.5</td></tr>
-<tr><td>Pyunik Yerevan</td><td>UECL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">2.5</td></tr>
-<tr><td>FC Noah</td><td>UECL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">2</td></tr>
-<tr><td>Alashkert FC</td><td>UECL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">1.5</td></tr>
+<tr><td><a class="sezona" href="/ranking/armenia/2026-27/ararat-armenia/">Ararat-Armenia</a></td><td>UCL, UEL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">4.5</td></tr>
+<tr><td><a class="sezona" href="/ranking/armenia/2026-27/pyunik-yerevan/">Pyunik Yerevan</a></td><td>UECL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">2.5</td></tr>
+<tr><td><a class="sezona" href="/ranking/armenia/2026-27/fc-noah/">FC Noah</a></td><td>UECL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">2</td></tr>
+<tr><td><a class="sezona" href="/ranking/armenia/2026-27/alashkert-fc/">Alashkert FC</a></td><td>UECL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">1.5</td></tr>
 </tbody></table></div><p class="note">Points = season total (matches, halved in qualifying, plus bonuses). Bonus = the part earned for a guaranteed Champions League league-phase place (+6), later also for final position and knockout rounds. Country coefficient = total points ÷ number of clubs.</p>
     <h2>History since 2004/05</h2>
     <p>Best season: <a href="/ranking/armenia/2024-25/">2024/25</a> (4.375, 28th place) · weakest: <a href="/ranking/armenia/2008-09/">2008/09</a> (0.000, 52nd place). Click a season in the table to see the clubs and their points.</p>

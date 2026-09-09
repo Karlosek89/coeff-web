@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/france/" class="back-link">← Full ranking</a>
+    <a href="/ranking/france/" class="back-link">← France</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/francie/2022-23/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,12 +99,12 @@
     <p>Paris Saint-Germain contributed the most: 19 of 75.5 points, 25 % of everything France earned in 2022/23. Next came OGC Nice (15) and Stade Rennais (13). Clubs by their main competition that season: 2 in the Champions League, 3 in the Europa League, 1 in the Conference League. Compared with <a href="/ranking/france/2021-22/">2021/22</a> (18.416), France had a coefficient 5.833 lower and dropped from 4th to 7th place in the season ranking. Since 2004/05 it ranks 7th of 22 seasons; the country's best was <a href="/ranking/france/2021-22/">2021/22</a> (18.416).</p>
     <h2>Clubs 2022/23</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Paris Saint-Germain</td><td>UCL</td><td>4–2–2</td><td class="cislo"><strong>19</strong></td></tr>
-<tr><td>OGC Nice</td><td>UECL</td><td>5–4–3 <span class="drobne">(incl. qual. 1–0–1)</span></td><td class="cislo"><strong>15</strong></td></tr>
-<tr><td>Stade Rennais</td><td>UEL</td><td>4–3–1</td><td class="cislo"><strong>13</strong></td></tr>
-<tr><td>AS Monaco</td><td>UEL</td><td>4–2–4 <span class="drobne">(incl. qual. 0–1–1)</span></td><td class="cislo"><strong>11.5</strong></td></tr>
-<tr><td>FC Nantes</td><td>UEL</td><td>3–1–4</td><td class="cislo"><strong>9</strong></td></tr>
-<tr><td>Olympique Marseille</td><td>UCL</td><td>2–0–4</td><td class="cislo"><strong>8</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/france/2022-23/paris-saint-germain/">Paris Saint-Germain</a></td><td>UCL</td><td>4–2–2</td><td class="cislo"><strong>19</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/france/2022-23/ogc-nice/">OGC Nice</a></td><td>UECL</td><td>5–4–3 <span class="drobne">(incl. qual. 1–0–1)</span></td><td class="cislo"><strong>15</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/france/2022-23/stade-rennais/">Stade Rennais</a></td><td>UEL</td><td>4–3–1</td><td class="cislo"><strong>13</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/france/2022-23/as-monaco/">AS Monaco</a></td><td>UEL</td><td>4–2–4 <span class="drobne">(incl. qual. 0–1–1)</span></td><td class="cislo"><strong>11.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/france/2022-23/fc-nantes/">FC Nantes</a></td><td>UEL</td><td>3–1–4</td><td class="cislo"><strong>9</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/france/2022-23/olympique-marseille/">Olympique Marseille</a></td><td>UCL</td><td>2–0–4</td><td class="cislo"><strong>8</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

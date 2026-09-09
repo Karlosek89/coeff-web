@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/lotyssko/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/lotyssko/" class="back-link">← Lotyšsko</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/latvia/2021-22/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,10 +99,10 @@
     <p>Nejvíc bodů přinesl klub Riga FC: 4 z 10,5, tedy 38 % všeho, co Lotyšsko v sezoně 2021/22 uhrálo. Za ním RFS Riga (3,5) a FK Liepaja (2,5). Kluby podle hlavní soutěže sezony: 4 v Konferenční lize. Proti sezoně <a href="/zebricek/lotyssko/2020-21/">2020/21</a> (1,375) mělo Lotyšsko koeficient o 1,25 vyšší a v pořadí sezony se posunulo z 47. na 35. místo. V historii země od 2004/05 je to 4. nejlepší sezona z 22; nejvíc mělo Lotyšsko v sezoně <a href="/zebricek/lotyssko/2024-25/">2024/25</a> (3,875).</p>
     <h2>Kluby 2021/22</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Riga FC</td><td>KL</td><td>3–2–3 <span class="drobne">(z toho kval. 3–2–3)</span></td><td class="cislo"><strong>4</strong></td></tr>
-<tr><td>RFS Riga</td><td>KL</td><td>3–1–2 <span class="drobne">(z toho kval. 3–1–2)</span></td><td class="cislo"><strong>3,5</strong></td></tr>
-<tr><td>FK Liepaja</td><td>KL</td><td>1–3–0 <span class="drobne">(z toho kval. 1–3–0)</span></td><td class="cislo"><strong>2,5</strong></td></tr>
-<tr><td>Valmieras FK</td><td>KL</td><td>0–1–1 <span class="drobne">(z toho kval. 0–1–1)</span></td><td class="cislo"><strong>0,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/lotyssko/2021-22/riga-fc/">Riga FC</a></td><td>KL</td><td>3–2–3 <span class="drobne">(z toho kval. 3–2–3)</span></td><td class="cislo"><strong>4</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/lotyssko/2021-22/rfs-riga/">RFS Riga</a></td><td>KL</td><td>3–1–2 <span class="drobne">(z toho kval. 3–1–2)</span></td><td class="cislo"><strong>3,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/lotyssko/2021-22/fk-liepaja/">FK Liepaja</a></td><td>KL</td><td>1–3–0 <span class="drobne">(z toho kval. 1–3–0)</span></td><td class="cislo"><strong>2,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/lotyssko/2021-22/valmieras-fk/">Valmieras FK</a></td><td>KL</td><td>0–1–1 <span class="drobne">(z toho kval. 0–1–1)</span></td><td class="cislo"><strong>0,5</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

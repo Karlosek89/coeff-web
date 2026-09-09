@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/ukrajina/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/ukrajina/" class="back-link">← Ukrajina</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/ukraine/2025-26/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,10 +99,10 @@
     <p>Nejvíc bodů přinesl klub Shakhtar Donetsk: 24,25 z 33,25, tedy 73 % všeho, co Ukrajina v sezoně 2025/26 uhrála. Za ním Dynamo Kyiv (7) a Polissya Zhytomyr (2). Kluby podle hlavní soutěže sezony: 4 v Konferenční lize. Proti sezoně <a href="/zebricek/ukrajina/2024-25/">2024/25</a> (3,6) měla Ukrajina koeficient o 4,712 vyšší a v pořadí sezony se posunula z 33. na 15. místo. V historii země od 2004/05 je to 6. nejlepší sezona z 22; nejvíc měla Ukrajina v sezoně <a href="/zebricek/ukrajina/2008-09/">2008/09</a> (16,625).</p>
     <h2>Kluby 2025/26</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Shakhtar Donetsk</td><td>KL</td><td>10–6–4 <span class="drobne">(z toho kval. 4–4–0)</span></td><td class="cislo"><strong>24,25</strong></td></tr>
-<tr><td>Dynamo Kyiv</td><td>KL</td><td>5–0–7 <span class="drobne">(z toho kval. 3–0–3)</span></td><td class="cislo"><strong>7</strong></td></tr>
-<tr><td>Polissya Zhytomyr</td><td>KL</td><td>2–0–4 <span class="drobne">(z toho kval. 2–0–4)</span></td><td class="cislo"><strong>2</strong></td></tr>
-<tr><td>FC Oleksandriya</td><td>KL</td><td>0–0–2 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/ukrajina/2025-26/shakhtar-donetsk/">Shakhtar Donetsk</a></td><td>KL</td><td>10–6–4 <span class="drobne">(z toho kval. 4–4–0)</span></td><td class="cislo"><strong>24,25</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/ukrajina/2025-26/dynamo-kyiv/">Dynamo Kyiv</a></td><td>KL</td><td>5–0–7 <span class="drobne">(z toho kval. 3–0–3)</span></td><td class="cislo"><strong>7</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/ukrajina/2025-26/polissya-zhytomyr/">Polissya Zhytomyr</a></td><td>KL</td><td>2–0–4 <span class="drobne">(z toho kval. 2–0–4)</span></td><td class="cislo"><strong>2</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/ukrajina/2025-26/fc-oleksandriya/">FC Oleksandriya</a></td><td>KL</td><td>0–0–2 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

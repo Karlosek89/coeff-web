@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/madarsko/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/madarsko/" class="back-link">← Maďarsko</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/hungary/2025-26/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,10 +99,10 @@
     <p>Nejvíc bodů přinesl klub Ferencváros: 23,75 z 29,75, tedy 80 % všeho, co Maďarsko v sezoně 2025/26 uhrálo. Za ním Paksi FC (3) a ETO Györ (3). Kluby podle hlavní soutěže sezony: 1 v Evropské lize, 3 v Konferenční lize. Proti sezoně <a href="/zebricek/madarsko/2024-25/">2024/25</a> (6,625) mělo Maďarsko koeficient o 0,812 vyšší a v pořadí sezony se posunulo z 22. na 17. místo. Je to nejlepší sezona země od 2004/05.</p>
     <h2>Kluby 2025/26</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Ferencváros</td><td>EL</td><td>10–4–4 <span class="drobne">(z toho kval. 4–1–1)</span></td><td class="cislo"><strong>23,75</strong></td></tr>
-<tr><td>Paksi FC</td><td>KL</td><td>2–2–2 <span class="drobne">(z toho kval. 2–2–2)</span></td><td class="cislo"><strong>3</strong></td></tr>
-<tr><td>ETO Györ</td><td>KL</td><td>3–0–3 <span class="drobne">(z toho kval. 3–0–3)</span></td><td class="cislo"><strong>3</strong></td></tr>
-<tr><td>Puskás Akadémia</td><td>KL</td><td>0–0–2 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/madarsko/2025-26/ferencvaros/">Ferencváros</a></td><td>EL</td><td>10–4–4 <span class="drobne">(z toho kval. 4–1–1)</span></td><td class="cislo"><strong>23,75</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/madarsko/2025-26/paksi-fc/">Paksi FC</a></td><td>KL</td><td>2–2–2 <span class="drobne">(z toho kval. 2–2–2)</span></td><td class="cislo"><strong>3</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/madarsko/2025-26/eto-gyor/">ETO Györ</a></td><td>KL</td><td>3–0–3 <span class="drobne">(z toho kval. 3–0–3)</span></td><td class="cislo"><strong>3</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/madarsko/2025-26/puskas-akademia/">Puskás Akadémia</a></td><td>KL</td><td>0–0–2 <span class="drobne">(z toho kval. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/germany/" class="back-link">← Full ranking</a>
+    <a href="/ranking/germany/" class="back-link">← Germany</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/nemecko/2024-25/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,14 +99,14 @@
     <p>Borussia Dortmund contributed the most: 30.75 of 147.375 points, 21 % of everything Germany earned in 2024/25. Next came Bayern München (30.25) and Bayer Leverkusen (23.25). Clubs by their main competition that season: 5 in the Champions League, 2 in the Europa League, 1 in the Conference League. Compared with <a href="/ranking/germany/2023-24/">2023/24</a> (19.357), Germany had a coefficient 0.936 lower and dropped from 2nd to 4th place in the season ranking. Since 2004/05 it ranks 4th of 22 seasons; the country's best was <a href="/ranking/germany/2025-26/">2025/26</a> (21.785).</p>
     <h2>Clubs 2024/25</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Borussia Dortmund</td><td>UCL</td><td>8–2–4</td><td class="cislo"><strong>30.75</strong></td></tr>
-<tr><td>Bayern München</td><td>UCL</td><td>8–2–4</td><td class="cislo"><strong>30.25</strong></td></tr>
-<tr><td>Bayer Leverkusen</td><td>UCL</td><td>5–1–4</td><td class="cislo"><strong>23.25</strong></td></tr>
-<tr><td>Eintracht Frankfurt</td><td>UEL</td><td>7–2–3</td><td class="cislo"><strong>23</strong></td></tr>
-<tr><td>VfB Stuttgart</td><td>UCL</td><td>3–1–4</td><td class="cislo"><strong>13</strong></td></tr>
-<tr><td>1.FC Heidenheim</td><td>UECL</td><td>6–1–3 <span class="drobne">(incl. qual. 2–0–0)</span></td><td class="cislo"><strong>12.125</strong></td></tr>
-<tr><td>RB Leipzig</td><td>UCL</td><td>1–0–7</td><td class="cislo"><strong>8</strong></td></tr>
-<tr><td>1899 Hoffenheim</td><td>UEL</td><td>2–3–3</td><td class="cislo"><strong>7</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2024-25/borussia-dortmund/">Borussia Dortmund</a></td><td>UCL</td><td>8–2–4</td><td class="cislo"><strong>30.75</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2024-25/bayern-munchen/">Bayern München</a></td><td>UCL</td><td>8–2–4</td><td class="cislo"><strong>30.25</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2024-25/bayer-leverkusen/">Bayer Leverkusen</a></td><td>UCL</td><td>5–1–4</td><td class="cislo"><strong>23.25</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2024-25/eintracht-frankfurt/">Eintracht Frankfurt</a></td><td>UEL</td><td>7–2–3</td><td class="cislo"><strong>23</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2024-25/vfb-stuttgart/">VfB Stuttgart</a></td><td>UCL</td><td>3–1–4</td><td class="cislo"><strong>13</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2024-25/1fc-heidenheim/">1.FC Heidenheim</a></td><td>UECL</td><td>6–1–3 <span class="drobne">(incl. qual. 2–0–0)</span></td><td class="cislo"><strong>12.125</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2024-25/rb-leipzig/">RB Leipzig</a></td><td>UCL</td><td>1–0–7</td><td class="cislo"><strong>8</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2024-25/1899-hoffenheim/">1899 Hoffenheim</a></td><td>UEL</td><td>2–3–3</td><td class="cislo"><strong>7</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

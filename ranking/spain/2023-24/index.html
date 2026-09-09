@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/spain/" class="back-link">← Full ranking</a>
+    <a href="/ranking/spain/" class="back-link">← Spain</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/spanelsko/2023-24/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,14 +99,14 @@
     <p>Real Madrid contributed the most: 34 of 128.5 points, 26 % of everything Spain earned in 2023/24. Next came Atlético Madrid (24) and FC Barcelona (23). Clubs by their main competition that season: 5 in the Champions League, 1 in the Europa League, 2 in the Conference League. Compared with <a href="/ranking/spain/2022-23/">2022/23</a> (16.571), Spain had a coefficient 0.509 lower and dropped from 4th to 5th place in the season ranking. Since 2004/05 it ranks 18th of 22 seasons; the country's best was <a href="/ranking/spain/2015-16/">2015/16</a> (23.928).</p>
     <h2>Clubs 2023/24</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Real Madrid</td><td>UCL</td><td>9–4–0</td><td class="cislo"><strong>34</strong></td></tr>
-<tr><td>Atlético Madrid</td><td>UCL</td><td>6–2–2</td><td class="cislo"><strong>24</strong></td></tr>
-<tr><td>FC Barcelona</td><td>UCL</td><td>6–1–3</td><td class="cislo"><strong>23</strong></td></tr>
-<tr><td>Real Sociedad</td><td>UCL</td><td>3–3–2</td><td class="cislo"><strong>18</strong></td></tr>
-<tr><td>Villarreal</td><td>UEL</td><td>5–1–2</td><td class="cislo"><strong>16</strong></td></tr>
-<tr><td>Real Betis</td><td>UECL</td><td>3–1–4</td><td class="cislo"><strong>7</strong></td></tr>
-<tr><td>Sevilla</td><td>UCL</td><td>0–2–4</td><td class="cislo"><strong>6</strong></td></tr>
-<tr><td>Osasuna</td><td>UECL</td><td>0–1–1 <span class="drobne">(incl. qual. 0–1–1)</span></td><td class="cislo"><strong>0.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/spain/2023-24/real-madrid/">Real Madrid</a></td><td>UCL</td><td>9–4–0</td><td class="cislo"><strong>34</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/spain/2023-24/atletico-madrid/">Atlético Madrid</a></td><td>UCL</td><td>6–2–2</td><td class="cislo"><strong>24</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/spain/2023-24/fc-barcelona/">FC Barcelona</a></td><td>UCL</td><td>6–1–3</td><td class="cislo"><strong>23</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/spain/2023-24/real-sociedad/">Real Sociedad</a></td><td>UCL</td><td>3–3–2</td><td class="cislo"><strong>18</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/spain/2023-24/villarreal/">Villarreal</a></td><td>UEL</td><td>5–1–2</td><td class="cislo"><strong>16</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/spain/2023-24/real-betis/">Real Betis</a></td><td>UECL</td><td>3–1–4</td><td class="cislo"><strong>7</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/spain/2023-24/sevilla/">Sevilla</a></td><td>UCL</td><td>0–2–4</td><td class="cislo"><strong>6</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/spain/2023-24/osasuna/">Osasuna</a></td><td>UECL</td><td>0–1–1 <span class="drobne">(incl. qual. 0–1–1)</span></td><td class="cislo"><strong>0.5</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

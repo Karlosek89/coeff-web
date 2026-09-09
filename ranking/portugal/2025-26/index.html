@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/portugal/" class="back-link">← Full ranking</a>
+    <a href="/ranking/portugal/" class="back-link">← Portugal</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/portugalsko/2025-26/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,11 +99,11 @@
     <p>Sporting Braga contributed the most: 32.25 of 102.5 points, 31 % of everything Portugal earned in 2025/26. Next came Sporting CP Lisbon (27.5) and FC Porto (24). Clubs by their main competition that season: 2 in the Champions League, 2 in the Europa League, 1 in the Conference League. Compared with <a href="/ranking/portugal/2024-25/">2024/25</a> (16.25), Portugal had a coefficient 4.25 higher and climbed from 6th to 4th place in the season ranking. It is the country's best season since 2004/05.</p>
     <h2>Clubs 2025/26</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Sporting Braga</td><td>UEL</td><td>13–4–3 <span class="drobne">(incl. qual. 5–1–0)</span></td><td class="cislo"><strong>32.25</strong></td></tr>
-<tr><td>Sporting CP Lisbon</td><td>UCL</td><td>6–2–4</td><td class="cislo"><strong>27.5</strong></td></tr>
-<tr><td>FC Porto</td><td>UEL</td><td>7–3–2</td><td class="cislo"><strong>24</strong></td></tr>
-<tr><td>Benfica</td><td>UCL</td><td>6–1–7 <span class="drobne">(incl. qual. 3–1–0)</span></td><td class="cislo"><strong>15.75</strong></td></tr>
-<tr><td>CD Santa Clara</td><td>UECL</td><td>2–2–2 <span class="drobne">(incl. qual. 2–2–2)</span></td><td class="cislo"><strong>3</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2025-26/sporting-braga/">Sporting Braga</a></td><td>UEL</td><td>13–4–3 <span class="drobne">(incl. qual. 5–1–0)</span></td><td class="cislo"><strong>32.25</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2025-26/sporting-cp-lisbon/">Sporting CP Lisbon</a></td><td>UCL</td><td>6–2–4</td><td class="cislo"><strong>27.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2025-26/fc-porto/">FC Porto</a></td><td>UEL</td><td>7–3–2</td><td class="cislo"><strong>24</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2025-26/benfica/">Benfica</a></td><td>UCL</td><td>6–1–7 <span class="drobne">(incl. qual. 3–1–0)</span></td><td class="cislo"><strong>15.75</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2025-26/cd-santa-clara/">CD Santa Clara</a></td><td>UECL</td><td>2–2–2 <span class="drobne">(incl. qual. 2–2–2)</span></td><td class="cislo"><strong>3</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

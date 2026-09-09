@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/germany/" class="back-link">← Full ranking</a>
+    <a href="/ranking/germany/" class="back-link">← Germany</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/nemecko/2021-22/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,13 +99,13 @@
     <p>Eintracht Frankfurt contributed the most: 28 of 113.5 points, 25 % of everything Germany earned in 2021/22. Next came Bayern München (26) and RB Leipzig (20). Clubs by their main competition that season: 2 in the Champions League, 4 in the Europa League, 1 in the Conference League. Compared with <a href="/ranking/germany/2020-21/">2020/21</a> (15.214), Germany had a coefficient 1 higher and dropped from 4th to 5th place in the season ranking. Since 2004/05 it ranks 9th of 22 seasons; the country's best was <a href="/ranking/germany/2025-26/">2025/26</a> (21.785).</p>
     <h2>Clubs 2021/22</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>Eintracht Frankfurt</td><td>UEL</td><td>7–6–0</td><td class="cislo"><strong>28</strong></td></tr>
-<tr><td>Bayern München</td><td>UCL</td><td>7–2–1</td><td class="cislo"><strong>26</strong></td></tr>
-<tr><td>RB Leipzig</td><td>UEL</td><td>5–3–4</td><td class="cislo"><strong>20</strong></td></tr>
-<tr><td>Bayer Leverkusen</td><td>UEL</td><td>4–1–3</td><td class="cislo"><strong>14</strong></td></tr>
-<tr><td>Borussia Dortmund</td><td>UEL</td><td>3–1–4</td><td class="cislo"><strong>11</strong></td></tr>
-<tr><td>VfL Wolfsburg</td><td>UCL</td><td>1–2–3</td><td class="cislo"><strong>8</strong></td></tr>
-<tr><td>Union Berlin</td><td>UECL</td><td>3–2–3 <span class="drobne">(incl. qual. 1–1–0)</span></td><td class="cislo"><strong>6.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2021-22/eintracht-frankfurt/">Eintracht Frankfurt</a></td><td>UEL</td><td>7–6–0</td><td class="cislo"><strong>28</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2021-22/bayern-munchen/">Bayern München</a></td><td>UCL</td><td>7–2–1</td><td class="cislo"><strong>26</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2021-22/rb-leipzig/">RB Leipzig</a></td><td>UEL</td><td>5–3–4</td><td class="cislo"><strong>20</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2021-22/bayer-leverkusen/">Bayer Leverkusen</a></td><td>UEL</td><td>4–1–3</td><td class="cislo"><strong>14</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2021-22/borussia-dortmund/">Borussia Dortmund</a></td><td>UEL</td><td>3–1–4</td><td class="cislo"><strong>11</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2021-22/vfl-wolfsburg/">VfL Wolfsburg</a></td><td>UCL</td><td>1–2–3</td><td class="cislo"><strong>8</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/germany/2021-22/union-berlin/">Union Berlin</a></td><td>UECL</td><td>3–2–3 <span class="drobne">(incl. qual. 1–1–0)</span></td><td class="cislo"><strong>6.5</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

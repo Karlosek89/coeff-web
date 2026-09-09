@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/ranking/luxembourg/" class="back-link">← Full ranking</a>
+    <a href="/ranking/luxembourg/" class="back-link">← Luxembourg</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/zebricek/lucembursko/2021-22/" class="jazyk">🇨🇿 Česky</a>
   </header>
@@ -92,10 +99,10 @@
     <p>CS Fola Esch contributed the most: 4.5 of 5 points, 90 % of everything Luxembourg earned in 2021/22. Next came Swift Hesperange (0.5) and Racing Union Luxembourg (0). Clubs by their main competition that season: 4 in the Conference League. Compared with <a href="/ranking/luxembourg/2020-21/">2020/21</a> (1), Luxembourg had a coefficient 0.25 higher and climbed from 50th to 48th place in the season ranking. Since 2004/05 it ranks 6th of 22 seasons; the country's best was <a href="/ranking/luxembourg/2019-20/">2019/20</a> (3).</p>
     <h2>Clubs 2021/22</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th>Record W–D–L</th><th class="cislo">Points</th></tr></thead><tbody>
-<tr><td>CS Fola Esch</td><td>UECL</td><td>4–1–3 <span class="drobne">(incl. qual. 4–1–3)</span></td><td class="cislo"><strong>4.5</strong></td></tr>
-<tr><td>Swift Hesperange</td><td>UECL</td><td>0–1–1 <span class="drobne">(incl. qual. 0–1–1)</span></td><td class="cislo"><strong>0.5</strong></td></tr>
-<tr><td>Racing Union Luxembourg</td><td>UECL</td><td>0–0–2 <span class="drobne">(incl. qual. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
-<tr><td>F91 Dudelange</td><td>UECL</td><td>0–0–2 <span class="drobne">(incl. qual. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/luxembourg/2021-22/cs-fola-esch/">CS Fola Esch</a></td><td>UECL</td><td>4–1–3 <span class="drobne">(incl. qual. 4–1–3)</span></td><td class="cislo"><strong>4.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/luxembourg/2021-22/swift-hesperange/">Swift Hesperange</a></td><td>UECL</td><td>0–1–1 <span class="drobne">(incl. qual. 0–1–1)</span></td><td class="cislo"><strong>0.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/luxembourg/2021-22/racing-union-luxembourg/">Racing Union Luxembourg</a></td><td>UECL</td><td>0–0–2 <span class="drobne">(incl. qual. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/luxembourg/2021-22/f91-dudelange/">F91 Dudelange</a></td><td>UECL</td><td>0–0–2 <span class="drobne">(incl. qual. 0–0–2)</span></td><td class="cislo"><strong>0</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>

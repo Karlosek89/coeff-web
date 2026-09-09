@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -80,7 +87,7 @@
 </head>
 <body>
   <header class="pruh">
-    <a href="/zebricek/anglie/" class="back-link">← Celý žebříček</a>
+    <a href="/zebricek/anglie/" class="back-link">← Anglie</a>
     <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
     <a href="/ranking/england/2024-25/" class="jazyk">🇬🇧 English</a>
   </header>
@@ -92,13 +99,13 @@
     <p>Nejvíc bodů přinesl klub Arsenal: 36 z 206,25, tedy 17 % všeho, co Anglie v sezoně 2024/25 uhrála. Za ním Manchester United (32,5) a Tottenham Hotspur (32,25). Kluby podle hlavní soutěže sezony: 4 v Lize mistrů, 2 v Evropské lize, 1 v Konferenční lize. Proti sezoně <a href="/zebricek/anglie/2023-24/">2023/24</a> (17,375) měla Anglie koeficient o 12,089 vyšší a v pořadí sezony se posunula z 3. na 1. místo. Je to nejlepší sezona země od 2004/05.</p>
     <h2>Kluby 2024/25</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th>Bilance V–R–P</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Arsenal</td><td>LM</td><td>9–2–3</td><td class="cislo"><strong>36</strong></td></tr>
-<tr><td>Manchester United</td><td>EL</td><td>9–5–1</td><td class="cislo"><strong>32,5</strong></td></tr>
-<tr><td>Tottenham Hotspur</td><td>EL</td><td>10–3–2</td><td class="cislo"><strong>32,25</strong></td></tr>
-<tr><td>Chelsea</td><td>KL</td><td>13–0–2 <span class="drobne">(z toho kval. 1–0–1)</span></td><td class="cislo"><strong>31</strong></td></tr>
-<tr><td>Aston Villa</td><td>LM</td><td>8–1–3</td><td class="cislo"><strong>30,25</strong></td></tr>
-<tr><td>Liverpool</td><td>LM</td><td>8–0–2</td><td class="cislo"><strong>29,5</strong></td></tr>
-<tr><td>Manchester City</td><td>LM</td><td>3–2–5</td><td class="cislo"><strong>14,75</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2024-25/arsenal/">Arsenal</a></td><td>LM</td><td>9–2–3</td><td class="cislo"><strong>36</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2024-25/manchester-united/">Manchester United</a></td><td>EL</td><td>9–5–1</td><td class="cislo"><strong>32,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2024-25/tottenham-hotspur/">Tottenham Hotspur</a></td><td>EL</td><td>10–3–2</td><td class="cislo"><strong>32,25</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2024-25/chelsea/">Chelsea</a></td><td>KL</td><td>13–0–2 <span class="drobne">(z toho kval. 1–0–1)</span></td><td class="cislo"><strong>31</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2024-25/aston-villa/">Aston Villa</a></td><td>LM</td><td>8–1–3</td><td class="cislo"><strong>30,25</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2024-25/liverpool/">Liverpool</a></td><td>LM</td><td>8–0–2</td><td class="cislo"><strong>29,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/anglie/2024-25/manchester-city/">Manchester City</a></td><td>LM</td><td>3–2–5</td><td class="cislo"><strong>14,75</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

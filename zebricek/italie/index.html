@@ -31,6 +31,13 @@
     .tabulka-obal a { color: var(--text); text-decoration: none; }
     .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .rozpad td, .zapasy td { padding: 6px 10px; }
+    .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
+    .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
+    .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
+    .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
+    .skore { font-weight: 700; white-space: nowrap; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -114,8 +121,8 @@
 
     <h2 id="kluby">Kluby 2026/27</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th class="cislo">Bonus</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Internazionale</td><td>LM</td><td class="cislo">+6</td><td class="cislo">6</td></tr>
-<tr><td>Atalanta</td><td>KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">1,5</td></tr>
+<tr><td><a class="sezona" href="/zebricek/italie/2026-27/internazionale/">Internazionale</a></td><td>LM</td><td class="cislo">+6</td><td class="cislo">6</td></tr>
+<tr><td><a class="sezona" href="/zebricek/italie/2026-27/atalanta/">Atalanta</a></td><td>KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">1,5</td></tr>
 <tr><td>AS Roma</td><td>LM</td><td class="cislo">+6</td><td class="cislo">6</td></tr>
 <tr><td>Napoli</td><td>LM</td><td class="cislo">+6</td><td class="cislo">6</td></tr>
 <tr><td>Como 1907</td><td>LM</td><td class="cislo">+6</td><td class="cislo">6</td></tr>
