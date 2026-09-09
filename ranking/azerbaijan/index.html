@@ -38,15 +38,39 @@
     .naskok { color: #66BB6A; font-weight: 700; }
     .ztrata { color: #E57373; font-weight: 700; }
     tr.moje td { background: #3D5AFE22; }
+    /* Pruh se značkou: hvězdné pozadí titulky, jen nízké. */
+    .pruh { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 20px;
+      background: radial-gradient(1px 1px at 12% 40%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 41% 20%, #fff9 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 66% 70%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 88% 30%, #fff8 50%, transparent 51%),
+        linear-gradient(180deg, #060A20 0%, var(--navy-2) 100%); border-bottom: 1px solid #ffffff14; }
+    .pruh .znacka img { height: 30px; display: block; }
+    .pruh .back-link, .pruh .jazyk { color: var(--text-2); text-decoration: none; font-size: 0.95rem; }
+    .pruh .back-link:hover, .pruh .jazyk:hover { color: var(--text); }
+    /* Široké rozložení tabulky: hlavní sloupec + postranní karta. */
+    .siroka { max-width: 1160px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .siroka .hlavni { min-width: 0; }
+    .karta { background: var(--panel); border: 1px solid #ffffff14; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
+    .karta h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .karta-zeme { margin-top: 10px; line-height: 1.5; }
+    .karta-zeme .velke { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+    @media (min-width: 1000px) {
+      .siroka { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; }
+      .siroka .bok { order: 2; position: sticky; top: 16px; }
+    }
+    /* Tabulka: pruhy, přilepená hlavička, zvýraznění pod kurzorem. */
+    .hlavni .tabulka-obal thead th { position: sticky; top: 0; background: var(--navy); z-index: 1; }
+    .hlavni .tabulka-obal tbody tr:nth-child(even) td { background: #ffffff05; }
+    .hlavni .tabulka-obal tbody tr:hover td { background: #ffffff0f; }
+    .hlavni .tabulka-obal tbody tr.moje td { background: #3D5AFE2e; }
   </style>
 </head>
 <body>
+  <header class="pruh">
+    <a href="/ranking/" class="back-link">← Full ranking</a>
+    <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
+    <a href="/zebricek/azerbajdzan/" class="jazyk">🇨🇿 Česky</a>
+  </header>
   <main class="clanek">
-    <div class="clanek-hlavicka">
-      <a href="/ranking/" class="back-link">← Full ranking</a>
-      <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
-    </div>
-    <p class="jazyk"><a href="/zebricek/azerbajdzan/">🇨🇿 Česky</a></p>
     <h1>🇦🇿 Azerbaijan — UEFA coefficient 2026/27</h1>
     <p class="datum">Updated 9 Sep 2026</p>
     <p class="perex"><strong>25th place</strong> of 55 <span class="sipka-nahoru" title="+1">▲1</span> · coefficient <strong>23.687</strong> · 4 clubs in Europe 2026/27</p>
@@ -61,6 +85,16 @@
 <tr><td>2026/27 <span class="drobne">(running)</span></td><td class="cislo">5.125</td></tr>
 <tr><td><strong>Σ</strong></td><td class="cislo"><strong>23.687</strong></td></tr>
     </tbody></table></div>
+    <h2>What is at stake — cup spots for 2028/29</h2>
+<p>At the current 25th place: <strong>UCL: 1 qual. · UEL: 1 qual. · UECL: 2 qual.</strong></p>
+<ul class="vstupy">
+<li><strong>UCL</strong> — Champion → first qualifying round (champions path)</li>
+<li><strong>UEL</strong> — Cup winner → first qualifying round</li>
+<li><strong>UECL</strong> — Runner-up → second qualifying round</li>
+<li><strong>UECL</strong> — 3rd place → second qualifying round</li>
+</ul>
+<p class="drobne">Per UEFA's base access list; the final window standings decide. One-off shifts of vacated places are not included.</p>
+
     <h2>Clubs 2026/27</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th class="cislo">Bonus</th><th class="cislo">Points</th></tr></thead><tbody>
 <tr><td>Sabah FK</td><td>UCL</td><td class="cislo">+6</td><td class="cislo">12</td></tr>

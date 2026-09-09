@@ -38,15 +38,39 @@
     .naskok { color: #66BB6A; font-weight: 700; }
     .ztrata { color: #E57373; font-weight: 700; }
     tr.moje td { background: #3D5AFE22; }
+    /* Pruh se značkou: hvězdné pozadí titulky, jen nízké. */
+    .pruh { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 20px;
+      background: radial-gradient(1px 1px at 12% 40%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 41% 20%, #fff9 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 66% 70%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 88% 30%, #fff8 50%, transparent 51%),
+        linear-gradient(180deg, #060A20 0%, var(--navy-2) 100%); border-bottom: 1px solid #ffffff14; }
+    .pruh .znacka img { height: 30px; display: block; }
+    .pruh .back-link, .pruh .jazyk { color: var(--text-2); text-decoration: none; font-size: 0.95rem; }
+    .pruh .back-link:hover, .pruh .jazyk:hover { color: var(--text); }
+    /* Široké rozložení tabulky: hlavní sloupec + postranní karta. */
+    .siroka { max-width: 1160px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .siroka .hlavni { min-width: 0; }
+    .karta { background: var(--panel); border: 1px solid #ffffff14; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
+    .karta h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .karta-zeme { margin-top: 10px; line-height: 1.5; }
+    .karta-zeme .velke { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+    @media (min-width: 1000px) {
+      .siroka { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; }
+      .siroka .bok { order: 2; position: sticky; top: 16px; }
+    }
+    /* Tabulka: pruhy, přilepená hlavička, zvýraznění pod kurzorem. */
+    .hlavni .tabulka-obal thead th { position: sticky; top: 0; background: var(--navy); z-index: 1; }
+    .hlavni .tabulka-obal tbody tr:nth-child(even) td { background: #ffffff05; }
+    .hlavni .tabulka-obal tbody tr:hover td { background: #ffffff0f; }
+    .hlavni .tabulka-obal tbody tr.moje td { background: #3D5AFE2e; }
   </style>
 </head>
 <body>
+  <header class="pruh">
+    <a href="/zebricek/" class="back-link">← Celý žebříček</a>
+    <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
+    <a href="/ranking/albania/" class="jazyk">🇬🇧 English</a>
+  </header>
   <main class="clanek">
-    <div class="clanek-hlavicka">
-      <a href="/zebricek/" class="back-link">← Celý žebříček</a>
-      <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
-    </div>
-    <p class="jazyk"><a href="/ranking/albania/">🇬🇧 English</a></p>
     <h1>🇦🇱 Albánie — koeficient UEFA 2026/27</h1>
     <p class="datum">Aktualizováno 9. 9. 2026</p>
     <p class="perex"><strong>42. místo</strong> z 55 <span class="sipka-nahoru" title="+2">▲2</span> · koeficient <strong>9,000</strong> · 4 klubů v pohárech 2026/27</p>
@@ -61,6 +85,16 @@
 <tr><td>2026/27 <span class="drobne">(běží)</span></td><td class="cislo">2,500</td></tr>
 <tr><td><strong>Σ</strong></td><td class="cislo"><strong>9,000</strong></td></tr>
     </tbody></table></div>
+    <h2>O co hraje — místa v pohárech 2028/29</h2>
+<p>Při současném 42. místě: <strong>LM: 1 kval. · KL: 3 kval.</strong></p>
+<ul class="vstupy">
+<li><strong>LM</strong> — Mistr → 1. předkolo (mistrovská větev)</li>
+<li><strong>KL</strong> — Vítěz poháru → 1. předkolo</li>
+<li><strong>KL</strong> — 2. místo → 1. předkolo</li>
+<li><strong>KL</strong> — 3. místo → 1. předkolo</li>
+</ul>
+<p class="drobne">Podle základní přístupové listiny UEFA; o místech rozhodne až konečné pořadí okna. Jednorázové posuny volných míst se nepočítají.</p>
+
     <h2>Kluby 2026/27</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th class="cislo">Bonus</th><th class="cislo">Body</th></tr></thead><tbody>
 <tr><td>Egnatia Rrogozhinë</td><td>LM, EL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">4</td></tr>

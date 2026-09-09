@@ -38,20 +38,54 @@
     .naskok { color: #66BB6A; font-weight: 700; }
     .ztrata { color: #E57373; font-weight: 700; }
     tr.moje td { background: #3D5AFE22; }
+    /* Pruh se značkou: hvězdné pozadí titulky, jen nízké. */
+    .pruh { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 20px;
+      background: radial-gradient(1px 1px at 12% 40%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 41% 20%, #fff9 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 66% 70%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 88% 30%, #fff8 50%, transparent 51%),
+        linear-gradient(180deg, #060A20 0%, var(--navy-2) 100%); border-bottom: 1px solid #ffffff14; }
+    .pruh .znacka img { height: 30px; display: block; }
+    .pruh .back-link, .pruh .jazyk { color: var(--text-2); text-decoration: none; font-size: 0.95rem; }
+    .pruh .back-link:hover, .pruh .jazyk:hover { color: var(--text); }
+    /* Široké rozložení tabulky: hlavní sloupec + postranní karta. */
+    .siroka { max-width: 1160px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .siroka .hlavni { min-width: 0; }
+    .karta { background: var(--panel); border: 1px solid #ffffff14; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
+    .karta h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .karta-zeme { margin-top: 10px; line-height: 1.5; }
+    .karta-zeme .velke { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+    @media (min-width: 1000px) {
+      .siroka { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; }
+      .siroka .bok { order: 2; position: sticky; top: 16px; }
+    }
+    /* Tabulka: pruhy, přilepená hlavička, zvýraznění pod kurzorem. */
+    .hlavni .tabulka-obal thead th { position: sticky; top: 0; background: var(--navy); z-index: 1; }
+    .hlavni .tabulka-obal tbody tr:nth-child(even) td { background: #ffffff05; }
+    .hlavni .tabulka-obal tbody tr:hover td { background: #ffffff0f; }
+    .hlavni .tabulka-obal tbody tr.moje td { background: #3D5AFE2e; }
   </style>
 </head>
 <body>
-  <main class="clanek">
-    <div class="clanek-hlavicka">
-      <a href="/" class="back-link">← coeff.app</a>
-      <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
-    </div>
-    <p class="jazyk"><a href="/ranking/">🇬🇧 English</a></p>
+  <header class="pruh">
+    <a href="/" class="back-link">← coeff.app</a>
+    <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
+    <a href="/ranking/" class="jazyk">🇬🇧 English</a>
+  </header>
+  <div class="siroka">
+    <aside class="bok">
+      <div class="karta">
+        <h3>Moje země</h3>
+        <p class="moje-zeme"><label for="moje">Moje země: <select id="moje"><option value="">— vyber —</option><option value="ALB">🇦🇱 Albánie</option><option value="AND">🇦🇩 Andorra</option><option value="ENG">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Anglie</option><option value="ARM">🇦🇲 Arménie</option><option value="BEL">🇧🇪 Belgie</option><option value="BIH">🇧🇦 Bosna a Hercegovina</option><option value="BUL">🇧🇬 Bulharsko</option><option value="BLR">🇧🇾 Bělorusko</option><option value="CRO">🇭🇷 Chorvatsko</option><option value="DEN">🇩🇰 Dánsko</option><option value="EST">🇪🇪 Estonsko</option><option value="FRO">🇫🇴 Faerské ostrovy</option><option value="FIN">🇫🇮 Finsko</option><option value="FRA">🇫🇷 Francie</option><option value="GIB">🇬🇮 Gibraltar</option><option value="GEO">🇬🇪 Gruzie</option><option value="IRL">🇮🇪 Irsko</option><option value="ISL">🇮🇸 Island</option><option value="ITA">🇮🇹 Itálie</option><option value="ISR">🇮🇱 Izrael</option><option value="KAZ">🇰🇿 Kazachstán</option><option value="KOS">🇽🇰 Kosovo</option><option value="CYP">🇨🇾 Kypr</option><option value="LIE">🇱🇮 Lichtenštejnsko</option><option value="LTU">🇱🇹 Litva</option><option value="LVA">🇱🇻 Lotyšsko</option><option value="LUX">🇱🇺 Lucembursko</option><option value="MLT">🇲🇹 Malta</option><option value="HUN">🇭🇺 Maďarsko</option><option value="MDA">🇲🇩 Moldavsko</option><option value="NED">🇳🇱 Nizozemsko</option><option value="NOR">🇳🇴 Norsko</option><option value="GER">🇩🇪 Německo</option><option value="POL">🇵🇱 Polsko</option><option value="POR">🇵🇹 Portugalsko</option><option value="AUT">🇦🇹 Rakousko</option><option value="ROU">🇷🇴 Rumunsko</option><option value="RUS">🇷🇺 Rusko</option><option value="SMR">🇸🇲 San Marino</option><option value="NIR">🇬🇧 Severní Irsko</option><option value="MKD">🇲🇰 Severní Makedonie</option><option value="SCO">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Skotsko</option><option value="SVK">🇸🇰 Slovensko</option><option value="SVN">🇸🇮 Slovinsko</option><option value="SRB">🇷🇸 Srbsko</option><option value="TUR">🇹🇷 Turecko</option><option value="UKR">🇺🇦 Ukrajina</option><option value="WAL">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</option><option value="AZE">🇦🇿 Ázerbájdžán</option><option value="MNE">🇲🇪 Černá Hora</option><option value="CZE">🇨🇿 Česko</option><option value="GRE">🇬🇷 Řecko</option><option value="ESP">🇪🇸 Španělsko</option><option value="SWE">🇸🇪 Švédsko</option><option value="SUI">🇨🇭 Švýcarsko</option></select></label></p>
+        <div id="karta-zeme" class="karta-zeme"></div>
+      </div>
+      <div class="karta drobne">
+        Žlutě u jména: body do koeficientu za poslední hrací týden. Šipka: posun způsobený letošními výsledky. Rozdíl: kolik bodů musí kluby mé země uhrát, aby dorovnaly danou zemi (kladné = náskok).
+      </div>
+    </aside>
+    <main class="hlavni">
     <h1>Žebříček zemí UEFA 2026/27</h1>
     <p class="datum">Aktualizováno 9. 9. 2026 · okno 2022/23–2026/27 · rozhoduje o pohárech 2028/29</p>
     <p class="perex">Aktuální pořadí zemí podle koeficientu UEFA (okno 2022/23–2026/27): čtyři uzavřené sezony plus běžící, přírůstek za poslední hrací týden a posun. Rozhoduje o místech v pohárech 2028/29.</p>
     <p class="legenda"><span class="zluta">■</span> Žlutě: body do koeficientu za hrací týden 7. 9. 2026–13. 9. 2026. Šipka: posun způsobený letošními výsledky.</p>
-    <p class="moje-zeme"><label for="moje">Moje země: <select id="moje"><option value="">— vyber —</option><option value="ALB">🇦🇱 Albánie</option><option value="AND">🇦🇩 Andorra</option><option value="ENG">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Anglie</option><option value="ARM">🇦🇲 Arménie</option><option value="BEL">🇧🇪 Belgie</option><option value="BIH">🇧🇦 Bosna a Hercegovina</option><option value="BUL">🇧🇬 Bulharsko</option><option value="BLR">🇧🇾 Bělorusko</option><option value="CRO">🇭🇷 Chorvatsko</option><option value="DEN">🇩🇰 Dánsko</option><option value="EST">🇪🇪 Estonsko</option><option value="FRO">🇫🇴 Faerské ostrovy</option><option value="FIN">🇫🇮 Finsko</option><option value="FRA">🇫🇷 Francie</option><option value="GIB">🇬🇮 Gibraltar</option><option value="GEO">🇬🇪 Gruzie</option><option value="IRL">🇮🇪 Irsko</option><option value="ISL">🇮🇸 Island</option><option value="ITA">🇮🇹 Itálie</option><option value="ISR">🇮🇱 Izrael</option><option value="KAZ">🇰🇿 Kazachstán</option><option value="KOS">🇽🇰 Kosovo</option><option value="CYP">🇨🇾 Kypr</option><option value="LIE">🇱🇮 Lichtenštejnsko</option><option value="LTU">🇱🇹 Litva</option><option value="LVA">🇱🇻 Lotyšsko</option><option value="LUX">🇱🇺 Lucembursko</option><option value="MLT">🇲🇹 Malta</option><option value="HUN">🇭🇺 Maďarsko</option><option value="MDA">🇲🇩 Moldavsko</option><option value="NED">🇳🇱 Nizozemsko</option><option value="NOR">🇳🇴 Norsko</option><option value="GER">🇩🇪 Německo</option><option value="POL">🇵🇱 Polsko</option><option value="POR">🇵🇹 Portugalsko</option><option value="AUT">🇦🇹 Rakousko</option><option value="ROU">🇷🇴 Rumunsko</option><option value="RUS">🇷🇺 Rusko</option><option value="SMR">🇸🇲 San Marino</option><option value="NIR">🇬🇧 Severní Irsko</option><option value="MKD">🇲🇰 Severní Makedonie</option><option value="SCO">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Skotsko</option><option value="SVK">🇸🇰 Slovensko</option><option value="SVN">🇸🇮 Slovinsko</option><option value="SRB">🇷🇸 Srbsko</option><option value="TUR">🇹🇷 Turecko</option><option value="UKR">🇺🇦 Ukrajina</option><option value="WAL">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</option><option value="AZE">🇦🇿 Ázerbájdžán</option><option value="MNE">🇲🇪 Černá Hora</option><option value="CZE">🇨🇿 Česko</option><option value="GRE">🇬🇷 Řecko</option><option value="ESP">🇪🇸 Španělsko</option><option value="SWE">🇸🇪 Švédsko</option><option value="SUI">🇨🇭 Švýcarsko</option></select></label> <span class="drobne">ukáže náskok/ztrátu v bodech u každé země</span></p>
     <div class="tabulka-obal">
       <table>
         <thead><tr><th>#</th><th>Země</th><th class="cislo">Σ</th><th class="cislo">22/23</th><th class="cislo">23/24</th><th class="cislo">24/25</th><th class="cislo">25/26</th><th class="cislo">26/27</th><th class="cislo" title="klubů v pohárech letos">Kl.</th><th class="cislo rozdil-h" title="kolik bodů musí kluby mé země uhrát, aby ji dorovnaly (+ = má náskok)">Rozdíl</th></tr></thead>
@@ -136,6 +170,28 @@
           td.className = 'cislo rozdil ' + (z > 0 ? 'naskok' : z < 0 ? 'ztrata' : '');
         });
         document.body.classList.toggle('ma-zemi', !!muj);
+        // Karta v postranním sloupci: pozice, koeficient, sousedi.
+        var karta = document.getElementById('karta-zeme');
+        if (!karta) return;
+        if (!muj) { karta.innerHTML = ''; return; }
+        var i = radky.indexOf(muj);
+        var jmeno = muj.querySelector('a').textContent;
+        var nad = i > 0 ? radky[i - 1] : null;
+        var pod = i < radky.length - 1 ? radky[i + 1] : null;
+        function gap(r) {
+          var z = Math.round((parseFloat(muj.dataset.soucet) - parseFloat(r.dataset.soucet)) * Math.max(1, parseInt(muj.dataset.kluby, 10)) * 2) / 2;
+          return pulbody(Math.abs(z));
+        }
+        var h = '<div class="velke">' + (cs ? (i + 1) + '. místo' : ordinal(i + 1) + ' place') + '</div>'
+          + '<div>' + jmeno + ' · ' + (cs ? muj.dataset.soucet.replace('.', ',') : muj.dataset.soucet) + '</div>';
+        if (nad) h += '<div class="drobne">' + (cs ? 'Na ' + i + '. místo (' + nad.querySelector('a').textContent + ') chybí ' : 'To ' + ordinal(i) + ' (' + nad.querySelector('a').textContent + '): ') + '<span class="ztrata">' + gap(nad) + (cs ? ' b' : ' pts') + '</span></div>';
+        if (pod) h += '<div class="drobne">' + (cs ? 'Náskok na ' + (i + 2) + '. místo (' + pod.querySelector('a').textContent + '): ' : 'Lead over ' + ordinal(i + 2) + ' (' + pod.querySelector('a').textContent + '): ') + '<span class="naskok">' + gap(pod) + (cs ? ' b' : ' pts') + '</span></div>';
+        h += '<div class="drobne"><a href="' + muj.querySelector('a').getAttribute('href') + '">' + (cs ? 'Stránka země →' : 'Country page →') + '</a></div>';
+        karta.innerHTML = h;
+      }
+      function ordinal(n) {
+        var m = n % 100; if (m >= 11 && m <= 13) return n + 'th';
+        return n + ({1: 'st', 2: 'nd', 3: 'rd'}[n % 10] || 'th');
       }
       var zUrl = new URLSearchParams(location.search).get('zeme');
       var ulozena = null;
@@ -158,7 +214,8 @@
         <a class="cta-tester cta-vedlejsi" href="/">Zjistit víc o aplikaci</a>
       </div>
     </div>
-  </main>
+    </main>
+  </div>
   <footer>
     <div class="radek"><a href="/">coeff.app</a> ·
       <a href="/zebricek/">Žebříček zemí</a> ·
