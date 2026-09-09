@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://coeff.app/sitemap.xml
+Sitemap: https://coeff.app/sitemap-sezony.xml
