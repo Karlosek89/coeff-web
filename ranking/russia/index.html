@@ -29,6 +29,9 @@
     .legenda { color: var(--text-2); font-size: 0.92rem; }
     .drobne { color: var(--text-2); font-size: 0.85em; font-weight: 400; }
     .tabulka-obal a { color: var(--text); text-decoration: none; }
+    .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
+    .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
     .moje-zeme { margin: 8px 0 4px; }
@@ -89,11 +92,11 @@
     <p><a href="/ranking/?zeme=RUS">Points gap to every other country →</a></p>
     <h2>Five-year window 2022/23–2026/27</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Season</th><th class="cislo">Coefficient</th></tr></thead><tbody>
-<tr><td>2022/23</td><td class="cislo">4.333</td></tr>
-<tr><td>2023/24</td><td class="cislo">4.333</td></tr>
-<tr><td>2024/25</td><td class="cislo">4.333</td></tr>
-<tr><td>2025/26</td><td class="cislo">4.333</td></tr>
-<tr><td>2026/27 <span class="drobne">(running)</span></td><td class="cislo">0.000</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2022-23/">2022/23</a></td><td class="cislo"><a class="sezona" href="/ranking/russia/2022-23/">4.333</a></td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2023-24/">2023/24</a></td><td class="cislo"><a class="sezona" href="/ranking/russia/2023-24/">4.333</a></td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2024-25/">2024/25</a></td><td class="cislo"><a class="sezona" href="/ranking/russia/2024-25/">4.333</a></td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2025-26/">2025/26</a></td><td class="cislo"><a class="sezona" href="/ranking/russia/2025-26/">4.333</a></td></tr>
+<tr><td><a class="sezona" href="#kluby">2026/27</a> <span class="drobne">(running)</span></td><td class="cislo"><a class="sezona" href="#kluby">0.000</a></td></tr>
 <tr><td><strong>Σ</strong></td><td class="cislo"><strong>17.332</strong></td></tr>
     </tbody></table></div>
     <h2>What is at stake — cup spots for 2028/29</h2>
@@ -107,33 +110,33 @@
 <p class="note">Russian clubs have been barred from European competition since 2022, so the places their rank would give them stay on paper only.</p>
 <p class="drobne">Per UEFA's base access list; the final window standings decide. One-off shifts of vacated places are not included.</p>
 
-    <h2>Clubs 2026/27</h2>
+    <h2 id="kluby">Clubs 2026/27</h2>
     <p class="note">No match played yet.</p>
     <h2>History since 2004/05</h2>
     <div class="historie-graf"><svg viewBox="0 0 680 240" role="img" aria-label="Coefficient by season"><line class="osa" x1="40.0" x2="668.0" y1="206.0" y2="206.0"/><text x="34.0" y="210.0" text-anchor="end">0</text><line class="osa" x1="40.0" x2="668.0" y1="141.3" y2="141.3"/><text x="34.0" y="145.3" text-anchor="end">5</text><line class="osa" x1="40.0" x2="668.0" y1="76.7" y2="76.7"/><text x="34.0" y="80.7" text-anchor="end">10</text><line class="osa" x1="40.0" x2="668.0" y1="12.0" y2="12.0"/><text x="34.0" y="16.0" text-anchor="end">15</text><polyline class="cara" points="40.0,76.7 68.5,76.7 97.1,120.3 125.6,60.5 154.2,79.9 182.7,126.3 211.3,64.8 239.8,79.9 268.4,79.9 296.9,71.3 325.5,81.0 354.0,57.3 382.5,87.0 411.1,43.0 439.6,107.9 468.2,145.7 496.7,150.0 525.3,137.5 553.8,150.0 582.4,150.0 610.9,150.0 639.5,150.0"/><line x1="639.5" y1="150.0" x2="668.0" y2="206.0" stroke="#FFC947" stroke-width="2" stroke-dasharray="4 4"/><circle class="bod" cx="40.0" cy="76.7" r="3"><title>2004/05: 10.000</title></circle><text x="40.0" y="224.0" text-anchor="middle">04/05</text><circle class="bod" cx="68.5" cy="76.7" r="3"><title>2005/06: 10.000</title></circle><circle class="bod" cx="97.1" cy="120.3" r="3"><title>2006/07: 6.625</title></circle><text x="97.1" y="224.0" text-anchor="middle">06/07</text><circle class="bod" cx="125.6" cy="60.5" r="3"><title>2007/08: 11.250</title></circle><circle class="bod" cx="154.2" cy="79.9" r="3"><title>2008/09: 9.750</title></circle><text x="154.2" y="224.0" text-anchor="middle">08/09</text><circle class="bod" cx="182.7" cy="126.3" r="3"><title>2009/10: 6.166</title></circle><circle class="bod" cx="211.3" cy="64.8" r="3"><title>2010/11: 10.916</title></circle><text x="211.3" y="224.0" text-anchor="middle">10/11</text><circle class="bod" cx="239.8" cy="79.9" r="3"><title>2011/12: 9.750</title></circle><circle class="bod" cx="268.4" cy="79.9" r="3"><title>2012/13: 9.750</title></circle><text x="268.4" y="224.0" text-anchor="middle">12/13</text><circle class="bod" cx="296.9" cy="71.3" r="3"><title>2013/14: 10.416</title></circle><circle class="bod" cx="325.5" cy="81.0" r="3"><title>2014/15: 9.666</title></circle><text x="325.5" y="224.0" text-anchor="middle">14/15</text><circle class="bod" cx="354.0" cy="57.3" r="3"><title>2015/16: 11.500</title></circle><circle class="bod" cx="382.5" cy="87.0" r="3"><title>2016/17: 9.200</title></circle><text x="382.5" y="224.0" text-anchor="middle">16/17</text><circle class="bod" cx="411.1" cy="43.0" r="3"><title>2017/18: 12.600</title></circle><circle class="bod" cx="439.6" cy="107.9" r="3"><title>2018/19: 7.583</title></circle><text x="439.6" y="224.0" text-anchor="middle">18/19</text><circle class="bod" cx="468.2" cy="145.7" r="3"><title>2019/20: 4.666</title></circle><circle class="bod" cx="496.7" cy="150.0" r="3"><title>2020/21: 4.333</title></circle><text x="496.7" y="224.0" text-anchor="middle">20/21</text><circle class="bod" cx="525.3" cy="137.5" r="3"><title>2021/22: 5.300</title></circle><circle class="bod" cx="553.8" cy="150.0" r="3"><title>2022/23: 4.333</title></circle><text x="553.8" y="224.0" text-anchor="middle">22/23</text><circle class="bod" cx="582.4" cy="150.0" r="3"><title>2023/24: 4.333</title></circle><circle class="bod" cx="610.9" cy="150.0" r="3"><title>2024/25: 4.333</title></circle><text x="610.9" y="224.0" text-anchor="middle">24/25</text><circle class="bod" cx="639.5" cy="150.0" r="3"><title>2025/26: 4.333</title></circle><circle class="bezi" cx="668.0" cy="206.0" r="4"><title>2026/27: 0.000 (running)</title></circle><text x="668.0" y="224.0" text-anchor="middle">26/27</text></svg></div>
     <div class="tabulka-obal"><table><thead><tr><th>Season</th><th class="cislo">Rank</th><th class="cislo">Clubs</th><th class="cislo">Points</th><th class="cislo">Coefficient</th></tr></thead><tbody>
-<tr><td>2004/05</td><td class="cislo">7th</td><td class="cislo">4</td><td class="cislo">40</td><td class="cislo">10.000</td></tr>
-<tr><td>2005/06</td><td class="cislo">7th</td><td class="cislo">4</td><td class="cislo">40</td><td class="cislo">10.000</td></tr>
-<tr><td>2006/07</td><td class="cislo">10th</td><td class="cislo">4</td><td class="cislo">26.5</td><td class="cislo">6.625</td></tr>
-<tr><td>2007/08</td><td class="cislo">4th</td><td class="cislo">4</td><td class="cislo">45</td><td class="cislo">11.250</td></tr>
-<tr><td>2008/09</td><td class="cislo">7th</td><td class="cislo">4</td><td class="cislo">39</td><td class="cislo">9.750</td></tr>
-<tr><td>2009/10</td><td class="cislo">13th</td><td class="cislo">6</td><td class="cislo">37</td><td class="cislo">6.166</td></tr>
-<tr><td>2010/11</td><td class="cislo">7th</td><td class="cislo">6</td><td class="cislo">65.5</td><td class="cislo">10.916</td></tr>
-<tr><td>2011/12</td><td class="cislo">9th</td><td class="cislo">6</td><td class="cislo">58.5</td><td class="cislo">9.750</td></tr>
-<tr><td>2012/13</td><td class="cislo">8th</td><td class="cislo">6</td><td class="cislo">58.5</td><td class="cislo">9.750</td></tr>
-<tr><td>2013/14</td><td class="cislo">5th</td><td class="cislo">6</td><td class="cislo">62.5</td><td class="cislo">10.416</td></tr>
-<tr><td>2014/15</td><td class="cislo">7th</td><td class="cislo">6</td><td class="cislo">58</td><td class="cislo">9.666</td></tr>
-<tr><td>2015/16</td><td class="cislo">5th</td><td class="cislo">5</td><td class="cislo">57.5</td><td class="cislo">11.500</td></tr>
-<tr><td>2016/17</td><td class="cislo">8th</td><td class="cislo">5</td><td class="cislo">46</td><td class="cislo">9.200</td></tr>
-<tr><td>2017/18</td><td class="cislo">4th</td><td class="cislo">5</td><td class="cislo">63</td><td class="cislo">12.600</td></tr>
-<tr><td>2018/19</td><td class="cislo">9th</td><td class="cislo">6</td><td class="cislo">45.5</td><td class="cislo">7.583</td></tr>
-<tr><td>2019/20</td><td class="cislo">20th</td><td class="cislo">6</td><td class="cislo">28</td><td class="cislo">4.666</td></tr>
-<tr><td>2020/21</td><td class="cislo">19th</td><td class="cislo">6</td><td class="cislo">26</td><td class="cislo">4.333</td></tr>
-<tr><td>2021/22</td><td class="cislo">20th</td><td class="cislo">5</td><td class="cislo">26.5</td><td class="cislo">5.300</td></tr>
-<tr><td>2022/23</td><td class="cislo">26th</td><td class="cislo">0</td><td class="cislo">0</td><td class="cislo">4.333</td></tr>
-<tr><td>2023/24</td><td class="cislo">24th</td><td class="cislo">0</td><td class="cislo">0</td><td class="cislo">4.333</td></tr>
-<tr><td>2024/25</td><td class="cislo">29th</td><td class="cislo">0</td><td class="cislo">0</td><td class="cislo">4.333</td></tr>
-<tr><td>2025/26</td><td class="cislo">27th</td><td class="cislo">0</td><td class="cislo">0</td><td class="cislo">4.333</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2004-05/">2004/05</a></td><td class="cislo">7th</td><td class="cislo">4</td><td class="cislo"><a class="sezona" href="/ranking/russia/2004-05/">40</a></td><td class="cislo">10.000</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2005-06/">2005/06</a></td><td class="cislo">7th</td><td class="cislo">4</td><td class="cislo"><a class="sezona" href="/ranking/russia/2005-06/">40</a></td><td class="cislo">10.000</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2006-07/">2006/07</a></td><td class="cislo">10th</td><td class="cislo">4</td><td class="cislo"><a class="sezona" href="/ranking/russia/2006-07/">26.5</a></td><td class="cislo">6.625</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2007-08/">2007/08</a></td><td class="cislo">4th</td><td class="cislo">4</td><td class="cislo"><a class="sezona" href="/ranking/russia/2007-08/">45</a></td><td class="cislo">11.250</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2008-09/">2008/09</a></td><td class="cislo">7th</td><td class="cislo">4</td><td class="cislo"><a class="sezona" href="/ranking/russia/2008-09/">39</a></td><td class="cislo">9.750</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2009-10/">2009/10</a></td><td class="cislo">13th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/russia/2009-10/">37</a></td><td class="cislo">6.166</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2010-11/">2010/11</a></td><td class="cislo">7th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/russia/2010-11/">65.5</a></td><td class="cislo">10.916</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2011-12/">2011/12</a></td><td class="cislo">9th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/russia/2011-12/">58.5</a></td><td class="cislo">9.750</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2012-13/">2012/13</a></td><td class="cislo">8th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/russia/2012-13/">58.5</a></td><td class="cislo">9.750</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2013-14/">2013/14</a></td><td class="cislo">5th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/russia/2013-14/">62.5</a></td><td class="cislo">10.416</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2014-15/">2014/15</a></td><td class="cislo">7th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/russia/2014-15/">58</a></td><td class="cislo">9.666</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2015-16/">2015/16</a></td><td class="cislo">5th</td><td class="cislo">5</td><td class="cislo"><a class="sezona" href="/ranking/russia/2015-16/">57.5</a></td><td class="cislo">11.500</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2016-17/">2016/17</a></td><td class="cislo">8th</td><td class="cislo">5</td><td class="cislo"><a class="sezona" href="/ranking/russia/2016-17/">46</a></td><td class="cislo">9.200</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2017-18/">2017/18</a></td><td class="cislo">4th</td><td class="cislo">5</td><td class="cislo"><a class="sezona" href="/ranking/russia/2017-18/">63</a></td><td class="cislo">12.600</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2018-19/">2018/19</a></td><td class="cislo">9th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/russia/2018-19/">45.5</a></td><td class="cislo">7.583</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2019-20/">2019/20</a></td><td class="cislo">20th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/russia/2019-20/">28</a></td><td class="cislo">4.666</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2020-21/">2020/21</a></td><td class="cislo">19th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/russia/2020-21/">26</a></td><td class="cislo">4.333</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2021-22/">2021/22</a></td><td class="cislo">20th</td><td class="cislo">5</td><td class="cislo"><a class="sezona" href="/ranking/russia/2021-22/">26.5</a></td><td class="cislo">5.300</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2022-23/">2022/23</a></td><td class="cislo">26th</td><td class="cislo">0</td><td class="cislo"><a class="sezona" href="/ranking/russia/2022-23/">0</a></td><td class="cislo">4.333</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2023-24/">2023/24</a></td><td class="cislo">24th</td><td class="cislo">0</td><td class="cislo"><a class="sezona" href="/ranking/russia/2023-24/">0</a></td><td class="cislo">4.333</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2024-25/">2024/25</a></td><td class="cislo">29th</td><td class="cislo">0</td><td class="cislo"><a class="sezona" href="/ranking/russia/2024-25/">0</a></td><td class="cislo">4.333</td></tr>
+<tr><td><a class="sezona" href="/ranking/russia/2025-26/">2025/26</a></td><td class="cislo">27th</td><td class="cislo">0</td><td class="cislo"><a class="sezona" href="/ranking/russia/2025-26/">0</a></td><td class="cislo">4.333</td></tr>
     </tbody></table></div>
     <p class="note">Rank in that single season (not in the five-year window). Values as published by UEFA.</p>
 

@@ -29,6 +29,9 @@
     .legenda { color: var(--text-2); font-size: 0.92rem; }
     .drobne { color: var(--text-2); font-size: 0.85em; font-weight: 400; }
     .tabulka-obal a { color: var(--text); text-decoration: none; }
+    .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
+    .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
     .moje-zeme { margin: 8px 0 4px; }
@@ -89,11 +92,11 @@
     <p><a href="/zebricek/?zeme=GIB">Náskok a ztráta na ostatní země v bodech →</a></p>
     <h2>Pětileté okno 2022/23–2026/27</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Sezona</th><th class="cislo">Koeficient</th></tr></thead><tbody>
-<tr><td>2022/23</td><td class="cislo">0,875</td></tr>
-<tr><td>2023/24</td><td class="cislo">0,166</td></tr>
-<tr><td>2024/25</td><td class="cislo">1,500</td></tr>
-<tr><td>2025/26</td><td class="cislo">3,333</td></tr>
-<tr><td>2026/27 <span class="drobne">(běží)</span></td><td class="cislo">1,333</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2022-23/">2022/23</a></td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2022-23/">0,875</a></td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2023-24/">2023/24</a></td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2023-24/">0,166</a></td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2024-25/">2024/25</a></td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2024-25/">1,500</a></td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2025-26/">2025/26</a></td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2025-26/">3,333</a></td></tr>
+<tr><td><a class="sezona" href="#kluby">2026/27</a> <span class="drobne">(běží)</span></td><td class="cislo"><a class="sezona" href="#kluby">1,333</a></td></tr>
 <tr><td><strong>Σ</strong></td><td class="cislo"><strong>7,207</strong></td></tr>
     </tbody></table></div>
     <h2>O co hraje — místa v pohárech 2028/29</h2>
@@ -106,7 +109,7 @@
 </ul>
 <p class="drobne">Podle základní přístupové listiny UEFA; o místech rozhodne až konečné pořadí okna. Jednorázové posuny volných míst se nepočítají.</p>
 
-    <h2>Kluby 2026/27</h2>
+    <h2 id="kluby">Kluby 2026/27</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th class="cislo">Bonus</th><th class="cislo">Body</th></tr></thead><tbody>
 <tr><td>Lincoln Red Imps</td><td>LM, EL, KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">3,5</td></tr>
 <tr><td>St Joseph's FC</td><td>KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">0,5</td></tr>
@@ -115,18 +118,18 @@
     <h2>Historie od 2014/15</h2>
     <div class="historie-graf"><svg viewBox="0 0 680 240" role="img" aria-label="Koeficient po sezonách"><line class="osa" x1="40.0" x2="668.0" y1="206.0" y2="206.0"/><text x="34.0" y="210.0" text-anchor="end">0</text><line class="osa" x1="40.0" x2="668.0" y1="109.0" y2="109.0"/><text x="34.0" y="113.0" text-anchor="end">2,5</text><line class="osa" x1="40.0" x2="668.0" y1="12.0" y2="12.0"/><text x="34.0" y="16.0" text-anchor="end">5</text><polyline class="cara" points="40.0,196.3 92.3,176.9 144.7,147.8 197.0,186.6 249.3,167.2 301.7,167.2 354.0,141.4 406.3,157.5 458.7,172.1 511.0,199.6 563.3,147.8 615.7,76.7"/><line x1="615.7" y1="76.7" x2="668.0" y2="154.3" stroke="#FFC947" stroke-width="2" stroke-dasharray="4 4"/><circle class="bod" cx="40.0" cy="196.3" r="3"><title>2014/15: 0,250</title></circle><text x="40.0" y="224.0" text-anchor="middle">14/15</text><circle class="bod" cx="92.3" cy="176.9" r="3"><title>2015/16: 0,750</title></circle><circle class="bod" cx="144.7" cy="147.8" r="3"><title>2016/17: 1,500</title></circle><text x="144.7" y="224.0" text-anchor="middle">16/17</text><circle class="bod" cx="197.0" cy="186.6" r="3"><title>2017/18: 0,500</title></circle><circle class="bod" cx="249.3" cy="167.2" r="3"><title>2018/19: 1,000</title></circle><text x="249.3" y="224.0" text-anchor="middle">18/19</text><circle class="bod" cx="301.7" cy="167.2" r="3"><title>2019/20: 1,000</title></circle><circle class="bod" cx="354.0" cy="141.4" r="3"><title>2020/21: 1,666</title></circle><text x="354.0" y="224.0" text-anchor="middle">20/21</text><circle class="bod" cx="406.3" cy="157.5" r="3"><title>2021/22: 1,250</title></circle><circle class="bod" cx="458.7" cy="172.1" r="3"><title>2022/23: 0,875</title></circle><text x="458.7" y="224.0" text-anchor="middle">22/23</text><circle class="bod" cx="511.0" cy="199.6" r="3"><title>2023/24: 0,166</title></circle><circle class="bod" cx="563.3" cy="147.8" r="3"><title>2024/25: 1,500</title></circle><text x="563.3" y="224.0" text-anchor="middle">24/25</text><circle class="bod" cx="615.7" cy="76.7" r="3"><title>2025/26: 3,333</title></circle><circle class="bezi" cx="668.0" cy="154.3" r="4"><title>2026/27: 1,333 (běží)</title></circle><text x="668.0" y="224.0" text-anchor="middle">26/27</text></svg></div>
     <div class="tabulka-obal"><table><thead><tr><th>Sezona</th><th class="cislo">Pořadí</th><th class="cislo">Klubů</th><th class="cislo">Body</th><th class="cislo">Koeficient</th></tr></thead><tbody>
-<tr><td>2014/15</td><td class="cislo">50.</td><td class="cislo">2</td><td class="cislo">0,5</td><td class="cislo">0,250</td></tr>
-<tr><td>2015/16</td><td class="cislo">46.</td><td class="cislo">2</td><td class="cislo">1,5</td><td class="cislo">0,750</td></tr>
-<tr><td>2016/17</td><td class="cislo">35.</td><td class="cislo">2</td><td class="cislo">3</td><td class="cislo">1,500</td></tr>
-<tr><td>2017/18</td><td class="cislo">50.</td><td class="cislo">3</td><td class="cislo">1,5</td><td class="cislo">0,500</td></tr>
-<tr><td>2018/19</td><td class="cislo">45.</td><td class="cislo">3</td><td class="cislo">3</td><td class="cislo">1,000</td></tr>
-<tr><td>2019/20</td><td class="cislo">46.</td><td class="cislo">3</td><td class="cislo">3</td><td class="cislo">1,000</td></tr>
-<tr><td>2020/21</td><td class="cislo">38.</td><td class="cislo">3</td><td class="cislo">5</td><td class="cislo">1,666</td></tr>
-<tr><td>2021/22</td><td class="cislo">50.</td><td class="cislo">4</td><td class="cislo">5</td><td class="cislo">1,250</td></tr>
-<tr><td>2022/23</td><td class="cislo">52.</td><td class="cislo">4</td><td class="cislo">3,5</td><td class="cislo">0,875</td></tr>
-<tr><td>2023/24</td><td class="cislo">54.</td><td class="cislo">3</td><td class="cislo">0,5</td><td class="cislo">0,166</td></tr>
-<tr><td>2024/25</td><td class="cislo">44.</td><td class="cislo">3</td><td class="cislo">4,5</td><td class="cislo">1,500</td></tr>
-<tr><td>2025/26</td><td class="cislo">36.</td><td class="cislo">3</td><td class="cislo">10</td><td class="cislo">3,333</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2014-15/">2014/15</a></td><td class="cislo">50.</td><td class="cislo">2</td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2014-15/">0,5</a></td><td class="cislo">0,250</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2015-16/">2015/16</a></td><td class="cislo">46.</td><td class="cislo">2</td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2015-16/">1,5</a></td><td class="cislo">0,750</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2016-17/">2016/17</a></td><td class="cislo">35.</td><td class="cislo">2</td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2016-17/">3</a></td><td class="cislo">1,500</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2017-18/">2017/18</a></td><td class="cislo">50.</td><td class="cislo">3</td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2017-18/">1,5</a></td><td class="cislo">0,500</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2018-19/">2018/19</a></td><td class="cislo">45.</td><td class="cislo">3</td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2018-19/">3</a></td><td class="cislo">1,000</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2019-20/">2019/20</a></td><td class="cislo">46.</td><td class="cislo">3</td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2019-20/">3</a></td><td class="cislo">1,000</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2020-21/">2020/21</a></td><td class="cislo">38.</td><td class="cislo">3</td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2020-21/">5</a></td><td class="cislo">1,666</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2021-22/">2021/22</a></td><td class="cislo">50.</td><td class="cislo">4</td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2021-22/">5</a></td><td class="cislo">1,250</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2022-23/">2022/23</a></td><td class="cislo">52.</td><td class="cislo">4</td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2022-23/">3,5</a></td><td class="cislo">0,875</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2023-24/">2023/24</a></td><td class="cislo">54.</td><td class="cislo">3</td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2023-24/">0,5</a></td><td class="cislo">0,166</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2024-25/">2024/25</a></td><td class="cislo">44.</td><td class="cislo">3</td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2024-25/">4,5</a></td><td class="cislo">1,500</td></tr>
+<tr><td><a class="sezona" href="/zebricek/gibraltar/2025-26/">2025/26</a></td><td class="cislo">36.</td><td class="cislo">3</td><td class="cislo"><a class="sezona" href="/zebricek/gibraltar/2025-26/">10</a></td><td class="cislo">3,333</td></tr>
     </tbody></table></div>
     <p class="note">Pořadí v jednotlivé sezoně (ne v pětiletém okně). Hodnoty publikované UEFA.</p>
 

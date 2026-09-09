@@ -29,6 +29,9 @@
     .legenda { color: var(--text-2); font-size: 0.92rem; }
     .drobne { color: var(--text-2); font-size: 0.85em; font-weight: 400; }
     .tabulka-obal a { color: var(--text); text-decoration: none; }
+    .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
+    .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
     .moje-zeme { margin: 8px 0 4px; }
@@ -89,11 +92,11 @@
     <p><a href="/ranking/?zeme=POR">Points gap to every other country →</a></p>
     <h2>Five-year window 2022/23–2026/27</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Season</th><th class="cislo">Coefficient</th></tr></thead><tbody>
-<tr><td>2022/23</td><td class="cislo">12.500</td></tr>
-<tr><td>2023/24</td><td class="cislo">11.000</td></tr>
-<tr><td>2024/25</td><td class="cislo">16.250</td></tr>
-<tr><td>2025/26</td><td class="cislo">20.500</td></tr>
-<tr><td>2026/27 <span class="drobne">(running)</span></td><td class="cislo">4.300</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2022-23/">2022/23</a></td><td class="cislo"><a class="sezona" href="/ranking/portugal/2022-23/">12.500</a></td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2023-24/">2023/24</a></td><td class="cislo"><a class="sezona" href="/ranking/portugal/2023-24/">11.000</a></td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2024-25/">2024/25</a></td><td class="cislo"><a class="sezona" href="/ranking/portugal/2024-25/">16.250</a></td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2025-26/">2025/26</a></td><td class="cislo"><a class="sezona" href="/ranking/portugal/2025-26/">20.500</a></td></tr>
+<tr><td><a class="sezona" href="#kluby">2026/27</a> <span class="drobne">(running)</span></td><td class="cislo"><a class="sezona" href="#kluby">4.300</a></td></tr>
 <tr><td><strong>Σ</strong></td><td class="cislo"><strong>64.550</strong></td></tr>
     </tbody></table></div>
     <h2>What is at stake — cup spots for 2028/29</h2>
@@ -108,7 +111,7 @@
 </ul>
 <p class="drobne">Per UEFA's base access list; the final window standings decide. One-off shifts of vacated places are not included.</p>
 
-    <h2>Clubs 2026/27</h2>
+    <h2 id="kluby">Clubs 2026/27</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th class="cislo">Bonus</th><th class="cislo">Points</th></tr></thead><tbody>
 <tr><td>FC Porto</td><td>UCL</td><td class="cislo">+6</td><td class="cislo">6</td></tr>
 <tr><td>Sporting Braga</td><td>UECL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">5</td></tr>
@@ -118,28 +121,28 @@
     <h2>History since 2004/05</h2>
     <div class="historie-graf"><svg viewBox="0 0 680 240" role="img" aria-label="Coefficient by season"><line class="osa" x1="40.0" x2="668.0" y1="206.0" y2="206.0"/><text x="34.0" y="210.0" text-anchor="end">0</text><line class="osa" x1="40.0" x2="668.0" y1="141.3" y2="141.3"/><text x="34.0" y="145.3" text-anchor="end">10</text><line class="osa" x1="40.0" x2="668.0" y1="76.7" y2="76.7"/><text x="34.0" y="80.7" text-anchor="end">20</text><line class="osa" x1="40.0" x2="668.0" y1="12.0" y2="12.0"/><text x="34.0" y="16.0" text-anchor="end">30</text><polyline class="cara" points="40.0,153.2 68.5,170.4 97.1,153.7 125.6,154.7 154.2,162.1 182.7,141.3 211.3,84.4 239.8,129.5 268.4,130.0 296.9,141.9 325.5,147.3 354.0,138.1 382.5,153.7 411.1,143.5 439.6,135.5 468.2,139.4 496.7,143.9 525.3,122.5 553.8,125.2 582.4,134.9 610.9,100.9 639.5,73.4"/><line x1="639.5" y1="73.4" x2="668.0" y2="178.2" stroke="#FFC947" stroke-width="2" stroke-dasharray="4 4"/><circle class="bod" cx="40.0" cy="153.2" r="3"><title>2004/05: 8.166</title></circle><text x="40.0" y="224.0" text-anchor="middle">04/05</text><circle class="bod" cx="68.5" cy="170.4" r="3"><title>2005/06: 5.500</title></circle><circle class="bod" cx="97.1" cy="153.7" r="3"><title>2006/07: 8.083</title></circle><text x="97.1" y="224.0" text-anchor="middle">06/07</text><circle class="bod" cx="125.6" cy="154.7" r="3"><title>2007/08: 7.928</title></circle><circle class="bod" cx="154.2" cy="162.1" r="3"><title>2008/09: 6.785</title></circle><text x="154.2" y="224.0" text-anchor="middle">08/09</text><circle class="bod" cx="182.7" cy="141.3" r="3"><title>2009/10: 10.000</title></circle><circle class="bod" cx="211.3" cy="84.4" r="3"><title>2010/11: 18.800</title></circle><text x="211.3" y="224.0" text-anchor="middle">10/11</text><circle class="bod" cx="239.8" cy="129.5" r="3"><title>2011/12: 11.833</title></circle><circle class="bod" cx="268.4" cy="130.0" r="3"><title>2012/13: 11.750</title></circle><text x="268.4" y="224.0" text-anchor="middle">12/13</text><circle class="bod" cx="296.9" cy="141.9" r="3"><title>2013/14: 9.916</title></circle><circle class="bod" cx="325.5" cy="147.3" r="3"><title>2014/15: 9.083</title></circle><text x="325.5" y="224.0" text-anchor="middle">14/15</text><circle class="bod" cx="354.0" cy="138.1" r="3"><title>2015/16: 10.500</title></circle><circle class="bod" cx="382.5" cy="153.7" r="3"><title>2016/17: 8.083</title></circle><text x="382.5" y="224.0" text-anchor="middle">16/17</text><circle class="bod" cx="411.1" cy="143.5" r="3"><title>2017/18: 9.666</title></circle><circle class="bod" cx="439.6" cy="135.5" r="3"><title>2018/19: 10.900</title></circle><text x="439.6" y="224.0" text-anchor="middle">18/19</text><circle class="bod" cx="468.2" cy="139.4" r="3"><title>2019/20: 10.300</title></circle><circle class="bod" cx="496.7" cy="143.9" r="3"><title>2020/21: 9.600</title></circle><text x="496.7" y="224.0" text-anchor="middle">20/21</text><circle class="bod" cx="525.3" cy="122.5" r="3"><title>2021/22: 12.916</title></circle><circle class="bod" cx="553.8" cy="125.2" r="3"><title>2022/23: 12.500</title></circle><text x="553.8" y="224.0" text-anchor="middle">22/23</text><circle class="bod" cx="582.4" cy="134.9" r="3"><title>2023/24: 11.000</title></circle><circle class="bod" cx="610.9" cy="100.9" r="3"><title>2024/25: 16.250</title></circle><text x="610.9" y="224.0" text-anchor="middle">24/25</text><circle class="bod" cx="639.5" cy="73.4" r="3"><title>2025/26: 20.500</title></circle><circle class="bezi" cx="668.0" cy="178.2" r="4"><title>2026/27: 4.300 (running)</title></circle><text x="668.0" y="224.0" text-anchor="middle">26/27</text></svg></div>
     <div class="tabulka-obal"><table><thead><tr><th>Season</th><th class="cislo">Rank</th><th class="cislo">Clubs</th><th class="cislo">Points</th><th class="cislo">Coefficient</th></tr></thead><tbody>
-<tr><td>2004/05</td><td class="cislo">8th</td><td class="cislo">6</td><td class="cislo">49</td><td class="cislo">8.166</td></tr>
-<tr><td>2005/06</td><td class="cislo">13th</td><td class="cislo">6</td><td class="cislo">33</td><td class="cislo">5.500</td></tr>
-<tr><td>2006/07</td><td class="cislo">8th</td><td class="cislo">6</td><td class="cislo">48.5</td><td class="cislo">8.083</td></tr>
-<tr><td>2007/08</td><td class="cislo">8th</td><td class="cislo">7</td><td class="cislo">55.5</td><td class="cislo">7.928</td></tr>
-<tr><td>2008/09</td><td class="cislo">10th</td><td class="cislo">7</td><td class="cislo">47.5</td><td class="cislo">6.785</td></tr>
-<tr><td>2009/10</td><td class="cislo">6th</td><td class="cislo">6</td><td class="cislo">60</td><td class="cislo">10.000</td></tr>
-<tr><td>2010/11</td><td class="cislo">1st</td><td class="cislo">5</td><td class="cislo">94</td><td class="cislo">18.800</td></tr>
-<tr><td>2011/12</td><td class="cislo">5th</td><td class="cislo">6</td><td class="cislo">71</td><td class="cislo">11.833</td></tr>
-<tr><td>2012/13</td><td class="cislo">6th</td><td class="cislo">6</td><td class="cislo">70.5</td><td class="cislo">11.750</td></tr>
-<tr><td>2013/14</td><td class="cislo">6th</td><td class="cislo">6</td><td class="cislo">59.5</td><td class="cislo">9.916</td></tr>
-<tr><td>2014/15</td><td class="cislo">9th</td><td class="cislo">6</td><td class="cislo">54.5</td><td class="cislo">9.083</td></tr>
-<tr><td>2015/16</td><td class="cislo">7th</td><td class="cislo">6</td><td class="cislo">63</td><td class="cislo">10.500</td></tr>
-<tr><td>2016/17</td><td class="cislo">11th</td><td class="cislo">6</td><td class="cislo">48.5</td><td class="cislo">8.083</td></tr>
-<tr><td>2017/18</td><td class="cislo">8th</td><td class="cislo">6</td><td class="cislo">58</td><td class="cislo">9.666</td></tr>
-<tr><td>2018/19</td><td class="cislo">5th</td><td class="cislo">5</td><td class="cislo">54.5</td><td class="cislo">10.900</td></tr>
-<tr><td>2019/20</td><td class="cislo">6th</td><td class="cislo">5</td><td class="cislo">51.5</td><td class="cislo">10.300</td></tr>
-<tr><td>2020/21</td><td class="cislo">5th</td><td class="cislo">5</td><td class="cislo">48</td><td class="cislo">9.600</td></tr>
-<tr><td>2021/22</td><td class="cislo">7th</td><td class="cislo">6</td><td class="cislo">77.5</td><td class="cislo">12.916</td></tr>
-<tr><td>2022/23</td><td class="cislo">8th</td><td class="cislo">6</td><td class="cislo">75</td><td class="cislo">12.500</td></tr>
-<tr><td>2023/24</td><td class="cislo">10th</td><td class="cislo">6</td><td class="cislo">66</td><td class="cislo">11.000</td></tr>
-<tr><td>2024/25</td><td class="cislo">6th</td><td class="cislo">5</td><td class="cislo">81.25</td><td class="cislo">16.250</td></tr>
-<tr><td>2025/26</td><td class="cislo">4th</td><td class="cislo">5</td><td class="cislo">102.5</td><td class="cislo">20.500</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2004-05/">2004/05</a></td><td class="cislo">8th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2004-05/">49</a></td><td class="cislo">8.166</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2005-06/">2005/06</a></td><td class="cislo">13th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2005-06/">33</a></td><td class="cislo">5.500</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2006-07/">2006/07</a></td><td class="cislo">8th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2006-07/">48.5</a></td><td class="cislo">8.083</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2007-08/">2007/08</a></td><td class="cislo">8th</td><td class="cislo">7</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2007-08/">55.5</a></td><td class="cislo">7.928</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2008-09/">2008/09</a></td><td class="cislo">10th</td><td class="cislo">7</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2008-09/">47.5</a></td><td class="cislo">6.785</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2009-10/">2009/10</a></td><td class="cislo">6th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2009-10/">60</a></td><td class="cislo">10.000</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2010-11/">2010/11</a></td><td class="cislo">1st</td><td class="cislo">5</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2010-11/">94</a></td><td class="cislo">18.800</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2011-12/">2011/12</a></td><td class="cislo">5th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2011-12/">71</a></td><td class="cislo">11.833</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2012-13/">2012/13</a></td><td class="cislo">6th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2012-13/">70.5</a></td><td class="cislo">11.750</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2013-14/">2013/14</a></td><td class="cislo">6th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2013-14/">59.5</a></td><td class="cislo">9.916</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2014-15/">2014/15</a></td><td class="cislo">9th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2014-15/">54.5</a></td><td class="cislo">9.083</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2015-16/">2015/16</a></td><td class="cislo">7th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2015-16/">63</a></td><td class="cislo">10.500</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2016-17/">2016/17</a></td><td class="cislo">11th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2016-17/">48.5</a></td><td class="cislo">8.083</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2017-18/">2017/18</a></td><td class="cislo">8th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2017-18/">58</a></td><td class="cislo">9.666</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2018-19/">2018/19</a></td><td class="cislo">5th</td><td class="cislo">5</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2018-19/">54.5</a></td><td class="cislo">10.900</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2019-20/">2019/20</a></td><td class="cislo">6th</td><td class="cislo">5</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2019-20/">51.5</a></td><td class="cislo">10.300</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2020-21/">2020/21</a></td><td class="cislo">5th</td><td class="cislo">5</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2020-21/">48</a></td><td class="cislo">9.600</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2021-22/">2021/22</a></td><td class="cislo">7th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2021-22/">77.5</a></td><td class="cislo">12.916</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2022-23/">2022/23</a></td><td class="cislo">8th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2022-23/">75</a></td><td class="cislo">12.500</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2023-24/">2023/24</a></td><td class="cislo">10th</td><td class="cislo">6</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2023-24/">66</a></td><td class="cislo">11.000</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2024-25/">2024/25</a></td><td class="cislo">6th</td><td class="cislo">5</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2024-25/">81.25</a></td><td class="cislo">16.250</td></tr>
+<tr><td><a class="sezona" href="/ranking/portugal/2025-26/">2025/26</a></td><td class="cislo">4th</td><td class="cislo">5</td><td class="cislo"><a class="sezona" href="/ranking/portugal/2025-26/">102.5</a></td><td class="cislo">20.500</td></tr>
     </tbody></table></div>
     <p class="note">Rank in that single season (not in the five-year window). Values as published by UEFA.</p>
 

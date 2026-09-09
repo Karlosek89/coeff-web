@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0F2D" />
+  <!-- VYGENEROVÁNO tool/generuj_web.dart (repo uefa_koeficient) — needitovat ručně, přepíše se. -->
+  <title>Faerské ostrovy 2006/07 — body klubů do koeficientu UEFA — Coeff</title>
+  <meta name="description" content="Faerské ostrovy v sezoně 2006/07: 47. místo, koeficient 0,500 (1,5 b. ÷ 3 klubů). Které kluby kolik bodů přinesly." />
+  <meta property="og:title" content="Faerské ostrovy 2006/07 — body klubů do koeficientu UEFA" />
+  <meta property="og:description" content="Faerské ostrovy v sezoně 2006/07: 47. místo, koeficient 0,500 (1,5 b. ÷ 3 klubů). Které kluby kolik bodů přinesly." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://coeff.app/zebricek/faerske-ostrovy/2006-07/" />
+  <meta property="og:image" content="https://coeff.app/app_icon.png" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+  <link rel="stylesheet" href="/styles.css?v=2026-09-07" />
+  <link rel="canonical" href="https://coeff.app/zebricek/faerske-ostrovy/2006-07/" />
+  <link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/faerske-ostrovy/2006-07/" />
+  <link rel="alternate" hreflang="en" href="https://coeff.app/ranking/faroe-islands/2006-07/" />
+  <link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/faroe-islands/2006-07/" />
+  <style>
+    .zluta { color: var(--zlata); font-weight: 700; }
+    .sipka-nahoru { color: #66BB6A; font-size: 0.9em; margin-left: 4px; }
+    .sipka-dolu { color: #E57373; font-size: 0.9em; margin-left: 4px; }
+    .cislo { text-align: right !important; font-variant-numeric: tabular-nums; }
+    .soucet { font-weight: 700; }
+    .poradi { color: var(--text-2); }
+    .legenda { color: var(--text-2); font-size: 0.92rem; }
+    .drobne { color: var(--text-2); font-size: 0.85em; font-weight: 400; }
+    .tabulka-obal a { color: var(--text); text-decoration: none; }
+    .tabulka-obal a.sezona { border-bottom: 1px dotted #ffffff44; }
+    .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
+    .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
+    .tabulka-obal a:hover { color: var(--modra); }
+    .jazyk { float: right; font-size: 0.92rem; }
+    .moje-zeme { margin: 8px 0 4px; }
+    .moje-zeme select { background: var(--panel); color: var(--text); border: 1px solid #ffffff33; border-radius: 8px; padding: 6px 10px; font: inherit; }
+    .rozdil, .rozdil-h { display: none; }
+    body.ma-zemi .rozdil, body.ma-zemi .rozdil-h { display: table-cell; }
+    .naskok { color: #66BB6A; font-weight: 700; }
+    .ztrata { color: #E57373; font-weight: 700; }
+    tr.moje td { background: #3D5AFE22; }
+    /* Pruh se značkou: hvězdné pozadí titulky, jen nízké. */
+    .pruh { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 20px;
+      background: radial-gradient(1px 1px at 12% 40%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 41% 20%, #fff9 50%, transparent 51%),
+        radial-gradient(1.5px 1.5px at 66% 70%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 88% 30%, #fff8 50%, transparent 51%),
+        linear-gradient(180deg, #060A20 0%, var(--navy-2) 100%); border-bottom: 1px solid #ffffff14; }
+    .pruh .znacka img { height: 30px; display: block; }
+    .pruh .back-link, .pruh .jazyk { color: var(--text-2); text-decoration: none; font-size: 0.95rem; }
+    .pruh .back-link:hover, .pruh .jazyk:hover { color: var(--text); }
+    /* Široké rozložení tabulky: hlavní sloupec + postranní karta. */
+    .siroka { max-width: 1160px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .siroka .hlavni { min-width: 0; }
+    .karta { background: var(--panel); border: 1px solid #ffffff14; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
+    .karta h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .karta-zeme { margin-top: 10px; line-height: 1.5; }
+    .karta-zeme .velke { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+    @media (min-width: 1000px) {
+      .siroka { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; }
+      .siroka .bok { order: 2; position: sticky; top: 16px; }
+    }
+    /* Tabulka: pruhy, přilepená hlavička, zvýraznění pod kurzorem. */
+    .hlavni .tabulka-obal thead th { position: sticky; top: 0; background: var(--navy); z-index: 1; }
+    .hlavni .tabulka-obal tbody tr:nth-child(even) td { background: #ffffff05; }
+    .hlavni .tabulka-obal tbody tr:hover td { background: #ffffff0f; }
+    .hlavni .tabulka-obal tbody tr.moje td { background: #3D5AFE2e; }
+    /* Mini-graf v řádku, pásma listiny, graf historie. */
+    .graf { width: 64px; padding-left: 6px !important; padding-right: 6px !important; }
+    .graf svg { display: block; width: 64px; height: 20px; }
+    .hlavni .tabulka-obal tbody tr.pasmo td { background: #3D5AFE1c !important; color: var(--text-2); font-size: 0.82rem; padding: 4px 10px; border-top: 1px solid #ffffff22; }
+    .historie-graf { margin: 8px 0 16px; }
+    .historie-graf svg { width: 100%; height: auto; display: block; }
+    .historie-graf text { fill: var(--text-2); font-size: 11px; font-family: inherit; }
+    .historie-graf .osa { stroke: #ffffff22; }
+    .historie-graf .cara { fill: none; stroke: var(--modra); stroke-width: 2; }
+    .historie-graf .bod { fill: var(--modra); }
+    .historie-graf .bezi { fill: var(--navy); stroke: var(--zlata); stroke-width: 2; }
+  </style>
+</head>
+<body>
+  <header class="pruh">
+    <a href="/zebricek/faerske-ostrovy/" class="back-link">← Celý žebříček</a>
+    <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
+    <a href="/ranking/faroe-islands/2006-07/" class="jazyk">🇬🇧 English</a>
+  </header>
+  <main class="clanek">
+    <h1>🇫🇴 Faerské ostrovy 2006/07 — kluby a body</h1>
+    <p class="datum">Uzavřená sezona · hodnoty publikované UEFA</p>
+    <p class="perex"><strong>47. místo</strong> v sezoně · koeficient <strong>0,500</strong> = 1,5 b. ÷ 3 klubů</p>
+    <div class="sezony-nav"><span><a href="/zebricek/faerske-ostrovy/2005-06/">← 2005/06</a></span><a href="/zebricek/faerske-ostrovy/">Všechny sezony</a><span><a href="/zebricek/faerske-ostrovy/2007-08/">2007/08 →</a></span></div>
+    <h2>Kluby 2006/07</h2>
+    <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th class="cislo">Body</th></tr></thead><tbody>
+<tr><td>B36 Torshavn</td><td>LM</td><td class="cislo"><strong>1,5</strong></td></tr>
+<tr><td>GI Gotu</td><td>EL</td><td class="cislo"><strong>0</strong></td></tr>
+<tr><td>Skala IF</td><td>EL</td><td class="cislo"><strong>0</strong></td></tr>
+</tbody></table></div>
+    
+    <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>
+    <p class="note">Starší sezony se hrály podle jiných pravidel (formát soutěží i bonusy se měnily), body napříč érami proto nejsou přímo srovnatelné.</p>
+    <div class="sezony-nav"><span><a href="/zebricek/faerske-ostrovy/2005-06/">← 2005/06</a></span><a href="/zebricek/faerske-ostrovy/">Všechny sezony</a><span><a href="/zebricek/faerske-ostrovy/2007-08/">2007/08 →</a></span></div>
+
+    <div class="clanek-cta">
+      <p>Tenhle žebříček máš v aplikaci Coeff živě, s notifikacemi o své zemi a kalkulačkou „co když". Zdarma, bez registrace.</p>
+      <div class="cta-tlacitka">
+        <a class="cta-tester" href="https://play.google.com/store/apps/details?id=com.coeff.app" target="_blank" rel="noopener">▶ Stáhnout na Google Play</a>
+        <a class="cta-tester" href="https://apps.apple.com/app/id6793454420" target="_blank" rel="noopener">🍏 Stáhnout v App Storu</a>
+        <a class="cta-tester cta-vedlejsi" href="/">Zjistit víc o aplikaci</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="radek"><a href="/">coeff.app</a> ·
+      <a href="/zebricek/">Žebříček zemí</a> ·
+      <a href="/clanky/">Články</a> ·
+      <a href="/soukromi.html">Zásady ochrany osobních údajů</a></div>
+    <div class="radek">© 2026 Karel Zbíral · Coeff není přidružený k UEFA.</div>
+  </footer>
+</body>
+</html>
