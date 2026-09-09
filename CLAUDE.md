@@ -65,3 +65,12 @@ v navigaci `index.html`/`en.html` (📊). Sitemap: ruční záznamy zůstávají
 nad blokem, generovaný blok se jen nahrazuje. Zásada „žádné skripty
 třetích stran" platí i pro ně (generátor žádný nevkládá, test to hlídá).
 Pages nasazuje z `main` — stránky se zveřejňují až sloučením do main.
+
+### Vlastní skript v generovaných stránkách („moje země")
+Stránky `/zebricek/` a `/ranking/` mají malý VLASTNÍ skript přímo
+v HTML (žádná třetí strana, nic neodchází ven): výběr země si pamatuje
+v `localStorage` pod klíčem `coeff-zeme` (stejně jako jazyk `coeff-jazyk`),
+`?zeme=CZE` v adrese má přednost. Rozdíl v bodech se počítá stejným
+vzorcem jako v appce (`Repozitar.ztrata`). Zásada „žádné skripty třetích
+stran" platí dál — test v repu appky hlídá, že ve stránkách není
+`<script src=`.
