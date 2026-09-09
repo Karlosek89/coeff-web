@@ -38,6 +38,14 @@
     .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
     .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
     .skore { font-weight: 700; white-space: nowrap; }
+    .zapas-hlava { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin: 8px 0 20px; }
+    .zapas-hlava .tym.l { text-align: right; } .zapas-hlava .tym.r { text-align: left; }
+    .zapas-hlava .jmeno { font-size: 1.2rem; font-weight: 700; } .zapas-hlava .jmeno a { color: var(--text); text-decoration: none; }
+    .zapas-hlava .jmeno a:hover { color: var(--modra); }
+    .zapas-hlava .tym a.drobne { text-decoration: none; }
+    .skore-velke { font-size: 2.4rem; font-weight: 800; font-variant-numeric: tabular-nums; text-align: center; padding: 6px 16px; background: var(--panel); border-radius: 12px; }
+    .prubeh td { padding: 5px 8px; } .prubeh .udalost.l { text-align: right; } .prubeh .minuta { color: var(--text-2); white-space: nowrap; text-align: center; width: 48px; }
+    .karta { display: inline-block; font-size: 1.1em; line-height: 1; } .karta.zl { color: #FFD54F; } .karta.cv { color: #E53935; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -99,10 +107,10 @@
     <div class="tabulka-obal"><table class="rozpad"><tbody><tr><td>Kvalifikace <span class="drobne">1V–0R–3P</span></td><td class="cislo">1</td></tr><tr><td><strong>Celkem</strong></td><td class="cislo"><strong>1</strong></td></tr></tbody></table></div>
     <h2>Zápasy <span class="drobne">(4)</span></h2>
     <h3>Konferenční liga</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="vyhra"><td class="datum-z">9. 7. 2026</td><td class="drobne">1. předkolo</td><td><strong>Dila Gori</strong> – AC Virtus <span class="drobne">🇸🇲 San Marino</span></td><td class="cislo skore">3:1</td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="prohra"><td class="datum-z">16. 7. 2026</td><td class="drobne">1. předkolo</td><td>AC Virtus – <strong>Dila Gori</strong> <span class="drobne">🇸🇲 San Marino</span></td><td class="cislo skore">1:0</td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">23. 7. 2026</td><td class="drobne">2. předkolo</td><td><strong>Dila Gori</strong> – Apollon Limassol <span class="drobne">🇨🇾 Kypr</span></td><td class="cislo skore">0:4</td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">28. 7. 2026</td><td class="drobne">2. předkolo</td><td>Apollon Limassol – <strong>Dila Gori</strong> <span class="drobne">🇨🇾 Kypr</span></td><td class="cislo skore">3:0</td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra"><td class="datum-z">9. 7. 2026</td><td class="drobne">1. předkolo</td><td><strong>Dila Gori</strong> – AC Virtus <span class="drobne">🇸🇲 San Marino</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2026-27/dila-gori-ac-virtus-2026-07-09/">3:1</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="prohra"><td class="datum-z">16. 7. 2026</td><td class="drobne">1. předkolo</td><td>AC Virtus – <strong>Dila Gori</strong> <span class="drobne">🇸🇲 San Marino</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2026-27/ac-virtus-dila-gori-2026-07-16/">1:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra"><td class="datum-z">23. 7. 2026</td><td class="drobne">2. předkolo</td><td><strong>Dila Gori</strong> – Apollon Limassol <span class="drobne">🇨🇾 Kypr</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2026-27/dila-gori-apollon-limassol-2026-07-23/">0:4</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra"><td class="datum-z">28. 7. 2026</td><td class="drobne">2. předkolo</td><td>Apollon Limassol – <strong>Dila Gori</strong> <span class="drobne">🇨🇾 Kypr</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2026-27/apollon-limassol-dila-gori-2026-07-28/">3:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
 </tbody></table></div>
 
     <p class="note">Body za zápas: výhra 2, remíza 1, v předkolech polovina; žlutě body do koeficientu země. Tučně je Gruzie klub, výsledek je barevně z jeho pohledu. Bonusy (účast v ligové fázi LM, pořadí, vyřazovací kola) jsou v rozpadu nahoře.</p>

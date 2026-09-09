@@ -38,6 +38,14 @@
     .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
     .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
     .skore { font-weight: 700; white-space: nowrap; }
+    .zapas-hlava { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin: 8px 0 20px; }
+    .zapas-hlava .tym.l { text-align: right; } .zapas-hlava .tym.r { text-align: left; }
+    .zapas-hlava .jmeno { font-size: 1.2rem; font-weight: 700; } .zapas-hlava .jmeno a { color: var(--text); text-decoration: none; }
+    .zapas-hlava .jmeno a:hover { color: var(--modra); }
+    .zapas-hlava .tym a.drobne { text-decoration: none; }
+    .skore-velke { font-size: 2.4rem; font-weight: 800; font-variant-numeric: tabular-nums; text-align: center; padding: 6px 16px; background: var(--panel); border-radius: 12px; }
+    .prubeh td { padding: 5px 8px; } .prubeh .udalost.l { text-align: right; } .prubeh .minuta { color: var(--text-2); white-space: nowrap; text-align: center; width: 48px; }
+    .karta { display: inline-block; font-size: 1.1em; line-height: 1; } .karta.zl { color: #FFD54F; } .karta.cv { color: #E53935; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -99,14 +107,14 @@
     <div class="tabulka-obal"><table class="rozpad"><tbody><tr><td>Main phase <span class="drobne">3W–3D–2L</span></td><td class="cislo">9</td></tr><tr><td>Bonuses <span class="drobne">participation, position, knockout rounds</span></td><td class="cislo">9</td></tr><tr><td><strong>Total</strong></td><td class="cislo"><strong>18</strong></td></tr></tbody></table></div>
     <h2>Matches <span class="drobne">(8)</span></h2>
     <h3>Champions League</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="remiza"><td class="datum-z">20 Sep 2023</td><td class="drobne">Group stage</td><td><strong>Real Sociedad</strong> – Internazionale <span class="drobne">🇮🇹 Italy</span></td><td class="cislo skore">1:1</td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="vyhra"><td class="datum-z">3 Oct 2023</td><td class="drobne">Group stage</td><td>FC Salzburg – <strong>Real Sociedad</strong> <span class="drobne">🇦🇹 Austria</span></td><td class="cislo skore">0:2</td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">24 Oct 2023</td><td class="drobne">Group stage</td><td>Benfica – <strong>Real Sociedad</strong> <span class="drobne">🇵🇹 Portugal</span></td><td class="cislo skore">0:1</td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">8 Nov 2023</td><td class="drobne">Group stage</td><td><strong>Real Sociedad</strong> – Benfica <span class="drobne">🇵🇹 Portugal</span></td><td class="cislo skore">3:1</td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="remiza"><td class="datum-z">29 Nov 2023</td><td class="drobne">Group stage</td><td><strong>Real Sociedad</strong> – FC Salzburg <span class="drobne">🇦🇹 Austria</span></td><td class="cislo skore">0:0</td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="remiza"><td class="datum-z">12 Dec 2023</td><td class="drobne">Group stage</td><td>Internazionale – <strong>Real Sociedad</strong> <span class="drobne">🇮🇹 Italy</span></td><td class="cislo skore">0:0</td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="prohra"><td class="datum-z">14 Feb 2024</td><td class="drobne">Round of 16</td><td>Paris Saint-Germain – <strong>Real Sociedad</strong> <span class="drobne">🇫🇷 France</span></td><td class="cislo skore">2:0</td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">5 Mar 2024</td><td class="drobne">Round of 16</td><td><strong>Real Sociedad</strong> – Paris Saint-Germain <span class="drobne">🇫🇷 France</span></td><td class="cislo skore">1:2</td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="remiza"><td class="datum-z">20 Sep 2023</td><td class="drobne">Group stage</td><td><strong>Real Sociedad</strong> – Internazionale <span class="drobne">🇮🇹 Italy</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2023-24/real-sociedad-internazionale-2023-09-20/">1:1</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="vyhra"><td class="datum-z">3 Oct 2023</td><td class="drobne">Group stage</td><td>FC Salzburg – <strong>Real Sociedad</strong> <span class="drobne">🇦🇹 Austria</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2023-24/fc-salzburg-real-sociedad-2023-10-03/">0:2</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra"><td class="datum-z">24 Oct 2023</td><td class="drobne">Group stage</td><td>Benfica – <strong>Real Sociedad</strong> <span class="drobne">🇵🇹 Portugal</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2023-24/benfica-real-sociedad-2023-10-24/">0:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra"><td class="datum-z">8 Nov 2023</td><td class="drobne">Group stage</td><td><strong>Real Sociedad</strong> – Benfica <span class="drobne">🇵🇹 Portugal</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2023-24/real-sociedad-benfica-2023-11-08/">3:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="remiza"><td class="datum-z">29 Nov 2023</td><td class="drobne">Group stage</td><td><strong>Real Sociedad</strong> – FC Salzburg <span class="drobne">🇦🇹 Austria</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2023-24/real-sociedad-fc-salzburg-2023-11-29/">0:0</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="remiza"><td class="datum-z">12 Dec 2023</td><td class="drobne">Group stage</td><td>Internazionale – <strong>Real Sociedad</strong> <span class="drobne">🇮🇹 Italy</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2023-24/internazionale-real-sociedad-2023-12-12/">0:0</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="prohra"><td class="datum-z">14 Feb 2024</td><td class="drobne">Round of 16</td><td>Paris Saint-Germain – <strong>Real Sociedad</strong> <span class="drobne">🇫🇷 France</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2023-24/paris-saint-germain-real-sociedad-2024-02-14/">2:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra"><td class="datum-z">5 Mar 2024</td><td class="drobne">Round of 16</td><td><strong>Real Sociedad</strong> – Paris Saint-Germain <span class="drobne">🇫🇷 France</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2023-24/real-sociedad-paris-saint-germain-2024-03-05/">1:2</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
 </tbody></table></div>
 
     <p class="note">Points per match: win 2, draw 1, halved in qualifying; yellow = points to the country coefficient. The club is in bold, colour shows the result from its point of view. Bonuses (UCL league-phase participation, position, knockout rounds) are in the breakdown above.</p>

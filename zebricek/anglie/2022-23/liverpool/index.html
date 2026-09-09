@@ -38,6 +38,14 @@
     .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
     .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
     .skore { font-weight: 700; white-space: nowrap; }
+    .zapas-hlava { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin: 8px 0 20px; }
+    .zapas-hlava .tym.l { text-align: right; } .zapas-hlava .tym.r { text-align: left; }
+    .zapas-hlava .jmeno { font-size: 1.2rem; font-weight: 700; } .zapas-hlava .jmeno a { color: var(--text); text-decoration: none; }
+    .zapas-hlava .jmeno a:hover { color: var(--modra); }
+    .zapas-hlava .tym a.drobne { text-decoration: none; }
+    .skore-velke { font-size: 2.4rem; font-weight: 800; font-variant-numeric: tabular-nums; text-align: center; padding: 6px 16px; background: var(--panel); border-radius: 12px; }
+    .prubeh td { padding: 5px 8px; } .prubeh .udalost.l { text-align: right; } .prubeh .minuta { color: var(--text-2); white-space: nowrap; text-align: center; width: 48px; }
+    .karta { display: inline-block; font-size: 1.1em; line-height: 1; } .karta.zl { color: #FFD54F; } .karta.cv { color: #E53935; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -99,14 +107,14 @@
     <div class="tabulka-obal"><table class="rozpad"><tbody><tr><td>Hlavní fáze <span class="drobne">5V–0R–3P</span></td><td class="cislo">10</td></tr><tr><td>Bonusy <span class="drobne">účast, pořadí, vyřazovací kola</span></td><td class="cislo">9</td></tr><tr><td><strong>Celkem</strong></td><td class="cislo"><strong>19</strong></td></tr></tbody></table></div>
     <h2>Zápasy <span class="drobne">(8)</span></h2>
     <h3>Liga mistrů</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="prohra"><td class="datum-z">7. 9. 2022</td><td class="drobne">Skupina</td><td>Napoli – <strong>Liverpool</strong> <span class="drobne">🇮🇹 Itálie</span></td><td class="cislo skore">4:1</td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="vyhra"><td class="datum-z">13. 9. 2022</td><td class="drobne">Skupina</td><td><strong>Liverpool</strong> – Ajax <span class="drobne">🇳🇱 Nizozemsko</span></td><td class="cislo skore">2:1</td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">4. 10. 2022</td><td class="drobne">Skupina</td><td><strong>Liverpool</strong> – Glasgow Rangers <span class="drobne">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Skotsko</span></td><td class="cislo skore">2:0</td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">12. 10. 2022</td><td class="drobne">Skupina</td><td>Glasgow Rangers – <strong>Liverpool</strong> <span class="drobne">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Skotsko</span></td><td class="cislo skore">1:7</td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">26. 10. 2022</td><td class="drobne">Skupina</td><td>Ajax – <strong>Liverpool</strong> <span class="drobne">🇳🇱 Nizozemsko</span></td><td class="cislo skore">0:3</td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">1. 11. 2022</td><td class="drobne">Skupina</td><td><strong>Liverpool</strong> – Napoli <span class="drobne">🇮🇹 Itálie</span></td><td class="cislo skore">2:0</td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="prohra"><td class="datum-z">21. 2. 2023</td><td class="drobne">Osmifinále</td><td><strong>Liverpool</strong> – Real Madrid <span class="drobne">🇪🇸 Španělsko</span></td><td class="cislo skore">2:5</td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">15. 3. 2023</td><td class="drobne">Osmifinále</td><td>Real Madrid – <strong>Liverpool</strong> <span class="drobne">🇪🇸 Španělsko</span></td><td class="cislo skore">1:0</td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra"><td class="datum-z">7. 9. 2022</td><td class="drobne">Skupina</td><td>Napoli – <strong>Liverpool</strong> <span class="drobne">🇮🇹 Itálie</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/napoli-liverpool-2022-09-07/">4:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra"><td class="datum-z">13. 9. 2022</td><td class="drobne">Skupina</td><td><strong>Liverpool</strong> – Ajax <span class="drobne">🇳🇱 Nizozemsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/liverpool-ajax-2022-09-13/">2:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra"><td class="datum-z">4. 10. 2022</td><td class="drobne">Skupina</td><td><strong>Liverpool</strong> – Glasgow Rangers <span class="drobne">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Skotsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/liverpool-glasgow-rangers-2022-10-04/">2:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra"><td class="datum-z">12. 10. 2022</td><td class="drobne">Skupina</td><td>Glasgow Rangers – <strong>Liverpool</strong> <span class="drobne">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Skotsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/glasgow-rangers-liverpool-2022-10-12/">1:7</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra"><td class="datum-z">26. 10. 2022</td><td class="drobne">Skupina</td><td>Ajax – <strong>Liverpool</strong> <span class="drobne">🇳🇱 Nizozemsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/ajax-liverpool-2022-10-26/">0:3</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra"><td class="datum-z">1. 11. 2022</td><td class="drobne">Skupina</td><td><strong>Liverpool</strong> – Napoli <span class="drobne">🇮🇹 Itálie</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/liverpool-napoli-2022-11-01/">2:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="prohra"><td class="datum-z">21. 2. 2023</td><td class="drobne">Osmifinále</td><td><strong>Liverpool</strong> – Real Madrid <span class="drobne">🇪🇸 Španělsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/liverpool-real-madrid-2023-02-21/">2:5</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra"><td class="datum-z">15. 3. 2023</td><td class="drobne">Osmifinále</td><td>Real Madrid – <strong>Liverpool</strong> <span class="drobne">🇪🇸 Španělsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/real-madrid-liverpool-2023-03-15/">1:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
 </tbody></table></div>
 
     <p class="note">Body za zápas: výhra 2, remíza 1, v předkolech polovina; žlutě body do koeficientu země. Tučně je Anglie klub, výsledek je barevně z jeho pohledu. Bonusy (účast v ligové fázi LM, pořadí, vyřazovací kola) jsou v rozpadu nahoře.</p>

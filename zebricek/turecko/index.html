@@ -38,6 +38,14 @@
     .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
     .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
     .skore { font-weight: 700; white-space: nowrap; }
+    .zapas-hlava { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin: 8px 0 20px; }
+    .zapas-hlava .tym.l { text-align: right; } .zapas-hlava .tym.r { text-align: left; }
+    .zapas-hlava .jmeno { font-size: 1.2rem; font-weight: 700; } .zapas-hlava .jmeno a { color: var(--text); text-decoration: none; }
+    .zapas-hlava .jmeno a:hover { color: var(--modra); }
+    .zapas-hlava .tym a.drobne { text-decoration: none; }
+    .skore-velke { font-size: 2.4rem; font-weight: 800; font-variant-numeric: tabular-nums; text-align: center; padding: 6px 16px; background: var(--panel); border-radius: 12px; }
+    .prubeh td { padding: 5px 8px; } .prubeh .udalost.l { text-align: right; } .prubeh .minuta { color: var(--text-2); white-space: nowrap; text-align: center; width: 48px; }
+    .karta { display: inline-block; font-size: 1.1em; line-height: 1; } .karta.zl { color: #FFD54F; } .karta.cv { color: #E53935; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -95,7 +103,7 @@
     <h1>🇹🇷 Turecko — koeficient UEFA 2026/27</h1>
     <p class="datum">Aktualizováno 9. 9. 2026</p>
     <p class="perex"><strong>9. místo</strong> z 55 · koeficient <strong>49,675</strong> · 5 klubů v pohárech 2026/27</p>
-    <p>V posledním hracím týdnu (7. 9. 2026–13. 9. 2026) kluby země nehrály.</p>
+    <p>Poslední hrací týden (7. 9. 2026–13. 9. 2026): <span class="zluta">+0</span> do koeficientu.</p>
     <p><a href="/zebricek/?zeme=TUR">Náskok a ztráta na ostatní země v bodech →</a></p>
     <h2>Pětileté okno 2022/23–2026/27</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Sezona</th><th class="cislo">Koeficient</th></tr></thead><tbody>
@@ -119,11 +127,11 @@
 
     <h2 id="kluby">Kluby 2026/27</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th class="cislo">Bonus</th><th class="cislo">Body</th></tr></thead><tbody>
+<tr><td><a class="sezona" href="/zebricek/turecko/2026-27/galatasaray/">Galatasaray</a></td><td>LM</td><td class="cislo">+6</td><td class="cislo">6</td></tr>
 <tr><td><a class="sezona" href="/zebricek/turecko/2026-27/fenerbahce/">Fenerbahçe</a></td><td>LM</td><td class="cislo">+6</td><td class="cislo">11</td></tr>
 <tr><td><a class="sezona" href="/zebricek/turecko/2026-27/besiktas/">Besiktas</a></td><td>EL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">5</td></tr>
 <tr><td><a class="sezona" href="/zebricek/turecko/2026-27/istanbul-basaksehir/">Istanbul Basaksehir</a></td><td>KL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">0,5</td></tr>
 <tr><td><a class="sezona" href="/zebricek/turecko/2026-27/trabzonspor/">Trabzonspor</a></td><td>EL</td><td class="cislo"><span class="drobne">–</span></td><td class="cislo">0</td></tr>
-<tr><td>Galatasaray</td><td>LM</td><td class="cislo">+6</td><td class="cislo">6</td></tr>
 </tbody></table></div><p class="note">Body = celkem za sezonu (zápasy, v předkolech půlené, plus bonusy). Bonus = kolik z toho je za jistou účast v ligové fázi Ligy mistrů (+6), později i za pořadí a vyřazovací fázi. Koeficient země = součet bodů ÷ počet klubů.</p>
     <h2>Historie od 2004/05</h2>
     <p>Nejlepší sezona: <a href="/zebricek/turecko/2023-24/">2023/24</a> (12,000, 8. místo) · nejslabší: <a href="/zebricek/turecko/2020-21/">2020/21</a> (3,100, 26. místo). Klepnutím na sezonu v tabulce se zobrazí kluby a jejich body.</p>

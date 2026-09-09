@@ -38,6 +38,14 @@
     .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
     .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
     .skore { font-weight: 700; white-space: nowrap; }
+    .zapas-hlava { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin: 8px 0 20px; }
+    .zapas-hlava .tym.l { text-align: right; } .zapas-hlava .tym.r { text-align: left; }
+    .zapas-hlava .jmeno { font-size: 1.2rem; font-weight: 700; } .zapas-hlava .jmeno a { color: var(--text); text-decoration: none; }
+    .zapas-hlava .jmeno a:hover { color: var(--modra); }
+    .zapas-hlava .tym a.drobne { text-decoration: none; }
+    .skore-velke { font-size: 2.4rem; font-weight: 800; font-variant-numeric: tabular-nums; text-align: center; padding: 6px 16px; background: var(--panel); border-radius: 12px; }
+    .prubeh td { padding: 5px 8px; } .prubeh .udalost.l { text-align: right; } .prubeh .minuta { color: var(--text-2); white-space: nowrap; text-align: center; width: 48px; }
+    .karta { display: inline-block; font-size: 1.1em; line-height: 1; } .karta.zl { color: #FFD54F; } .karta.cv { color: #E53935; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -99,14 +107,14 @@
     <div class="tabulka-obal"><table class="rozpad"><tbody><tr><td>Qualifying <span class="drobne">6W–0D–2L</span></td><td class="cislo">6</td></tr><tr><td>Bonuses <span class="drobne">participation, position, knockout rounds</span></td><td class="cislo">6</td></tr><tr><td><strong>Total</strong></td><td class="cislo"><strong>12</strong></td></tr></tbody></table></div>
     <h2>Matches <span class="drobne">(8)</span></h2>
     <h3>Champions League</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="vyhra"><td class="datum-z">7 Jul 2026</td><td class="drobne">1st qualifying round</td><td><strong>Sabah FK</strong> – The New Saints <span class="drobne">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</span></td><td class="cislo skore">2:0</td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="vyhra"><td class="datum-z">14 Jul 2026</td><td class="drobne">1st qualifying round</td><td>The New Saints – <strong>Sabah FK</strong> <span class="drobne">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</span></td><td class="cislo skore">1:2</td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="vyhra"><td class="datum-z">21 Jul 2026</td><td class="drobne">2nd qualifying round</td><td><strong>Sabah FK</strong> – KuPS Kuopio <span class="drobne">🇫🇮 Finland</span></td><td class="cislo skore">1:0</td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="vyhra"><td class="datum-z">28 Jul 2026</td><td class="drobne">2nd qualifying round</td><td>KuPS Kuopio – <strong>Sabah FK</strong> <span class="drobne">🇫🇮 Finland</span></td><td class="cislo skore">0:2</td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="prohra"><td class="datum-z">5 Aug 2026</td><td class="drobne">3rd qualifying round</td><td>AGF Aarhus – <strong>Sabah FK</strong> <span class="drobne">🇩🇰 Denmark</span></td><td class="cislo skore">2:1</td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="vyhra"><td class="datum-z">11 Aug 2026</td><td class="drobne">3rd qualifying round</td><td><strong>Sabah FK</strong> – AGF Aarhus <span class="drobne">🇩🇰 Denmark</span></td><td class="cislo skore">4:0</td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="prohra"><td class="datum-z">19 Aug 2026</td><td class="drobne">Play-off (qualifying)</td><td>Hapoel Beer-Sheva – <strong>Sabah FK</strong> <span class="drobne">🇮🇱 Israel</span></td><td class="cislo skore">2:1</td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="vyhra"><td class="datum-z">25 Aug 2026</td><td class="drobne">Play-off (qualifying)</td><td><strong>Sabah FK</strong> – Hapoel Beer-Sheva <span class="drobne">🇮🇱 Israel</span></td><td class="cislo skore">5:2</td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="vyhra"><td class="datum-z">7 Jul 2026</td><td class="drobne">1st qualifying round</td><td><strong>Sabah FK</strong> – The New Saints <span class="drobne">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2026-27/sabah-fk-the-new-saints-2026-07-07/">2:0</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="vyhra"><td class="datum-z">14 Jul 2026</td><td class="drobne">1st qualifying round</td><td>The New Saints – <strong>Sabah FK</strong> <span class="drobne">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2026-27/the-new-saints-sabah-fk-2026-07-14/">1:2</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="vyhra"><td class="datum-z">21 Jul 2026</td><td class="drobne">2nd qualifying round</td><td><strong>Sabah FK</strong> – KuPS Kuopio <span class="drobne">🇫🇮 Finland</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2026-27/sabah-fk-kups-kuopio-2026-07-21/">1:0</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="vyhra"><td class="datum-z">28 Jul 2026</td><td class="drobne">2nd qualifying round</td><td>KuPS Kuopio – <strong>Sabah FK</strong> <span class="drobne">🇫🇮 Finland</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2026-27/kups-kuopio-sabah-fk-2026-07-28/">0:2</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="prohra"><td class="datum-z">5 Aug 2026</td><td class="drobne">3rd qualifying round</td><td>AGF Aarhus – <strong>Sabah FK</strong> <span class="drobne">🇩🇰 Denmark</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2026-27/agf-aarhus-sabah-fk-2026-08-05/">2:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra"><td class="datum-z">11 Aug 2026</td><td class="drobne">3rd qualifying round</td><td><strong>Sabah FK</strong> – AGF Aarhus <span class="drobne">🇩🇰 Denmark</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2026-27/sabah-fk-agf-aarhus-2026-08-11/">4:0</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="prohra"><td class="datum-z">19 Aug 2026</td><td class="drobne">Play-off (qualifying)</td><td>Hapoel Beer-Sheva – <strong>Sabah FK</strong> <span class="drobne">🇮🇱 Israel</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2026-27/hapoel-beer-sheva-sabah-fk-2026-08-19/">2:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra"><td class="datum-z">25 Aug 2026</td><td class="drobne">Play-off (qualifying)</td><td><strong>Sabah FK</strong> – Hapoel Beer-Sheva <span class="drobne">🇮🇱 Israel</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2026-27/sabah-fk-hapoel-beer-sheva-2026-08-25/">5:2</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
 </tbody></table></div>
 
     <p class="note">Points per match: win 2, draw 1, halved in qualifying; yellow = points to the country coefficient. The club is in bold, colour shows the result from its point of view. Bonuses (UCL league-phase participation, position, knockout rounds) are in the breakdown above.</p>

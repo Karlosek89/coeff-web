@@ -22017,6 +22017,42 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/england/2026-27/manchester-city/"/>
   </url>
   <url>
+    <loc>https://coeff.app/zebricek/anglie/2026-27/liverpool/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/anglie/2026-27/liverpool/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/england/2026-27/liverpool/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/england/2026-27/liverpool/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/england/2026-27/liverpool/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/anglie/2026-27/liverpool/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/england/2026-27/liverpool/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/england/2026-27/liverpool/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/zebricek/anglie/2026-27/arsenal/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/anglie/2026-27/arsenal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/england/2026-27/arsenal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/england/2026-27/arsenal/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/england/2026-27/arsenal/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/anglie/2026-27/arsenal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/england/2026-27/arsenal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/england/2026-27/arsenal/"/>
+  </url>
+  <url>
     <loc>https://coeff.app/zebricek/anglie/2026-27/brighton-hove-albion/</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -22699,6 +22735,24 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/italie/2026-27/internazionale/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/italy/2026-27/internazionale/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/italy/2026-27/internazionale/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/zebricek/italie/2026-27/napoli/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/italie/2026-27/napoli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/italy/2026-27/napoli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/italy/2026-27/napoli/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/italy/2026-27/napoli/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/italie/2026-27/napoli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/italy/2026-27/napoli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/italy/2026-27/napoli/"/>
   </url>
   <url>
     <loc>https://coeff.app/zebricek/italie/2026-27/atalanta/</loc>
@@ -23455,6 +23509,24 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/spanelsko/2026-27/villarreal/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/spain/2026-27/villarreal/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/spain/2026-27/villarreal/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/zebricek/spanelsko/2026-27/atletico-madrid/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/spanelsko/2026-27/atletico-madrid/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/spain/2026-27/atletico-madrid/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/spain/2026-27/atletico-madrid/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/spain/2026-27/atletico-madrid/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/spanelsko/2026-27/atletico-madrid/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/spain/2026-27/atletico-madrid/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/spain/2026-27/atletico-madrid/"/>
   </url>
   <url>
     <loc>https://coeff.app/zebricek/spanelsko/2026-27/getafe/</loc>
@@ -24771,6 +24843,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/france/2025-26/ogc-nice/"/>
   </url>
   <url>
+    <loc>https://coeff.app/zebricek/francie/2026-27/paris-saint-germain/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/francie/2026-27/paris-saint-germain/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/france/2026-27/paris-saint-germain/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/france/2026-27/paris-saint-germain/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/france/2026-27/paris-saint-germain/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/francie/2026-27/paris-saint-germain/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/france/2026-27/paris-saint-germain/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/france/2026-27/paris-saint-germain/"/>
+  </url>
+  <url>
     <loc>https://coeff.app/zebricek/francie/2026-27/lille-osc/</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -25327,6 +25417,24 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/portugalsko/2025-26/cd-santa-clara/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/portugal/2025-26/cd-santa-clara/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/portugal/2025-26/cd-santa-clara/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/zebricek/portugalsko/2026-27/sporting-cp-lisbon/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/portugalsko/2026-27/sporting-cp-lisbon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/portugal/2026-27/sporting-cp-lisbon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/portugal/2026-27/sporting-cp-lisbon/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/portugal/2026-27/sporting-cp-lisbon/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/portugalsko/2026-27/sporting-cp-lisbon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/portugal/2026-27/sporting-cp-lisbon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/portugal/2026-27/sporting-cp-lisbon/"/>
   </url>
   <url>
     <loc>https://coeff.app/zebricek/portugalsko/2026-27/fc-porto/</loc>
@@ -26911,6 +27019,24 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/turecko/2025-26/besiktas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/turkiye/2025-26/besiktas/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/turkiye/2025-26/besiktas/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/zebricek/turecko/2026-27/galatasaray/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/turecko/2026-27/galatasaray/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/turkiye/2026-27/galatasaray/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/turkiye/2026-27/galatasaray/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/turkiye/2026-27/galatasaray/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/turecko/2026-27/galatasaray/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/turkiye/2026-27/galatasaray/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/turkiye/2026-27/galatasaray/"/>
   </url>
   <url>
     <loc>https://coeff.app/zebricek/turecko/2026-27/fenerbahce/</loc>

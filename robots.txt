@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://coeff.app/sitemap.xml
 Sitemap: https://coeff.app/sitemap-sezony.xml
+Sitemap: https://coeff.app/sitemap-zapasy.xml

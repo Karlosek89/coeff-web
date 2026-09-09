@@ -38,6 +38,14 @@
     .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
     .datum-z { white-space: nowrap; color: var(--text-2); font-size: 0.9em; }
     .skore { font-weight: 700; white-space: nowrap; }
+    .zapas-hlava { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin: 8px 0 20px; }
+    .zapas-hlava .tym.l { text-align: right; } .zapas-hlava .tym.r { text-align: left; }
+    .zapas-hlava .jmeno { font-size: 1.2rem; font-weight: 700; } .zapas-hlava .jmeno a { color: var(--text); text-decoration: none; }
+    .zapas-hlava .jmeno a:hover { color: var(--modra); }
+    .zapas-hlava .tym a.drobne { text-decoration: none; }
+    .skore-velke { font-size: 2.4rem; font-weight: 800; font-variant-numeric: tabular-nums; text-align: center; padding: 6px 16px; background: var(--panel); border-radius: 12px; }
+    .prubeh td { padding: 5px 8px; } .prubeh .udalost.l { text-align: right; } .prubeh .minuta { color: var(--text-2); white-space: nowrap; text-align: center; width: 48px; }
+    .karta { display: inline-block; font-size: 1.1em; line-height: 1; } .karta.zl { color: #FFD54F; } .karta.cv { color: #E53935; }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -99,14 +107,14 @@
     <div class="tabulka-obal"><table class="rozpad"><tbody><tr><td>Main phase <span class="drobne">5W–2D–1L</span></td><td class="cislo">12</td></tr><tr><td>Bonuses <span class="drobne">participation, position, knockout rounds</span></td><td class="cislo">5</td></tr><tr><td><strong>Total</strong></td><td class="cislo"><strong>17</strong></td></tr></tbody></table></div>
     <h2>Matches <span class="drobne">(8)</span></h2>
     <h3>Europa League</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="vyhra"><td class="datum-z">8 Sep 2022</td><td class="drobne">Group stage</td><td>FC Zürich – <strong>Arsenal</strong> <span class="drobne">🇨🇭 Switzerland</span></td><td class="cislo skore">1:2</td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">6 Oct 2022</td><td class="drobne">Group stage</td><td><strong>Arsenal</strong> – Bodø/Glimt <span class="drobne">🇳🇴 Norway</span></td><td class="cislo skore">3:0</td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">13 Oct 2022</td><td class="drobne">Group stage</td><td>Bodø/Glimt – <strong>Arsenal</strong> <span class="drobne">🇳🇴 Norway</span></td><td class="cislo skore">0:1</td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">20 Oct 2022</td><td class="drobne">Group stage</td><td><strong>Arsenal</strong> – PSV Eindhoven <span class="drobne">🇳🇱 Netherlands</span></td><td class="cislo skore">1:0</td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="prohra"><td class="datum-z">27 Oct 2022</td><td class="drobne">Group stage</td><td>PSV Eindhoven – <strong>Arsenal</strong> <span class="drobne">🇳🇱 Netherlands</span></td><td class="cislo skore">2:0</td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="vyhra"><td class="datum-z">3 Nov 2022</td><td class="drobne">Group stage</td><td><strong>Arsenal</strong> – FC Zürich <span class="drobne">🇨🇭 Switzerland</span></td><td class="cislo skore">1:0</td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="remiza"><td class="datum-z">9 Mar 2023</td><td class="drobne">Round of 16</td><td>Sporting CP Lisbon – <strong>Arsenal</strong> <span class="drobne">🇵🇹 Portugal</span></td><td class="cislo skore">2:2</td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="remiza"><td class="datum-z">16 Mar 2023</td><td class="drobne">Round of 16</td><td><strong>Arsenal</strong> – Sporting CP Lisbon <span class="drobne">🇵🇹 Portugal</span></td><td class="cislo skore">1:1 <span class="drobne">(pens 3:5)</span></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="vyhra"><td class="datum-z">8 Sep 2022</td><td class="drobne">Group stage</td><td>FC Zürich – <strong>Arsenal</strong> <span class="drobne">🇨🇭 Switzerland</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2022-23/fc-zurich-arsenal-2022-09-08/">1:2</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra"><td class="datum-z">6 Oct 2022</td><td class="drobne">Group stage</td><td><strong>Arsenal</strong> – Bodø/Glimt <span class="drobne">🇳🇴 Norway</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2022-23/arsenal-bodoglimt-2022-10-06/">3:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra"><td class="datum-z">13 Oct 2022</td><td class="drobne">Group stage</td><td>Bodø/Glimt – <strong>Arsenal</strong> <span class="drobne">🇳🇴 Norway</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2022-23/bodoglimt-arsenal-2022-10-13/">0:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra"><td class="datum-z">20 Oct 2022</td><td class="drobne">Group stage</td><td><strong>Arsenal</strong> – PSV Eindhoven <span class="drobne">🇳🇱 Netherlands</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2022-23/arsenal-psv-eindhoven-2022-10-20/">1:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="prohra"><td class="datum-z">27 Oct 2022</td><td class="drobne">Group stage</td><td>PSV Eindhoven – <strong>Arsenal</strong> <span class="drobne">🇳🇱 Netherlands</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2022-23/psv-eindhoven-arsenal-2022-10-27/">2:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra"><td class="datum-z">3 Nov 2022</td><td class="drobne">Group stage</td><td><strong>Arsenal</strong> – FC Zürich <span class="drobne">🇨🇭 Switzerland</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2022-23/arsenal-fc-zurich-2022-11-03/">1:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="remiza"><td class="datum-z">9 Mar 2023</td><td class="drobne">Round of 16</td><td>Sporting CP Lisbon – <strong>Arsenal</strong> <span class="drobne">🇵🇹 Portugal</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2022-23/sporting-cp-lisbon-arsenal-2023-03-09/">2:2</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="remiza"><td class="datum-z">16 Mar 2023</td><td class="drobne">Round of 16</td><td><strong>Arsenal</strong> – Sporting CP Lisbon <span class="drobne">🇵🇹 Portugal</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2022-23/arsenal-sporting-cp-lisbon-2023-03-16/">1:1</a> <span class="drobne">(pens 3:5)</span></td><td class="cislo"><span class="zluta">+1</span></td></tr>
 </tbody></table></div>
 
     <p class="note">Points per match: win 2, draw 1, halved in qualifying; yellow = points to the country coefficient. The club is in bold, colour shows the result from its point of view. Bonuses (UCL league-phase participation, position, knockout rounds) are in the breakdown above.</p>
