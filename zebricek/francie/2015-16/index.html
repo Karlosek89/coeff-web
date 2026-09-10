@@ -83,7 +83,23 @@
     /* Mini-graf v řádku, pásma listiny, graf historie. */
     .graf { width: 64px; padding-left: 6px !important; padding-right: 6px !important; }
     .graf svg { display: block; width: 64px; height: 20px; }
-    .hlavni .tabulka-obal tbody tr.pasmo td { background: #3D5AFE1c !important; color: var(--text-2); font-size: 0.82rem; padding: 4px 10px; border-top: 1px solid #ffffff22; }
+    /* Pásmo listiny: tenká linka a malý šedý text vpravo — země jsou hlavní,
+       pásmo je jen orientační dělítko (Karel 10. 9. 2026). */
+    .hlavni .tabulka-obal tbody tr.pasmo td { background: transparent !important; color: var(--text-2); font-size: 0.74rem; letter-spacing: 0.02em; text-align: right; padding: 12px 10px 2px; border-top: 2px solid #3D5AFE66; border-bottom: none; }
+    .hlavni .tabulka-obal tbody tr.pasmo:first-child td { border-top: none; padding-top: 4px; }
+    /* Přilepená hlavička: na počítači tabulka nepotřebuje rolovat do stran,
+       takže obal nesmí být scroll-kontejner (sticky se lepí k němu, ne k oknu). */
+    @media (min-width: 1000px) { .hlavni .tabulka-obal { overflow: visible; } }
+    /* Mobil: jednotlivé sezony a Kl. skrýt, zůstane pořadí, země s přírůstkem,
+       Σ a trend; detail sezon je na stránce země. */
+    @media (max-width: 700px) {
+      .sez { display: none !important; }
+      .siroka { padding: 16px 10px 40px; }
+      .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 5px; font-size: 0.92rem; }
+      .hlavni .tabulka-obal td:nth-child(2), .hlavni .tabulka-obal tr.pasmo td { white-space: normal; }
+      .graf, .graf svg { width: 48px; }
+      .graf { padding-left: 2px !important; padding-right: 2px !important; }
+    }
     .historie-graf { margin: 8px 0 16px; }
     .historie-graf svg { width: 100%; height: auto; display: block; }
     .historie-graf text { fill: var(--text-2); font-size: 11px; font-family: inherit; }
@@ -108,12 +124,12 @@
     <p>Nejvíc bodů přinesl klub Paris Saint-Germain: 24 z 66,5, tedy 36 % všeho, co Francie v sezoně 2015/16 uhrála. Za ním AS Saint-Étienne (11,5) a Olympique Marseille (9). Kluby podle hlavní soutěže sezony: 2 v Lize mistrů, 4 v Evropské lize. Proti sezoně <a href="/zebricek/francie/2014-15/">2014/15</a> (10,916) měla Francie koeficient o 0,167 vyšší a v pořadí sezony klesla z 5. na 6. místo. V historii země od 2004/05 je to 12. nejlepší sezona z 22; nejvíc měla Francie v sezoně <a href="/zebricek/francie/2021-22/">2021/22</a> (18,416).</p>
     <h2>Kluby 2015/16</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Klub</th><th>Soutěž</th><th class="cislo">Body</th></tr></thead><tbody>
-<tr><td>Paris Saint-Germain</td><td>LM</td><td class="cislo"><strong>24</strong></td></tr>
-<tr><td>AS Saint-Étienne</td><td>EL</td><td class="cislo"><strong>11,5</strong></td></tr>
-<tr><td>Olympique Marseille</td><td>EL</td><td class="cislo"><strong>9</strong></td></tr>
-<tr><td>AS Monaco</td><td>EL</td><td class="cislo"><strong>8</strong></td></tr>
-<tr><td>Olympique Lyon</td><td>LM</td><td class="cislo"><strong>7</strong></td></tr>
-<tr><td>Girondins Bordeaux</td><td>EL</td><td class="cislo"><strong>7</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/francie/2015-16/paris-saint-germain/">Paris Saint-Germain</a></td><td>LM</td><td class="cislo"><strong>24</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/francie/2015-16/as-saint-etienne/">AS Saint-Étienne</a></td><td>EL</td><td class="cislo"><strong>11,5</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/francie/2015-16/olympique-marseille/">Olympique Marseille</a></td><td>EL</td><td class="cislo"><strong>9</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/francie/2015-16/as-monaco/">AS Monaco</a></td><td>EL</td><td class="cislo"><strong>8</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/francie/2015-16/olympique-lyon/">Olympique Lyon</a></td><td>LM</td><td class="cislo"><strong>7</strong></td></tr>
+<tr><td><a class="sezona" href="/zebricek/francie/2015-16/girondins-bordeaux/">Girondins Bordeaux</a></td><td>EL</td><td class="cislo"><strong>7</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Body = příspěvek klubu do koeficientu ZEMĚ (výhra 2, remíza 1, v předkolech půlené, plus bonusy) — ne klubový koeficient pro nasazení do losů, ten má jiná čísla. Koeficient země = součet ÷ počet klubů.</p>

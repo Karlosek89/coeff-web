@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#0A0F2D" />
   <!-- VYGENEROVÁNO tool/generuj_web.dart (repo uefa_koeficient) — needitovat ručně, přepíše se. -->
   <title>Sporting CP Lisbon 3:1 Galatasaray — UCL 2026/27 — Coeff</title>
-  <meta name="description" content="Sporting CP Lisbon 3:1 Galatasaray, UCL 2026/27 (League phase, round 1). Result and UEFA coefficient points." />
+  <meta name="description" content="Sporting CP Lisbon 3:1 Galatasaray, UCL 2026/27 (League phase, round 1). Goals, cards and UEFA coefficient points for Portugal and Türkiye." />
   <meta property="og:title" content="Sporting CP Lisbon 3:1 Galatasaray — UCL 2026/27" />
-  <meta property="og:description" content="Sporting CP Lisbon 3:1 Galatasaray, UCL 2026/27 (League phase, round 1). Result and UEFA coefficient points." />
+  <meta property="og:description" content="Sporting CP Lisbon 3:1 Galatasaray, UCL 2026/27 (League phase, round 1). Goals, cards and UEFA coefficient points for Portugal and Türkiye." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://coeff.app/ranking/zapas/2026-27/sporting-cp-lisbon-galatasaray-2026-09-09/" />
   <meta property="og:image" content="https://coeff.app/app_icon.png" />
@@ -83,7 +83,23 @@
     /* Mini-graf v řádku, pásma listiny, graf historie. */
     .graf { width: 64px; padding-left: 6px !important; padding-right: 6px !important; }
     .graf svg { display: block; width: 64px; height: 20px; }
-    .hlavni .tabulka-obal tbody tr.pasmo td { background: #3D5AFE1c !important; color: var(--text-2); font-size: 0.82rem; padding: 4px 10px; border-top: 1px solid #ffffff22; }
+    /* Pásmo listiny: tenká linka a malý šedý text vpravo — země jsou hlavní,
+       pásmo je jen orientační dělítko (Karel 10. 9. 2026). */
+    .hlavni .tabulka-obal tbody tr.pasmo td { background: transparent !important; color: var(--text-2); font-size: 0.74rem; letter-spacing: 0.02em; text-align: right; padding: 12px 10px 2px; border-top: 2px solid #3D5AFE66; border-bottom: none; }
+    .hlavni .tabulka-obal tbody tr.pasmo:first-child td { border-top: none; padding-top: 4px; }
+    /* Přilepená hlavička: na počítači tabulka nepotřebuje rolovat do stran,
+       takže obal nesmí být scroll-kontejner (sticky se lepí k němu, ne k oknu). */
+    @media (min-width: 1000px) { .hlavni .tabulka-obal { overflow: visible; } }
+    /* Mobil: jednotlivé sezony a Kl. skrýt, zůstane pořadí, země s přírůstkem,
+       Σ a trend; detail sezon je na stránce země. */
+    @media (max-width: 700px) {
+      .sez { display: none !important; }
+      .siroka { padding: 16px 10px 40px; }
+      .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 5px; font-size: 0.92rem; }
+      .hlavni .tabulka-obal td:nth-child(2), .hlavni .tabulka-obal tr.pasmo td { white-space: normal; }
+      .graf, .graf svg { width: 48px; }
+      .graf { padding-left: 2px !important; padding-right: 2px !important; }
+    }
     .historie-graf { margin: 8px 0 16px; }
     .historie-graf svg { width: 100%; height: auto; display: block; }
     .historie-graf text { fill: var(--text-2); font-size: 11px; font-family: inherit; }
@@ -114,7 +130,17 @@
     </tbody></table></div>
     <p class="note">Main phase: win 2 points, draw 1. </p>
     <h2>Timeline</h2>
-    <p class="note">Goals and cards are not available for this match.</p>
+    <div class="tabulka-obal"><table class="prubeh"><tbody>
+<tr><td class="udalost l"></td><td class="minuta">5'</td><td class="udalost r">⚽ Gonçalo Inácio (o.g.) <strong>0:1</strong></td></tr>
+<tr><td class="udalost l"><span class="karta-ik zl">▮</span> Sergi Altimira</td><td class="minuta">22'</td><td class="udalost r"></td></tr>
+<tr><td class="udalost l">⚽ Geny Catamo <strong>1:1</strong></td><td class="minuta">27'</td><td class="udalost r"></td></tr>
+<tr><td class="udalost l"><span class="karta-ik zl">▮</span> Luis Suárez</td><td class="minuta">44'</td><td class="udalost r"></td></tr>
+<tr><td class="udalost l"></td><td class="minuta">52'</td><td class="udalost r"><span class="karta-ik zl">▮</span> Eren Elmalı</td></tr>
+<tr><td class="udalost l">⚽ Luis Suárez (pen.) <strong>2:1</strong></td><td class="minuta">57'</td><td class="udalost r"></td></tr>
+<tr><td class="udalost l">⚽ Rodrigo Zalazar <strong>3:1</strong></td><td class="minuta">63'</td><td class="udalost r"></td></tr>
+<tr><td class="udalost l"></td><td class="minuta">80'</td><td class="udalost r"><span class="karta-ik zl">▮</span> Deniz Gül</td></tr>
+<tr><td class="udalost l"></td><td class="minuta">90'</td><td class="udalost r"><span class="karta-ik zl">▮</span> Ismail Jakobs</td></tr>
+</tbody></table></div><p class="note">Stoppage-time minutes are rounded to the base minute (45+2 → 45).</p>
 
     <div class="clanek-cta">
       <p>Get this ranking live in the Coeff app, with notifications about your country and a "what if" calculator. Free, no sign-up.</p>

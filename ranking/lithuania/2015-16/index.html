@@ -83,7 +83,23 @@
     /* Mini-graf v řádku, pásma listiny, graf historie. */
     .graf { width: 64px; padding-left: 6px !important; padding-right: 6px !important; }
     .graf svg { display: block; width: 64px; height: 20px; }
-    .hlavni .tabulka-obal tbody tr.pasmo td { background: #3D5AFE1c !important; color: var(--text-2); font-size: 0.82rem; padding: 4px 10px; border-top: 1px solid #ffffff22; }
+    /* Pásmo listiny: tenká linka a malý šedý text vpravo — země jsou hlavní,
+       pásmo je jen orientační dělítko (Karel 10. 9. 2026). */
+    .hlavni .tabulka-obal tbody tr.pasmo td { background: transparent !important; color: var(--text-2); font-size: 0.74rem; letter-spacing: 0.02em; text-align: right; padding: 12px 10px 2px; border-top: 2px solid #3D5AFE66; border-bottom: none; }
+    .hlavni .tabulka-obal tbody tr.pasmo:first-child td { border-top: none; padding-top: 4px; }
+    /* Přilepená hlavička: na počítači tabulka nepotřebuje rolovat do stran,
+       takže obal nesmí být scroll-kontejner (sticky se lepí k němu, ne k oknu). */
+    @media (min-width: 1000px) { .hlavni .tabulka-obal { overflow: visible; } }
+    /* Mobil: jednotlivé sezony a Kl. skrýt, zůstane pořadí, země s přírůstkem,
+       Σ a trend; detail sezon je na stránce země. */
+    @media (max-width: 700px) {
+      .sez { display: none !important; }
+      .siroka { padding: 16px 10px 40px; }
+      .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 5px; font-size: 0.92rem; }
+      .hlavni .tabulka-obal td:nth-child(2), .hlavni .tabulka-obal tr.pasmo td { white-space: normal; }
+      .graf, .graf svg { width: 48px; }
+      .graf { padding-left: 2px !important; padding-right: 2px !important; }
+    }
     .historie-graf { margin: 8px 0 16px; }
     .historie-graf svg { width: 100%; height: auto; display: block; }
     .historie-graf text { fill: var(--text-2); font-size: 11px; font-family: inherit; }
@@ -109,9 +125,9 @@
     <h2>Clubs 2015/16</h2>
     <div class="tabulka-obal"><table><thead><tr><th>Club</th><th>Competition</th><th class="cislo">Points</th></tr></thead><tbody>
 <tr><td>FK Trakai</td><td>UEL</td><td class="cislo"><strong>2.5</strong></td></tr>
-<tr><td>Zalgiris Vilnius</td><td>UCL</td><td class="cislo"><strong>0.5</strong></td></tr>
-<tr><td>Atlantas Klaipeda</td><td>UEL</td><td class="cislo"><strong>0</strong></td></tr>
-<tr><td>Kruoja Pakruojis</td><td>UEL</td><td class="cislo"><strong>0</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/lithuania/2015-16/zalgiris-vilnius/">Zalgiris Vilnius</a></td><td>UCL</td><td class="cislo"><strong>0.5</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/lithuania/2015-16/atlantas-klaipeda/">Atlantas Klaipeda</a></td><td>UEL</td><td class="cislo"><strong>0</strong></td></tr>
+<tr><td><a class="sezona" href="/ranking/lithuania/2015-16/kruoja-pakruojis/">Kruoja Pakruojis</a></td><td>UEL</td><td class="cislo"><strong>0</strong></td></tr>
 </tbody></table></div>
     
     <p class="note">Points = the club's contribution to the COUNTRY coefficient (win 2, draw 1, halved in qualifying, plus bonuses) — not the club coefficient used for seeding, which has different numbers. Country coefficient = total ÷ number of clubs.</p>
