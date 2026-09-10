@@ -33,6 +33,7 @@
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
     .rozpad td, .zapasy td { padding: 6px 10px; }
     .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    tr.radek-odkaz { cursor: pointer; } tr.radek-odkaz:hover td { background: #ffffff0f; }
     .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
     .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
     .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
@@ -65,13 +66,13 @@
     .pruh .back-link, .pruh .jazyk { color: var(--text-2); text-decoration: none; font-size: 0.95rem; }
     .pruh .back-link:hover, .pruh .jazyk:hover { color: var(--text); }
     /* Široké rozložení tabulky: hlavní sloupec + postranní karta. */
-    .siroka { max-width: 1160px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .siroka { max-width: 1300px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
     .siroka .hlavni { min-width: 0; }
     .karta { background: var(--panel); border: 1px solid #ffffff14; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
     .karta h3 { margin: 0 0 8px; font-size: 1.05rem; }
     .karta-zeme { margin-top: 10px; line-height: 1.5; }
     .karta-zeme .velke { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; }
-    @media (min-width: 1000px) {
+    @media (min-width: 1220px) {
       .siroka { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; }
       .siroka .bok { order: 2; position: sticky; top: 16px; }
     }
@@ -89,7 +90,9 @@
     .hlavni .tabulka-obal tbody tr.pasmo:first-child td { border-top: none; padding-top: 4px; }
     /* Přilepená hlavička: na počítači tabulka nepotřebuje rolovat do stran,
        takže obal nesmí být scroll-kontejner (sticky se lepí k němu, ne k oknu). */
-    @media (min-width: 1000px) { .hlavni .tabulka-obal { overflow: visible; } }
+    /* Přilepená hlavička: obal nesmí být scroll-kontejner (sticky se lepí k němu). Platí
+       jen tam, kde se tabulka i s Rozdílem vejde vedle karty — jinak se rozlézala pod ni. */
+    @media (min-width: 1220px) { .hlavni .tabulka-obal { overflow: visible; } .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 8px; } }
     /* Mobil: jednotlivé sezony a Kl. skrýt, zůstane pořadí, země s přírůstkem,
        Σ a trend; detail sezon je na stránce země. */
     @media (max-width: 700px) {
@@ -123,22 +126,23 @@
     <div class="tabulka-obal"><table class="rozpad"><tbody><tr><td>Qualifying <span class="drobne">1W–1D–2L</span></td><td class="cislo">1.5</td></tr><tr><td>Main phase <span class="drobne">2W–0D–6L</span></td><td class="cislo">4</td></tr><tr><td><strong>Total</strong></td><td class="cislo"><strong>5.5</strong></td></tr></tbody></table></div>
     <h2>Matches <span class="drobne">(12)</span></h2>
     <h3>Champions League</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="vyhra"><td class="datum-z">23 Jul 2025</td><td class="drobne">2nd qualifying round</td><td>SK Brann Bergen – <strong>FC Salzburg</strong> <span class="drobne">🇳🇴 Norway</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/sk-brann-bergen-fc-salzburg-2025-07-23/">1:4</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="remiza"><td class="datum-z">30 Jul 2025</td><td class="drobne">2nd qualifying round</td><td><strong>FC Salzburg</strong> – SK Brann Bergen <span class="drobne">🇳🇴 Norway</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-sk-brann-bergen-2025-07-30/">1:1</a></td><td class="cislo"><span class="zluta">+0.5</span></td></tr>
-<tr class="prohra"><td class="datum-z">6 Aug 2025</td><td class="drobne">3rd qualifying round</td><td><strong>FC Salzburg</strong> – Club Brugge <span class="drobne">🇧🇪 Belgium</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-club-brugge-2025-08-06/">0:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">12 Aug 2025</td><td class="drobne">3rd qualifying round</td><td>Club Brugge – <strong>FC Salzburg</strong> <span class="drobne">🇧🇪 Belgium</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/club-brugge-fc-salzburg-2025-08-12/">3:2</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/ranking/zapas/2025-26/sk-brann-bergen-fc-salzburg-2025-07-23/"><td class="datum-z">23 Jul 2025</td><td class="drobne">2nd qualifying round</td><td>SK Brann Bergen <span class="drobne" title="Norway">🇳🇴</span> – <strong>FC Salzburg</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/sk-brann-bergen-fc-salzburg-2025-07-23/">1:4</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="remiza radek-odkaz" data-href="/ranking/zapas/2025-26/fc-salzburg-sk-brann-bergen-2025-07-30/"><td class="datum-z">30 Jul 2025</td><td class="drobne">2nd qualifying round</td><td><strong>FC Salzburg</strong> – SK Brann Bergen <span class="drobne" title="Norway">🇳🇴</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-sk-brann-bergen-2025-07-30/">1:1</a></td><td class="cislo"><span class="zluta">+0.5</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/fc-salzburg-club-brugge-2025-08-06/"><td class="datum-z">6 Aug 2025</td><td class="drobne">3rd qualifying round</td><td><strong>FC Salzburg</strong> – Club Brugge <span class="drobne" title="Belgium">🇧🇪</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-club-brugge-2025-08-06/">0:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/club-brugge-fc-salzburg-2025-08-12/"><td class="datum-z">12 Aug 2025</td><td class="drobne">3rd qualifying round</td><td>Club Brugge <span class="drobne" title="Belgium">🇧🇪</span> – <strong>FC Salzburg</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/club-brugge-fc-salzburg-2025-08-12/">3:2</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
 </tbody></table></div>
 <h3>Europa League</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="prohra"><td class="datum-z">25 Sep 2025</td><td class="drobne">League phase</td><td><strong>FC Salzburg</strong> – FC Porto <span class="drobne">🇵🇹 Portugal</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-fc-porto-2025-09-25/">0:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">2 Oct 2025</td><td class="drobne">League phase</td><td>Olympique Lyon – <strong>FC Salzburg</strong> <span class="drobne">🇫🇷 France</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/olympique-lyon-fc-salzburg-2025-10-02/">2:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">23 Oct 2025</td><td class="drobne">League phase</td><td><strong>FC Salzburg</strong> – Ferencváros <span class="drobne">🇭🇺 Hungary</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-ferencvaros-2025-10-23/">2:3</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="vyhra"><td class="datum-z">6 Nov 2025</td><td class="drobne">League phase</td><td><strong>FC Salzburg</strong> – Go Ahead Eagles <span class="drobne">🇳🇱 Netherlands</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-go-ahead-eagles-2025-11-06/">2:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="prohra"><td class="datum-z">27 Nov 2025</td><td class="drobne">League phase</td><td>Bologna – <strong>FC Salzburg</strong> <span class="drobne">🇮🇹 Italy</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/bologna-fc-salzburg-2025-11-27/">4:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">11 Dec 2025</td><td class="drobne">League phase</td><td>SC Freiburg – <strong>FC Salzburg</strong> <span class="drobne">🇩🇪 Germany</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/sc-freiburg-fc-salzburg-2025-12-11/">1:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="vyhra"><td class="datum-z">22 Jan 2026</td><td class="drobne">League phase</td><td><strong>FC Salzburg</strong> – FC Basel <span class="drobne">🇨🇭 Switzerland</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-fc-basel-2026-01-22/">3:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="prohra"><td class="datum-z">29 Jan 2026</td><td class="drobne">League phase</td><td>Aston Villa – <strong>FC Salzburg</strong> <span class="drobne">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/aston-villa-fc-salzburg-2026-01-29/">3:2</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/fc-salzburg-fc-porto-2025-09-25/"><td class="datum-z">25 Sep 2025</td><td class="drobne">League phase</td><td><strong>FC Salzburg</strong> – FC Porto <span class="drobne" title="Portugal">🇵🇹</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-fc-porto-2025-09-25/">0:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/olympique-lyon-fc-salzburg-2025-10-02/"><td class="datum-z">2 Oct 2025</td><td class="drobne">League phase</td><td>Olympique Lyon <span class="drobne" title="France">🇫🇷</span> – <strong>FC Salzburg</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/olympique-lyon-fc-salzburg-2025-10-02/">2:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/fc-salzburg-ferencvaros-2025-10-23/"><td class="datum-z">23 Oct 2025</td><td class="drobne">League phase</td><td><strong>FC Salzburg</strong> – Ferencváros <span class="drobne" title="Hungary">🇭🇺</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-ferencvaros-2025-10-23/">2:3</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/ranking/zapas/2025-26/fc-salzburg-go-ahead-eagles-2025-11-06/"><td class="datum-z">6 Nov 2025</td><td class="drobne">League phase</td><td><strong>FC Salzburg</strong> – Go Ahead Eagles <span class="drobne" title="Netherlands">🇳🇱</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-go-ahead-eagles-2025-11-06/">2:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/bologna-fc-salzburg-2025-11-27/"><td class="datum-z">27 Nov 2025</td><td class="drobne">League phase</td><td>Bologna <span class="drobne" title="Italy">🇮🇹</span> – <strong>FC Salzburg</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/bologna-fc-salzburg-2025-11-27/">4:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/sc-freiburg-fc-salzburg-2025-12-11/"><td class="datum-z">11 Dec 2025</td><td class="drobne">League phase</td><td>SC Freiburg <span class="drobne" title="Germany">🇩🇪</span> – <strong>FC Salzburg</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/sc-freiburg-fc-salzburg-2025-12-11/">1:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/ranking/zapas/2025-26/fc-salzburg-fc-basel-2026-01-22/"><td class="datum-z">22 Jan 2026</td><td class="drobne">League phase</td><td><strong>FC Salzburg</strong> – FC Basel <span class="drobne" title="Switzerland">🇨🇭</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-fc-basel-2026-01-22/">3:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/aston-villa-fc-salzburg-2026-01-29/"><td class="datum-z">29 Jan 2026</td><td class="drobne">League phase</td><td>Aston Villa <span class="drobne" title="England">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span> – <strong>FC Salzburg</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/aston-villa-fc-salzburg-2026-01-29/">3:2</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
 </tbody></table></div>
 
+    <script>document.querySelectorAll("tr.radek-odkaz").forEach(function (r) { r.addEventListener("click", function (e) { if (e.target.closest("a")) return; location.href = r.dataset.href; }); });</script>
     <p class="note">Points per match: win 2, draw 1, halved in qualifying; yellow = points to the country coefficient. The club is in bold, colour shows the result from its point of view. Bonuses (UCL league-phase participation, position, knockout rounds) are in the breakdown above.</p>
 
     <div class="clanek-cta">

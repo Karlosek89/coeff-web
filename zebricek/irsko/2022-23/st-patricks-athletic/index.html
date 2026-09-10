@@ -33,6 +33,7 @@
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
     .rozpad td, .zapasy td { padding: 6px 10px; }
     .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    tr.radek-odkaz { cursor: pointer; } tr.radek-odkaz:hover td { background: #ffffff0f; }
     .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
     .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
     .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
@@ -65,13 +66,13 @@
     .pruh .back-link, .pruh .jazyk { color: var(--text-2); text-decoration: none; font-size: 0.95rem; }
     .pruh .back-link:hover, .pruh .jazyk:hover { color: var(--text); }
     /* Široké rozložení tabulky: hlavní sloupec + postranní karta. */
-    .siroka { max-width: 1160px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .siroka { max-width: 1300px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
     .siroka .hlavni { min-width: 0; }
     .karta { background: var(--panel); border: 1px solid #ffffff14; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
     .karta h3 { margin: 0 0 8px; font-size: 1.05rem; }
     .karta-zeme { margin-top: 10px; line-height: 1.5; }
     .karta-zeme .velke { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; }
-    @media (min-width: 1000px) {
+    @media (min-width: 1220px) {
       .siroka { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; }
       .siroka .bok { order: 2; position: sticky; top: 16px; }
     }
@@ -89,7 +90,9 @@
     .hlavni .tabulka-obal tbody tr.pasmo:first-child td { border-top: none; padding-top: 4px; }
     /* Přilepená hlavička: na počítači tabulka nepotřebuje rolovat do stran,
        takže obal nesmí být scroll-kontejner (sticky se lepí k němu, ne k oknu). */
-    @media (min-width: 1000px) { .hlavni .tabulka-obal { overflow: visible; } }
+    /* Přilepená hlavička: obal nesmí být scroll-kontejner (sticky se lepí k němu). Platí
+       jen tam, kde se tabulka i s Rozdílem vejde vedle karty — jinak se rozlézala pod ni. */
+    @media (min-width: 1220px) { .hlavni .tabulka-obal { overflow: visible; } .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 8px; } }
     /* Mobil: jednotlivé sezony a Kl. skrýt, zůstane pořadí, země s přírůstkem,
        Σ a trend; detail sezon je na stránce země. */
     @media (max-width: 700px) {
@@ -123,12 +126,13 @@
     <div class="tabulka-obal"><table class="rozpad"><tbody><tr><td>Kvalifikace <span class="drobne">1V–2R–1P</span></td><td class="cislo">2</td></tr><tr><td><strong>Celkem</strong></td><td class="cislo"><strong>2</strong></td></tr></tbody></table></div>
     <h2>Zápasy <span class="drobne">(4)</span></h2>
     <h3>Konferenční liga</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="remiza"><td class="datum-z">21. 7. 2022</td><td class="drobne">2. předkolo</td><td><strong>St. Patrick's Athletic</strong> – Mura Murska Sobota <span class="drobne">🇸🇮 Slovinsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/st-patricks-athletic-mura-murska-sobota-2022-07-21/">1:1</a></td><td class="cislo"><span class="zluta">+0,5</span></td></tr>
-<tr class="remiza"><td class="datum-z">28. 7. 2022</td><td class="drobne">2. předkolo</td><td>Mura Murska Sobota – <strong>St. Patrick's Athletic</strong> <span class="drobne">🇸🇮 Slovinsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/mura-murska-sobota-st-patricks-athletic-2022-07-28/">0:0</a> <span class="drobne">(pen. 5:6)</span></td><td class="cislo"><span class="zluta">+0,5</span></td></tr>
-<tr class="vyhra"><td class="datum-z">4. 8. 2022</td><td class="drobne">3. předkolo</td><td>CSKA Sofia – <strong>St. Patrick's Athletic</strong> <span class="drobne">🇧🇬 Bulharsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/cska-sofia-st-patricks-athletic-2022-08-04/">0:1</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="prohra"><td class="datum-z">11. 8. 2022</td><td class="drobne">3. předkolo</td><td><strong>St. Patrick's Athletic</strong> – CSKA Sofia <span class="drobne">🇧🇬 Bulharsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/st-patricks-athletic-cska-sofia-2022-08-11/">0:2</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="remiza radek-odkaz" data-href="/zebricek/zapas/2022-23/st-patricks-athletic-mura-murska-sobota-2022-07-21/"><td class="datum-z">21. 7. 2022</td><td class="drobne">2. předkolo</td><td><strong>St. Patrick's Athletic</strong> – Mura Murska Sobota <span class="drobne" title="Slovinsko">🇸🇮</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/st-patricks-athletic-mura-murska-sobota-2022-07-21/">1:1</a></td><td class="cislo"><span class="zluta">+0,5</span></td></tr>
+<tr class="remiza radek-odkaz" data-href="/zebricek/zapas/2022-23/mura-murska-sobota-st-patricks-athletic-2022-07-28/"><td class="datum-z">28. 7. 2022</td><td class="drobne">2. předkolo</td><td>Mura Murska Sobota <span class="drobne" title="Slovinsko">🇸🇮</span> – <strong>St. Patrick's Athletic</strong></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/mura-murska-sobota-st-patricks-athletic-2022-07-28/">0:0</a> <span class="drobne">(pen. 5:6)</span></td><td class="cislo"><span class="zluta">+0,5</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/zebricek/zapas/2022-23/cska-sofia-st-patricks-athletic-2022-08-04/"><td class="datum-z">4. 8. 2022</td><td class="drobne">3. předkolo</td><td>CSKA Sofia <span class="drobne" title="Bulharsko">🇧🇬</span> – <strong>St. Patrick's Athletic</strong></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/cska-sofia-st-patricks-athletic-2022-08-04/">0:1</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/zebricek/zapas/2022-23/st-patricks-athletic-cska-sofia-2022-08-11/"><td class="datum-z">11. 8. 2022</td><td class="drobne">3. předkolo</td><td><strong>St. Patrick's Athletic</strong> – CSKA Sofia <span class="drobne" title="Bulharsko">🇧🇬</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2022-23/st-patricks-athletic-cska-sofia-2022-08-11/">0:2</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
 </tbody></table></div>
 
+    <script>document.querySelectorAll("tr.radek-odkaz").forEach(function (r) { r.addEventListener("click", function (e) { if (e.target.closest("a")) return; location.href = r.dataset.href; }); });</script>
     <p class="note">Body za zápas: výhra 2, remíza 1, v předkolech polovina; žlutě body do koeficientu země. Tučně je klub země Irsko, výsledek je barevně z jeho pohledu. Bonusy (účast v ligové fázi LM, pořadí, vyřazovací kola) jsou v rozpadu nahoře.</p>
 
     <div class="clanek-cta">

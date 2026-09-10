@@ -33,6 +33,7 @@
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
     .rozpad td, .zapasy td { padding: 6px 10px; }
     .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    tr.radek-odkaz { cursor: pointer; } tr.radek-odkaz:hover td { background: #ffffff0f; }
     .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
     .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
     .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
@@ -65,13 +66,13 @@
     .pruh .back-link, .pruh .jazyk { color: var(--text-2); text-decoration: none; font-size: 0.95rem; }
     .pruh .back-link:hover, .pruh .jazyk:hover { color: var(--text); }
     /* Široké rozložení tabulky: hlavní sloupec + postranní karta. */
-    .siroka { max-width: 1160px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .siroka { max-width: 1300px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
     .siroka .hlavni { min-width: 0; }
     .karta { background: var(--panel); border: 1px solid #ffffff14; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
     .karta h3 { margin: 0 0 8px; font-size: 1.05rem; }
     .karta-zeme { margin-top: 10px; line-height: 1.5; }
     .karta-zeme .velke { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; }
-    @media (min-width: 1000px) {
+    @media (min-width: 1220px) {
       .siroka { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; }
       .siroka .bok { order: 2; position: sticky; top: 16px; }
     }
@@ -89,7 +90,9 @@
     .hlavni .tabulka-obal tbody tr.pasmo:first-child td { border-top: none; padding-top: 4px; }
     /* Přilepená hlavička: na počítači tabulka nepotřebuje rolovat do stran,
        takže obal nesmí být scroll-kontejner (sticky se lepí k němu, ne k oknu). */
-    @media (min-width: 1000px) { .hlavni .tabulka-obal { overflow: visible; } }
+    /* Přilepená hlavička: obal nesmí být scroll-kontejner (sticky se lepí k němu). Platí
+       jen tam, kde se tabulka i s Rozdílem vejde vedle karty — jinak se rozlézala pod ni. */
+    @media (min-width: 1220px) { .hlavni .tabulka-obal { overflow: visible; } .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 8px; } }
     /* Mobil: jednotlivé sezony a Kl. skrýt, zůstane pořadí, země s přírůstkem,
        Σ a trend; detail sezon je na stránce země. */
     @media (max-width: 700px) {
@@ -123,18 +126,19 @@
     <div class="tabulka-obal"><table class="rozpad"><tbody><tr><td>Hlavní fáze <span class="drobne">5V–1R–4P</span></td><td class="cislo">11</td></tr><tr><td><strong>Celkem</strong></td><td class="cislo"><strong>11</strong></td></tr></tbody></table></div>
     <h2>Zápasy <span class="drobne">(10)</span></h2>
     <h3>Evropská liga</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="remiza"><td class="datum-z">17. 9. 2015</td><td class="drobne">Skupina</td><td><strong>Anderlecht</strong> – AS Monaco <span class="drobne">🇫🇷 Francie</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/anderlecht-as-monaco-2015-09-17/">1:1</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="prohra"><td class="datum-z">1. 10. 2015</td><td class="drobne">Skupina</td><td>Qarabag FK – <strong>Anderlecht</strong> <span class="drobne">🇦🇿 Ázerbájdžán</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/qarabag-fk-anderlecht-2015-10-01/">1:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="vyhra"><td class="datum-z">22. 10. 2015</td><td class="drobne">Skupina</td><td><strong>Anderlecht</strong> – Tottenham Hotspur <span class="drobne">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Anglie</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/anderlecht-tottenham-hotspur-2015-10-22/">2:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="prohra"><td class="datum-z">5. 11. 2015</td><td class="drobne">Skupina</td><td>Tottenham Hotspur – <strong>Anderlecht</strong> <span class="drobne">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Anglie</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/tottenham-hotspur-anderlecht-2015-11-05/">2:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="vyhra"><td class="datum-z">26. 11. 2015</td><td class="drobne">Skupina</td><td>AS Monaco – <strong>Anderlecht</strong> <span class="drobne">🇫🇷 Francie</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/as-monaco-anderlecht-2015-11-26/">0:2</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">10. 12. 2015</td><td class="drobne">Skupina</td><td><strong>Anderlecht</strong> – Qarabag FK <span class="drobne">🇦🇿 Ázerbájdžán</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/anderlecht-qarabag-fk-2015-12-10/">2:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">18. 2. 2016</td><td class="drobne">Play-off vyřazovací fáze</td><td><strong>Anderlecht</strong> – Olympiakos Piraeus <span class="drobne">🇬🇷 Řecko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/anderlecht-olympiakos-piraeus-2016-02-18/">1:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">25. 2. 2016</td><td class="drobne">Play-off vyřazovací fáze</td><td>Olympiakos Piraeus – <strong>Anderlecht</strong> <span class="drobne">🇬🇷 Řecko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/olympiakos-piraeus-anderlecht-2016-02-25/">1:2</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="prohra"><td class="datum-z">10. 3. 2016</td><td class="drobne">Osmifinále</td><td>Shakhtar Donetsk – <strong>Anderlecht</strong> <span class="drobne">🇺🇦 Ukrajina</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/shakhtar-donetsk-anderlecht-2016-03-10/">3:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">17. 3. 2016</td><td class="drobne">Osmifinále</td><td><strong>Anderlecht</strong> – Shakhtar Donetsk <span class="drobne">🇺🇦 Ukrajina</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/anderlecht-shakhtar-donetsk-2016-03-17/">0:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="remiza radek-odkaz" data-href="/zebricek/zapas/2015-16/anderlecht-as-monaco-2015-09-17/"><td class="datum-z">17. 9. 2015</td><td class="drobne">Skupina</td><td><strong>Anderlecht</strong> – AS Monaco <span class="drobne" title="Francie">🇫🇷</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/anderlecht-as-monaco-2015-09-17/">1:1</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/zebricek/zapas/2015-16/qarabag-fk-anderlecht-2015-10-01/"><td class="datum-z">1. 10. 2015</td><td class="drobne">Skupina</td><td>Qarabag FK <span class="drobne" title="Ázerbájdžán">🇦🇿</span> – <strong>Anderlecht</strong></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/qarabag-fk-anderlecht-2015-10-01/">1:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/zebricek/zapas/2015-16/anderlecht-tottenham-hotspur-2015-10-22/"><td class="datum-z">22. 10. 2015</td><td class="drobne">Skupina</td><td><strong>Anderlecht</strong> – Tottenham Hotspur <span class="drobne" title="Anglie">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/anderlecht-tottenham-hotspur-2015-10-22/">2:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/zebricek/zapas/2015-16/tottenham-hotspur-anderlecht-2015-11-05/"><td class="datum-z">5. 11. 2015</td><td class="drobne">Skupina</td><td>Tottenham Hotspur <span class="drobne" title="Anglie">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span> – <strong>Anderlecht</strong></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/tottenham-hotspur-anderlecht-2015-11-05/">2:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/zebricek/zapas/2015-16/as-monaco-anderlecht-2015-11-26/"><td class="datum-z">26. 11. 2015</td><td class="drobne">Skupina</td><td>AS Monaco <span class="drobne" title="Francie">🇫🇷</span> – <strong>Anderlecht</strong></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/as-monaco-anderlecht-2015-11-26/">0:2</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/zebricek/zapas/2015-16/anderlecht-qarabag-fk-2015-12-10/"><td class="datum-z">10. 12. 2015</td><td class="drobne">Skupina</td><td><strong>Anderlecht</strong> – Qarabag FK <span class="drobne" title="Ázerbájdžán">🇦🇿</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/anderlecht-qarabag-fk-2015-12-10/">2:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/zebricek/zapas/2015-16/anderlecht-olympiakos-piraeus-2016-02-18/"><td class="datum-z">18. 2. 2016</td><td class="drobne">Play-off vyřazovací fáze</td><td><strong>Anderlecht</strong> – Olympiakos Piraeus <span class="drobne" title="Řecko">🇬🇷</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/anderlecht-olympiakos-piraeus-2016-02-18/">1:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/zebricek/zapas/2015-16/olympiakos-piraeus-anderlecht-2016-02-25/"><td class="datum-z">25. 2. 2016</td><td class="drobne">Play-off vyřazovací fáze</td><td>Olympiakos Piraeus <span class="drobne" title="Řecko">🇬🇷</span> – <strong>Anderlecht</strong></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/olympiakos-piraeus-anderlecht-2016-02-25/">1:2</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/zebricek/zapas/2015-16/shakhtar-donetsk-anderlecht-2016-03-10/"><td class="datum-z">10. 3. 2016</td><td class="drobne">Osmifinále</td><td>Shakhtar Donetsk <span class="drobne" title="Ukrajina">🇺🇦</span> – <strong>Anderlecht</strong></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/shakhtar-donetsk-anderlecht-2016-03-10/">3:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/zebricek/zapas/2015-16/anderlecht-shakhtar-donetsk-2016-03-17/"><td class="datum-z">17. 3. 2016</td><td class="drobne">Osmifinále</td><td><strong>Anderlecht</strong> – Shakhtar Donetsk <span class="drobne" title="Ukrajina">🇺🇦</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2015-16/anderlecht-shakhtar-donetsk-2016-03-17/">0:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
 </tbody></table></div>
 
+    <script>document.querySelectorAll("tr.radek-odkaz").forEach(function (r) { r.addEventListener("click", function (e) { if (e.target.closest("a")) return; location.href = r.dataset.href; }); });</script>
     <p class="note">Body za zápas: výhra 2, remíza 1, v předkolech polovina; žlutě body do koeficientu země. Tučně je klub země Belgie, výsledek je barevně z jeho pohledu. Bonusy (účast v ligové fázi LM, pořadí, vyřazovací kola) jsou v rozpadu nahoře.</p>
 
     <div class="clanek-cta">

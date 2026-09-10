@@ -33,6 +33,7 @@
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
     .rozpad td, .zapasy td { padding: 6px 10px; }
     .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    tr.radek-odkaz { cursor: pointer; } tr.radek-odkaz:hover td { background: #ffffff0f; }
     .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
     .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
     .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
@@ -65,13 +66,13 @@
     .pruh .back-link, .pruh .jazyk { color: var(--text-2); text-decoration: none; font-size: 0.95rem; }
     .pruh .back-link:hover, .pruh .jazyk:hover { color: var(--text); }
     /* Široké rozložení tabulky: hlavní sloupec + postranní karta. */
-    .siroka { max-width: 1160px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .siroka { max-width: 1300px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
     .siroka .hlavni { min-width: 0; }
     .karta { background: var(--panel); border: 1px solid #ffffff14; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
     .karta h3 { margin: 0 0 8px; font-size: 1.05rem; }
     .karta-zeme { margin-top: 10px; line-height: 1.5; }
     .karta-zeme .velke { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; }
-    @media (min-width: 1000px) {
+    @media (min-width: 1220px) {
       .siroka { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; }
       .siroka .bok { order: 2; position: sticky; top: 16px; }
     }
@@ -89,7 +90,9 @@
     .hlavni .tabulka-obal tbody tr.pasmo:first-child td { border-top: none; padding-top: 4px; }
     /* Přilepená hlavička: na počítači tabulka nepotřebuje rolovat do stran,
        takže obal nesmí být scroll-kontejner (sticky se lepí k němu, ne k oknu). */
-    @media (min-width: 1000px) { .hlavni .tabulka-obal { overflow: visible; } }
+    /* Přilepená hlavička: obal nesmí být scroll-kontejner (sticky se lepí k němu). Platí
+       jen tam, kde se tabulka i s Rozdílem vejde vedle karty — jinak se rozlézala pod ni. */
+    @media (min-width: 1220px) { .hlavni .tabulka-obal { overflow: visible; } .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 8px; } }
     /* Mobil: jednotlivé sezony a Kl. skrýt, zůstane pořadí, země s přírůstkem,
        Σ a trend; detail sezon je na stránce země. */
     @media (max-width: 700px) {
@@ -123,20 +126,21 @@
     <div class="tabulka-obal"><table class="rozpad"><tbody><tr><td>Qualifying <span class="drobne">0W–1D–1L</span></td><td class="cislo">0.5</td></tr><tr><td>Main phase <span class="drobne">2W–0D–6L</span></td><td class="cislo">4</td></tr><tr><td><strong>Total</strong></td><td class="cislo"><strong>4.5</strong></td></tr></tbody></table></div>
     <h2>Matches <span class="drobne">(10)</span></h2>
     <h3>Champions League</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="remiza"><td class="datum-z">20 Aug 2025</td><td class="drobne">Play-off (qualifying)</td><td><strong>FC Basel</strong> – FC København <span class="drobne">🇩🇰 Denmark</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-basel-fc-kobenhavn-2025-08-20/">1:1</a></td><td class="cislo"><span class="zluta">+0.5</span></td></tr>
-<tr class="prohra"><td class="datum-z">27 Aug 2025</td><td class="drobne">Play-off (qualifying)</td><td>FC København – <strong>FC Basel</strong> <span class="drobne">🇩🇰 Denmark</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-kobenhavn-fc-basel-2025-08-27/">2:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="remiza radek-odkaz" data-href="/ranking/zapas/2025-26/fc-basel-fc-kobenhavn-2025-08-20/"><td class="datum-z">20 Aug 2025</td><td class="drobne">Play-off (qualifying)</td><td><strong>FC Basel</strong> – FC København <span class="drobne" title="Denmark">🇩🇰</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-basel-fc-kobenhavn-2025-08-20/">1:1</a></td><td class="cislo"><span class="zluta">+0.5</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/fc-kobenhavn-fc-basel-2025-08-27/"><td class="datum-z">27 Aug 2025</td><td class="drobne">Play-off (qualifying)</td><td>FC København <span class="drobne" title="Denmark">🇩🇰</span> – <strong>FC Basel</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-kobenhavn-fc-basel-2025-08-27/">2:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
 </tbody></table></div>
 <h3>Europa League</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="prohra"><td class="datum-z">24 Sep 2025</td><td class="drobne">League phase</td><td>SC Freiburg – <strong>FC Basel</strong> <span class="drobne">🇩🇪 Germany</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/sc-freiburg-fc-basel-2025-09-24/">2:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="vyhra"><td class="datum-z">2 Oct 2025</td><td class="drobne">League phase</td><td><strong>FC Basel</strong> – VfB Stuttgart <span class="drobne">🇩🇪 Germany</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-basel-vfb-stuttgart-2025-10-02/">2:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="prohra"><td class="datum-z">23 Oct 2025</td><td class="drobne">League phase</td><td>Olympique Lyon – <strong>FC Basel</strong> <span class="drobne">🇫🇷 France</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/olympique-lyon-fc-basel-2025-10-23/">2:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="vyhra"><td class="datum-z">6 Nov 2025</td><td class="drobne">League phase</td><td><strong>FC Basel</strong> – FCSB <span class="drobne">🇷🇴 Romania</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-basel-fcsb-2025-11-06/">3:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="prohra"><td class="datum-z">27 Nov 2025</td><td class="drobne">League phase</td><td>Racing Genk – <strong>FC Basel</strong> <span class="drobne">🇧🇪 Belgium</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/racing-genk-fc-basel-2025-11-27/">2:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">11 Dec 2025</td><td class="drobne">League phase</td><td><strong>FC Basel</strong> – Aston Villa <span class="drobne">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-basel-aston-villa-2025-12-11/">1:2</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">22 Jan 2026</td><td class="drobne">League phase</td><td>FC Salzburg – <strong>FC Basel</strong> <span class="drobne">🇦🇹 Austria</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-fc-basel-2026-01-22/">3:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">29 Jan 2026</td><td class="drobne">League phase</td><td><strong>FC Basel</strong> – Viktoria Plzen <span class="drobne">🇨🇿 Czechia</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-basel-viktoria-plzen-2026-01-29/">0:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/sc-freiburg-fc-basel-2025-09-24/"><td class="datum-z">24 Sep 2025</td><td class="drobne">League phase</td><td>SC Freiburg <span class="drobne" title="Germany">🇩🇪</span> – <strong>FC Basel</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/sc-freiburg-fc-basel-2025-09-24/">2:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/ranking/zapas/2025-26/fc-basel-vfb-stuttgart-2025-10-02/"><td class="datum-z">2 Oct 2025</td><td class="drobne">League phase</td><td><strong>FC Basel</strong> – VfB Stuttgart <span class="drobne" title="Germany">🇩🇪</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-basel-vfb-stuttgart-2025-10-02/">2:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/olympique-lyon-fc-basel-2025-10-23/"><td class="datum-z">23 Oct 2025</td><td class="drobne">League phase</td><td>Olympique Lyon <span class="drobne" title="France">🇫🇷</span> – <strong>FC Basel</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/olympique-lyon-fc-basel-2025-10-23/">2:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/ranking/zapas/2025-26/fc-basel-fcsb-2025-11-06/"><td class="datum-z">6 Nov 2025</td><td class="drobne">League phase</td><td><strong>FC Basel</strong> – FCSB <span class="drobne" title="Romania">🇷🇴</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-basel-fcsb-2025-11-06/">3:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/racing-genk-fc-basel-2025-11-27/"><td class="datum-z">27 Nov 2025</td><td class="drobne">League phase</td><td>Racing Genk <span class="drobne" title="Belgium">🇧🇪</span> – <strong>FC Basel</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/racing-genk-fc-basel-2025-11-27/">2:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/fc-basel-aston-villa-2025-12-11/"><td class="datum-z">11 Dec 2025</td><td class="drobne">League phase</td><td><strong>FC Basel</strong> – Aston Villa <span class="drobne" title="England">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-basel-aston-villa-2025-12-11/">1:2</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/fc-salzburg-fc-basel-2026-01-22/"><td class="datum-z">22 Jan 2026</td><td class="drobne">League phase</td><td>FC Salzburg <span class="drobne" title="Austria">🇦🇹</span> – <strong>FC Basel</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-salzburg-fc-basel-2026-01-22/">3:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2025-26/fc-basel-viktoria-plzen-2026-01-29/"><td class="datum-z">29 Jan 2026</td><td class="drobne">League phase</td><td><strong>FC Basel</strong> – Viktoria Plzen <span class="drobne" title="Czechia">🇨🇿</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2025-26/fc-basel-viktoria-plzen-2026-01-29/">0:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
 </tbody></table></div>
 
+    <script>document.querySelectorAll("tr.radek-odkaz").forEach(function (r) { r.addEventListener("click", function (e) { if (e.target.closest("a")) return; location.href = r.dataset.href; }); });</script>
     <p class="note">Points per match: win 2, draw 1, halved in qualifying; yellow = points to the country coefficient. The club is in bold, colour shows the result from its point of view. Bonuses (UCL league-phase participation, position, knockout rounds) are in the breakdown above.</p>
 
     <div class="clanek-cta">

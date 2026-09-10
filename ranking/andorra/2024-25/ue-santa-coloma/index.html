@@ -33,6 +33,7 @@
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
     .rozpad td, .zapasy td { padding: 6px 10px; }
     .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    tr.radek-odkaz { cursor: pointer; } tr.radek-odkaz:hover td { background: #ffffff0f; }
     .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
     .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
     .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
@@ -65,13 +66,13 @@
     .pruh .back-link, .pruh .jazyk { color: var(--text-2); text-decoration: none; font-size: 0.95rem; }
     .pruh .back-link:hover, .pruh .jazyk:hover { color: var(--text); }
     /* Široké rozložení tabulky: hlavní sloupec + postranní karta. */
-    .siroka { max-width: 1160px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .siroka { max-width: 1300px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
     .siroka .hlavni { min-width: 0; }
     .karta { background: var(--panel); border: 1px solid #ffffff14; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
     .karta h3 { margin: 0 0 8px; font-size: 1.05rem; }
     .karta-zeme { margin-top: 10px; line-height: 1.5; }
     .karta-zeme .velke { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; }
-    @media (min-width: 1000px) {
+    @media (min-width: 1220px) {
       .siroka { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; }
       .siroka .bok { order: 2; position: sticky; top: 16px; }
     }
@@ -89,7 +90,9 @@
     .hlavni .tabulka-obal tbody tr.pasmo:first-child td { border-top: none; padding-top: 4px; }
     /* Přilepená hlavička: na počítači tabulka nepotřebuje rolovat do stran,
        takže obal nesmí být scroll-kontejner (sticky se lepí k němu, ne k oknu). */
-    @media (min-width: 1000px) { .hlavni .tabulka-obal { overflow: visible; } }
+    /* Přilepená hlavička: obal nesmí být scroll-kontejner (sticky se lepí k němu). Platí
+       jen tam, kde se tabulka i s Rozdílem vejde vedle karty — jinak se rozlézala pod ni. */
+    @media (min-width: 1220px) { .hlavni .tabulka-obal { overflow: visible; } .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 8px; } }
     /* Mobil: jednotlivé sezony a Kl. skrýt, zůstane pořadí, země s přírůstkem,
        Σ a trend; detail sezon je na stránce země. */
     @media (max-width: 700px) {
@@ -123,20 +126,21 @@
     <div class="tabulka-obal"><table class="rozpad"><tbody><tr><td>Qualifying <span class="drobne">1W–1D–6L</span></td><td class="cislo">1.5</td></tr><tr><td><strong>Total</strong></td><td class="cislo"><strong>1.5</strong></td></tr></tbody></table></div>
     <h2>Matches <span class="drobne">(8)</span></h2>
     <h3>Champions League</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="prohra"><td class="datum-z">9 Jul 2024</td><td class="drobne">1st qualifying round</td><td><strong>UE Santa Coloma</strong> – FC Ballkani <span class="drobne">🇽🇰 Kosovo</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/ue-santa-coloma-fc-ballkani-2024-07-09/">1:2</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="vyhra"><td class="datum-z">16 Jul 2024</td><td class="drobne">1st qualifying round</td><td>FC Ballkani – <strong>UE Santa Coloma</strong> <span class="drobne">🇽🇰 Kosovo</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/fc-ballkani-ue-santa-coloma-2024-07-16/">1:2</a> <span class="drobne">(pens 5:6)</span></td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="prohra"><td class="datum-z">23 Jul 2024</td><td class="drobne">2nd qualifying round</td><td><strong>UE Santa Coloma</strong> – FC Midtjylland <span class="drobne">🇩🇰 Denmark</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/ue-santa-coloma-fc-midtjylland-2024-07-23/">0:3</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">31 Jul 2024</td><td class="drobne">2nd qualifying round</td><td>FC Midtjylland – <strong>UE Santa Coloma</strong> <span class="drobne">🇩🇰 Denmark</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/fc-midtjylland-ue-santa-coloma-2024-07-31/">1:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2024-25/ue-santa-coloma-fc-ballkani-2024-07-09/"><td class="datum-z">9 Jul 2024</td><td class="drobne">1st qualifying round</td><td><strong>UE Santa Coloma</strong> – FC Ballkani <span class="drobne" title="Kosovo">🇽🇰</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/ue-santa-coloma-fc-ballkani-2024-07-09/">1:2</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/ranking/zapas/2024-25/fc-ballkani-ue-santa-coloma-2024-07-16/"><td class="datum-z">16 Jul 2024</td><td class="drobne">1st qualifying round</td><td>FC Ballkani <span class="drobne" title="Kosovo">🇽🇰</span> – <strong>UE Santa Coloma</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/fc-ballkani-ue-santa-coloma-2024-07-16/">1:2</a> <span class="drobne">(pens 5:6)</span></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2024-25/ue-santa-coloma-fc-midtjylland-2024-07-23/"><td class="datum-z">23 Jul 2024</td><td class="drobne">2nd qualifying round</td><td><strong>UE Santa Coloma</strong> – FC Midtjylland <span class="drobne" title="Denmark">🇩🇰</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/ue-santa-coloma-fc-midtjylland-2024-07-23/">0:3</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2024-25/fc-midtjylland-ue-santa-coloma-2024-07-31/"><td class="datum-z">31 Jul 2024</td><td class="drobne">2nd qualifying round</td><td>FC Midtjylland <span class="drobne" title="Denmark">🇩🇰</span> – <strong>UE Santa Coloma</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/fc-midtjylland-ue-santa-coloma-2024-07-31/">1:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
 </tbody></table></div>
 <h3>Europa League</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="prohra"><td class="datum-z">8 Aug 2024</td><td class="drobne">3rd qualifying round</td><td><strong>UE Santa Coloma</strong> – RFS Riga <span class="drobne">🇱🇻 Latvia</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/ue-santa-coloma-rfs-riga-2024-08-08/">0:2</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="prohra"><td class="datum-z">14 Aug 2024</td><td class="drobne">3rd qualifying round</td><td>RFS Riga – <strong>UE Santa Coloma</strong> <span class="drobne">🇱🇻 Latvia</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/rfs-riga-ue-santa-coloma-2024-08-14/">7:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2024-25/ue-santa-coloma-rfs-riga-2024-08-08/"><td class="datum-z">8 Aug 2024</td><td class="drobne">3rd qualifying round</td><td><strong>UE Santa Coloma</strong> – RFS Riga <span class="drobne" title="Latvia">🇱🇻</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/ue-santa-coloma-rfs-riga-2024-08-08/">0:2</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2024-25/rfs-riga-ue-santa-coloma-2024-08-14/"><td class="datum-z">14 Aug 2024</td><td class="drobne">3rd qualifying round</td><td>RFS Riga <span class="drobne" title="Latvia">🇱🇻</span> – <strong>UE Santa Coloma</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/rfs-riga-ue-santa-coloma-2024-08-14/">7:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
 </tbody></table></div>
 <h3>Conference League</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="prohra"><td class="datum-z">22 Aug 2024</td><td class="drobne">Play-off (qualifying)</td><td>Vikingur Reykjavik – <strong>UE Santa Coloma</strong> <span class="drobne">🇮🇸 Iceland</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/vikingur-reykjavik-ue-santa-coloma-2024-08-22/">5:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="remiza"><td class="datum-z">29 Aug 2024</td><td class="drobne">Play-off (qualifying)</td><td><strong>UE Santa Coloma</strong> – Vikingur Reykjavik <span class="drobne">🇮🇸 Iceland</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/ue-santa-coloma-vikingur-reykjavik-2024-08-29/">0:0</a></td><td class="cislo"><span class="zluta">+0.5</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/ranking/zapas/2024-25/vikingur-reykjavik-ue-santa-coloma-2024-08-22/"><td class="datum-z">22 Aug 2024</td><td class="drobne">Play-off (qualifying)</td><td>Vikingur Reykjavik <span class="drobne" title="Iceland">🇮🇸</span> – <strong>UE Santa Coloma</strong></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/vikingur-reykjavik-ue-santa-coloma-2024-08-22/">5:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="remiza radek-odkaz" data-href="/ranking/zapas/2024-25/ue-santa-coloma-vikingur-reykjavik-2024-08-29/"><td class="datum-z">29 Aug 2024</td><td class="drobne">Play-off (qualifying)</td><td><strong>UE Santa Coloma</strong> – Vikingur Reykjavik <span class="drobne" title="Iceland">🇮🇸</span></td><td class="cislo skore"><a class="sezona" href="/ranking/zapas/2024-25/ue-santa-coloma-vikingur-reykjavik-2024-08-29/">0:0</a></td><td class="cislo"><span class="zluta">+0.5</span></td></tr>
 </tbody></table></div>
 
+    <script>document.querySelectorAll("tr.radek-odkaz").forEach(function (r) { r.addEventListener("click", function (e) { if (e.target.closest("a")) return; location.href = r.dataset.href; }); });</script>
     <p class="note">Points per match: win 2, draw 1, halved in qualifying; yellow = points to the country coefficient. The club is in bold, colour shows the result from its point of view. Bonuses (UCL league-phase participation, position, knockout rounds) are in the breakdown above.</p>
 
     <div class="clanek-cta">

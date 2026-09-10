@@ -33,6 +33,7 @@
     .tabulka-obal a.sezona:hover { color: var(--modra); border-color: var(--modra); }
     .rozpad td, .zapasy td { padding: 6px 10px; }
     .zapasy tr td:first-child { border-left: 4px solid transparent; }
+    tr.radek-odkaz { cursor: pointer; } tr.radek-odkaz:hover td { background: #ffffff0f; }
     .zapasy tr.vyhra td:first-child { border-left-color: #66BB6A; }
     .zapasy tr.remiza td:first-child { border-left-color: #FFB74D; }
     .zapasy tr.prohra td:first-child { border-left-color: #E57373; }
@@ -65,13 +66,13 @@
     .pruh .back-link, .pruh .jazyk { color: var(--text-2); text-decoration: none; font-size: 0.95rem; }
     .pruh .back-link:hover, .pruh .jazyk:hover { color: var(--text); }
     /* Široké rozložení tabulky: hlavní sloupec + postranní karta. */
-    .siroka { max-width: 1160px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+    .siroka { max-width: 1300px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
     .siroka .hlavni { min-width: 0; }
     .karta { background: var(--panel); border: 1px solid #ffffff14; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; }
     .karta h3 { margin: 0 0 8px; font-size: 1.05rem; }
     .karta-zeme { margin-top: 10px; line-height: 1.5; }
     .karta-zeme .velke { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; }
-    @media (min-width: 1000px) {
+    @media (min-width: 1220px) {
       .siroka { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; }
       .siroka .bok { order: 2; position: sticky; top: 16px; }
     }
@@ -89,7 +90,9 @@
     .hlavni .tabulka-obal tbody tr.pasmo:first-child td { border-top: none; padding-top: 4px; }
     /* Přilepená hlavička: na počítači tabulka nepotřebuje rolovat do stran,
        takže obal nesmí být scroll-kontejner (sticky se lepí k němu, ne k oknu). */
-    @media (min-width: 1000px) { .hlavni .tabulka-obal { overflow: visible; } }
+    /* Přilepená hlavička: obal nesmí být scroll-kontejner (sticky se lepí k němu). Platí
+       jen tam, kde se tabulka i s Rozdílem vejde vedle karty — jinak se rozlézala pod ni. */
+    @media (min-width: 1220px) { .hlavni .tabulka-obal { overflow: visible; } .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 8px; } }
     /* Mobil: jednotlivé sezony a Kl. skrýt, zůstane pořadí, země s přírůstkem,
        Σ a trend; detail sezon je na stránce země. */
     @media (max-width: 700px) {
@@ -123,20 +126,21 @@
     <div class="tabulka-obal"><table class="rozpad"><tbody><tr><td>Hlavní fáze <span class="drobne">7V–3R–2P</span></td><td class="cislo">17</td></tr><tr><td>Bonusy <span class="drobne">účast, pořadí, vyřazovací kola</span></td><td class="cislo">11</td></tr><tr><td><strong>Celkem</strong></td><td class="cislo"><strong>28</strong></td></tr></tbody></table></div>
     <h2>Zápasy <span class="drobne">(12)</span></h2>
     <h3>Liga mistrů</h3><div class="tabulka-obal"><table class="zapasy"><tbody>
-<tr class="vyhra"><td class="datum-z">20. 9. 2023</td><td class="drobne">Skupina</td><td><strong>Bayern München</strong> – Manchester United <span class="drobne">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Anglie</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/bayern-munchen-manchester-united-2023-09-20/">4:3</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">3. 10. 2023</td><td class="drobne">Skupina</td><td>FC København – <strong>Bayern München</strong> <span class="drobne">🇩🇰 Dánsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/fc-kobenhavn-bayern-munchen-2023-10-03/">1:2</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">24. 10. 2023</td><td class="drobne">Skupina</td><td>Galatasaray – <strong>Bayern München</strong> <span class="drobne">🇹🇷 Turecko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/galatasaray-bayern-munchen-2023-10-24/">1:3</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="vyhra"><td class="datum-z">8. 11. 2023</td><td class="drobne">Skupina</td><td><strong>Bayern München</strong> – Galatasaray <span class="drobne">🇹🇷 Turecko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/bayern-munchen-galatasaray-2023-11-08/">2:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="remiza"><td class="datum-z">29. 11. 2023</td><td class="drobne">Skupina</td><td><strong>Bayern München</strong> – FC København <span class="drobne">🇩🇰 Dánsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/bayern-munchen-fc-kobenhavn-2023-11-29/">0:0</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="vyhra"><td class="datum-z">12. 12. 2023</td><td class="drobne">Skupina</td><td>Manchester United – <strong>Bayern München</strong> <span class="drobne">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Anglie</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/manchester-united-bayern-munchen-2023-12-12/">0:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="prohra"><td class="datum-z">14. 2. 2024</td><td class="drobne">Osmifinále</td><td>Lazio – <strong>Bayern München</strong> <span class="drobne">🇮🇹 Itálie</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/lazio-bayern-munchen-2024-02-14/">1:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
-<tr class="vyhra"><td class="datum-z">5. 3. 2024</td><td class="drobne">Osmifinále</td><td><strong>Bayern München</strong> – Lazio <span class="drobne">🇮🇹 Itálie</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/bayern-munchen-lazio-2024-03-05/">3:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="remiza"><td class="datum-z">9. 4. 2024</td><td class="drobne">Čtvrtfinále</td><td>Arsenal – <strong>Bayern München</strong> <span class="drobne">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Anglie</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/arsenal-bayern-munchen-2024-04-09/">2:2</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="vyhra"><td class="datum-z">17. 4. 2024</td><td class="drobne">Čtvrtfinále</td><td><strong>Bayern München</strong> – Arsenal <span class="drobne">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Anglie</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/bayern-munchen-arsenal-2024-04-17/">1:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
-<tr class="remiza"><td class="datum-z">30. 4. 2024</td><td class="drobne">Semifinále</td><td><strong>Bayern München</strong> – Real Madrid <span class="drobne">🇪🇸 Španělsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/bayern-munchen-real-madrid-2024-04-30/">2:2</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
-<tr class="prohra"><td class="datum-z">8. 5. 2024</td><td class="drobne">Semifinále</td><td>Real Madrid – <strong>Bayern München</strong> <span class="drobne">🇪🇸 Španělsko</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/real-madrid-bayern-munchen-2024-05-08/">2:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/zebricek/zapas/2023-24/bayern-munchen-manchester-united-2023-09-20/"><td class="datum-z">20. 9. 2023</td><td class="drobne">Skupina</td><td><strong>Bayern München</strong> – Manchester United <span class="drobne" title="Anglie">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/bayern-munchen-manchester-united-2023-09-20/">4:3</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/zebricek/zapas/2023-24/fc-kobenhavn-bayern-munchen-2023-10-03/"><td class="datum-z">3. 10. 2023</td><td class="drobne">Skupina</td><td>FC København <span class="drobne" title="Dánsko">🇩🇰</span> – <strong>Bayern München</strong></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/fc-kobenhavn-bayern-munchen-2023-10-03/">1:2</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/zebricek/zapas/2023-24/galatasaray-bayern-munchen-2023-10-24/"><td class="datum-z">24. 10. 2023</td><td class="drobne">Skupina</td><td>Galatasaray <span class="drobne" title="Turecko">🇹🇷</span> – <strong>Bayern München</strong></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/galatasaray-bayern-munchen-2023-10-24/">1:3</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/zebricek/zapas/2023-24/bayern-munchen-galatasaray-2023-11-08/"><td class="datum-z">8. 11. 2023</td><td class="drobne">Skupina</td><td><strong>Bayern München</strong> – Galatasaray <span class="drobne" title="Turecko">🇹🇷</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/bayern-munchen-galatasaray-2023-11-08/">2:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="remiza radek-odkaz" data-href="/zebricek/zapas/2023-24/bayern-munchen-fc-kobenhavn-2023-11-29/"><td class="datum-z">29. 11. 2023</td><td class="drobne">Skupina</td><td><strong>Bayern München</strong> – FC København <span class="drobne" title="Dánsko">🇩🇰</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/bayern-munchen-fc-kobenhavn-2023-11-29/">0:0</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/zebricek/zapas/2023-24/manchester-united-bayern-munchen-2023-12-12/"><td class="datum-z">12. 12. 2023</td><td class="drobne">Skupina</td><td>Manchester United <span class="drobne" title="Anglie">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span> – <strong>Bayern München</strong></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/manchester-united-bayern-munchen-2023-12-12/">0:1</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/zebricek/zapas/2023-24/lazio-bayern-munchen-2024-02-14/"><td class="datum-z">14. 2. 2024</td><td class="drobne">Osmifinále</td><td>Lazio <span class="drobne" title="Itálie">🇮🇹</span> – <strong>Bayern München</strong></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/lazio-bayern-munchen-2024-02-14/">1:0</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/zebricek/zapas/2023-24/bayern-munchen-lazio-2024-03-05/"><td class="datum-z">5. 3. 2024</td><td class="drobne">Osmifinále</td><td><strong>Bayern München</strong> – Lazio <span class="drobne" title="Itálie">🇮🇹</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/bayern-munchen-lazio-2024-03-05/">3:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="remiza radek-odkaz" data-href="/zebricek/zapas/2023-24/arsenal-bayern-munchen-2024-04-09/"><td class="datum-z">9. 4. 2024</td><td class="drobne">Čtvrtfinále</td><td>Arsenal <span class="drobne" title="Anglie">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span> – <strong>Bayern München</strong></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/arsenal-bayern-munchen-2024-04-09/">2:2</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="vyhra radek-odkaz" data-href="/zebricek/zapas/2023-24/bayern-munchen-arsenal-2024-04-17/"><td class="datum-z">17. 4. 2024</td><td class="drobne">Čtvrtfinále</td><td><strong>Bayern München</strong> – Arsenal <span class="drobne" title="Anglie">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/bayern-munchen-arsenal-2024-04-17/">1:0</a></td><td class="cislo"><span class="zluta">+2</span></td></tr>
+<tr class="remiza radek-odkaz" data-href="/zebricek/zapas/2023-24/bayern-munchen-real-madrid-2024-04-30/"><td class="datum-z">30. 4. 2024</td><td class="drobne">Semifinále</td><td><strong>Bayern München</strong> – Real Madrid <span class="drobne" title="Španělsko">🇪🇸</span></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/bayern-munchen-real-madrid-2024-04-30/">2:2</a></td><td class="cislo"><span class="zluta">+1</span></td></tr>
+<tr class="prohra radek-odkaz" data-href="/zebricek/zapas/2023-24/real-madrid-bayern-munchen-2024-05-08/"><td class="datum-z">8. 5. 2024</td><td class="drobne">Semifinále</td><td>Real Madrid <span class="drobne" title="Španělsko">🇪🇸</span> – <strong>Bayern München</strong></td><td class="cislo skore"><a class="sezona" href="/zebricek/zapas/2023-24/real-madrid-bayern-munchen-2024-05-08/">2:1</a></td><td class="cislo"><span class="drobne">0</span></td></tr>
 </tbody></table></div>
 
+    <script>document.querySelectorAll("tr.radek-odkaz").forEach(function (r) { r.addEventListener("click", function (e) { if (e.target.closest("a")) return; location.href = r.dataset.href; }); });</script>
     <p class="note">Body za zápas: výhra 2, remíza 1, v předkolech polovina; žlutě body do koeficientu země. Tučně je klub země Německo, výsledek je barevně z jeho pohledu. Bonusy (účast v ligové fázi LM, pořadí, vyřazovací kola) jsou v rozpadu nahoře.</p>
 
     <div class="clanek-cta">
