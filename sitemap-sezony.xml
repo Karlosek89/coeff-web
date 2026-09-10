@@ -23349,6 +23349,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/england/2026-27/arsenal/"/>
   </url>
   <url>
+    <loc>https://coeff.app/zebricek/anglie/2026-27/manchester-united/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/anglie/2026-27/manchester-united/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/england/2026-27/manchester-united/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/england/2026-27/manchester-united/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/england/2026-27/manchester-united/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/anglie/2026-27/manchester-united/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/england/2026-27/manchester-united/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/england/2026-27/manchester-united/"/>
+  </url>
+  <url>
     <loc>https://coeff.app/zebricek/anglie/2026-27/brighton-hove-albion/</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -25165,6 +25183,24 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/italie/2025-26/napoli/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/italy/2025-26/napoli/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/italy/2025-26/napoli/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/zebricek/italie/2026-27/como-1907/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/italie/2026-27/como-1907/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/italy/2026-27/como-1907/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/italy/2026-27/como-1907/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/italy/2026-27/como-1907/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/italie/2026-27/como-1907/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/italy/2026-27/como-1907/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/italy/2026-27/como-1907/"/>
   </url>
   <url>
     <loc>https://coeff.app/zebricek/italie/2026-27/as-roma/</loc>
@@ -29217,6 +29253,42 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/germany/2026-27/vfb-stuttgart/"/>
   </url>
   <url>
+    <loc>https://coeff.app/zebricek/nemecko/2026-27/bayern-munchen/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/nemecko/2026-27/bayern-munchen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/germany/2026-27/bayern-munchen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/germany/2026-27/bayern-munchen/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/germany/2026-27/bayern-munchen/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/nemecko/2026-27/bayern-munchen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/germany/2026-27/bayern-munchen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/germany/2026-27/bayern-munchen/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/zebricek/nemecko/2026-27/rb-leipzig/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/nemecko/2026-27/rb-leipzig/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/germany/2026-27/rb-leipzig/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/germany/2026-27/rb-leipzig/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/germany/2026-27/rb-leipzig/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/nemecko/2026-27/rb-leipzig/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/germany/2026-27/rb-leipzig/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/germany/2026-27/rb-leipzig/"/>
+  </url>
+  <url>
     <loc>https://coeff.app/zebricek/nemecko/2026-27/sc-freiburg/</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -30907,6 +30979,24 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/francie/2026-27/paris-saint-germain/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/france/2026-27/paris-saint-germain/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/france/2026-27/paris-saint-germain/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/zebricek/francie/2026-27/rc-lens/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/francie/2026-27/rc-lens/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/france/2026-27/rc-lens/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/france/2026-27/rc-lens/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/france/2026-27/rc-lens/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/francie/2026-27/rc-lens/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/france/2026-27/rc-lens/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/france/2026-27/rc-lens/"/>
   </url>
   <url>
     <loc>https://coeff.app/zebricek/francie/2026-27/lille-osc/</loc>
@@ -39369,6 +39459,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/czechia/2025-26/banik-ostrava/"/>
   </url>
   <url>
+    <loc>https://coeff.app/zebricek/cesko/2026-27/slavia-praha/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/cesko/2026-27/slavia-praha/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/czechia/2026-27/slavia-praha/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/czechia/2026-27/slavia-praha/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/czechia/2026-27/slavia-praha/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/cesko/2026-27/slavia-praha/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/czechia/2026-27/slavia-praha/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/czechia/2026-27/slavia-praha/"/>
+  </url>
+  <url>
     <loc>https://coeff.app/zebricek/cesko/2026-27/fk-jablonec/</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -41997,6 +42105,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/norway/2025-26/fredrikstad-fk/"/>
   </url>
   <url>
+    <loc>https://coeff.app/zebricek/norsko/2026-27/bodoglimt/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/norsko/2026-27/bodoglimt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/norway/2026-27/bodoglimt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/norway/2026-27/bodoglimt/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/ranking/norway/2026-27/bodoglimt/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/norsko/2026-27/bodoglimt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/norway/2026-27/bodoglimt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/norway/2026-27/bodoglimt/"/>
+  </url>
+  <url>
     <loc>https://coeff.app/zebricek/norsko/2026-27/viking-stavanger/</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -42031,24 +42157,6 @@
     <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/norsko/2026-27/sk-brann-bergen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/norway/2026-27/sk-brann-bergen/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/norway/2026-27/sk-brann-bergen/"/>
-  </url>
-  <url>
-    <loc>https://coeff.app/zebricek/norsko/2026-27/bodoglimt/</loc>
-    <lastmod>2026-09-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/norsko/2026-27/bodoglimt/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/norway/2026-27/bodoglimt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/norway/2026-27/bodoglimt/"/>
-  </url>
-  <url>
-    <loc>https://coeff.app/ranking/norway/2026-27/bodoglimt/</loc>
-    <lastmod>2026-09-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/norsko/2026-27/bodoglimt/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/norway/2026-27/bodoglimt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/norway/2026-27/bodoglimt/"/>
   </url>
   <url>
     <loc>https://coeff.app/zebricek/norsko/2026-27/tromso-il/</loc>
