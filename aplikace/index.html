@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0F2D" />
+  <title>Coeff — aplikace na koeficienty UEFA</title>
+  <meta name="description" content="Mobilní aplikace Coeff: žebříček zemí a klubů UEFA živě a srozumitelně. Kalkulačka Co když…?, historie pohárů, notifikace o tvé zemi." />
+  <meta property="og:title" content="Coeff — aplikace na koeficienty UEFA" />
+  <meta property="og:description" content="Žebříček UEFA živě a srozumitelně. Kalkulačka Co když…?, historie pohárů, notifikace o tvé zemi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://coeff.app/aplikace/" />
+  <meta property="og:image" content="https://coeff.app/app_icon.png" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+  <link rel="stylesheet" href="/styles.css?v=2026-09-07" />
+  <!-- Jazykové varianty pro vyhledávače: Googlu tím říkáme, že jde
+       o tutéž stránku ve dvou jazycích, a komu kterou nabídnout.
+       x-default = pro všechny ostatní jazyky (tedy angličtina). -->
+  <link rel="canonical" href="https://coeff.app/aplikace/" />
+  <link rel="alternate" hreflang="cs" href="https://coeff.app/aplikace/" />
+  <link rel="alternate" hreflang="en" href="https://coeff.app/app/" />
+  <link rel="alternate" hreflang="x-default" href="https://coeff.app/app/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Coeff",
+    "url": "https://coeff.app/",
+    "image": "https://coeff.app/app_icon.png",
+    "description": "Evropské fotbalové koeficienty — živě, přehledně a srozumitelně i pro nefajnšmekry.",
+    "operatingSystem": "Android, iOS",
+    "applicationCategory": "SportsApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <script>
+    // Kdo nemá v prohlížeči češtinu ani slovenštinu, tomu ukážeme
+    // anglickou verzi. Ruční volba jazyka (odkazy nesou ?lang=…) má vždy
+    // přednost a uloží se, aby se návštěvník nepřesměrovával pořád dokola.
+    (function () {
+      try {
+        // Ruční volba jazyka: „?lang=cs" tu zůstane, „?lang=en" pošle na
+        // anglickou verzi (slouží i jako zkušební adresa coeff.app/?lang=en).
+        // Od 11. 9. 2026 je tahle stránka na /aplikace/ (titulka je
+        // žebříček) — anglická verze je /app/.
+        var volba = new URL(window.location.href).searchParams.get('lang');
+        if (volba) {
+          localStorage.setItem('coeff-jazyk', volba);
+          if (volba !== 'cs') window.location.replace('/app/');
+          return;
+        }
+        if (localStorage.getItem('coeff-jazyk')) return;
+        var jazyk =
+          (navigator.languages && navigator.languages[0]) ||
+          navigator.language ||
+          '';
+        if (/^(cs|sk)/i.test(jazyk)) return;
+        localStorage.setItem('coeff-jazyk', 'en');
+        window.location.replace('/app/');
+      } catch (e) {
+        // Bez localStorage (soukromý režim, starý prohlížeč) necháme
+        // češtinu — odkaz na English je v hlavičce.
+      }
+    })();
+  </script>
+
+  <header class="hero">
+    <nav class="lang-switch">
+      <a href="/">📊 Žebříček zemí</a>
+      <a href="/clanky/">📝 Články</a>
+      <a href="/app/">🇬🇧 English</a>
+      <a class="x-link" href="https://x.com/coeffapp" target="_blank"
+         rel="noopener" aria-label="Coeff na síti X">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        <span>Sleduj nás na X</span>
+      </a>
+    </nav>
+    <div class="hero-content">
+      <img src="/app_icon.png" alt="Coeff — logo aplikace" class="hero-logo" />
+      <h1 class="hero-wordmark"><img src="/logo.png" alt="Coeff — aplikace na koeficienty UEFA" /></h1>
+      <p class="tagline">Aplikace Coeff: evropské fotbalové koeficienty —
+        živě, přehledně a srozumitelně i pro nefajnšmekry.</p>
+      <p class="tagline">Kolik míst v pohárech tvoje země uhraje? A co s tím
+        udělá dnešní večer?</p>
+      <div class="badges">
+        <a class="badge" href="https://play.google.com/store/apps/details?id=com.coeff.app"
+           target="_blank" rel="noopener">▶ Stáhnout na Google Play</a>
+        <a class="badge" href="https://apps.apple.com/cz/app/id6793454420"
+           target="_blank" rel="noopener">🍏 Stáhnout v App Storu</a>
+      </div>
+      <p class="cta-note">Zdarma, bez reklam a bez registrace.</p>
+      <div class="cta-tlacitka">
+        <a class="cta-tester" href="/clanky/jak-se-pocita-koeficient-uefa/">❓ Jak se počítá koeficient UEFA?</a>
+        <a class="cta-tester" href="/clanky/kolik-mist-ma-vase-zeme-v-evropskych-poharech/">🎫 Kolik týmů má vaše země v evropských pohárech?</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Co Coeff umí</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="emoji">🏆</div>
+        <h3>Žebříček zemí naživo</h3>
+        <p>Pětiletý koeficient UEFA, posuny po každém kole a bodová ztráta
+          na sousedy. Tvoje země zvýrazněná, žebříček se aktualizuje sám.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🎫</div>
+        <h3>O co se právě hraje</h3>
+        <p>Kolik vstupenek do Ligy mistrů, Evropské a Konferenční ligy,
+          co aktuální pozice zaručuje — přehledně a jednoduše.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🧮</div>
+        <h3>Kalkulačka „Co když…?"</h3>
+        <p>Natipuj výsledky rozlosovaných zápasů a hned vidíš, co udělají
+          se žebříčkem. Scénáře si ulož a sdílej jako obrázek, třeba
+          i na sítě.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🛡️</div>
+        <h3>Kluby a jejich koeficienty</h3>
+        <p>Pětiletý klubový žebříček (nasazení do losů), profil každého
+          klubu s body po sezonách a všemi evropskými zápasy.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">📖</div>
+        <h3>Historie pohárů</h3>
+        <p>Pavouky předkol i vyřazovacích fází, tabulky ligové fáze,
+          střelci a asistence — ročník po ročníku.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🔔</div>
+        <h3>Novinky o tvé zemi</h3>
+        <p>Push notifikace po odehraných kolech: výsledky klubů tvé země
+          a posuny v žebříčku. Bez registrace a bez e-mailu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Náhled aplikace</h2>
+    <div class="shots">
+      <img src="/shots/cs/01-zebricek.png" alt="Žebříček zemí UEFA živě se zvýrazněným Českem" loading="lazy" />
+      <img src="/shots/cs/02-detail-ceska.png" alt="Detail země — o co se právě hraje" loading="lazy" />
+      <img src="/shots/cs/03-kalkulacka.png" alt="Kalkulačka Co když…? s natipovanými zápasy" loading="lazy" />
+      <img src="/shots/cs/04-kalkulacka-vysledek.png" alt="Žebříček po tvých tipech" loading="lazy" />
+      <img src="/shots/cs/05-historie.png" alt="Historie pohárů — vyřazovací pavouk" loading="lazy" />
+      <img src="/shots/cs/06-program.png" alt="Program — kdo hraje s kým" loading="lazy" />
+      <img src="/shots/cs/07-nahled-tipu.png" alt="Sdílitelný náhled tipů" loading="lazy" />
+    </div>
+    <p class="shots-hint">Posouvej do stran pro další →</p>
+  </section>
+
+  <section>
+    <h2>Tři soutěže, jedna appka</h2>
+    <div class="proc">
+      <p><span class="tecka lm"></span><strong>Liga mistrů</strong> ·
+         <span class="tecka el"></span><strong>Evropská liga</strong> ·
+         <span class="tecka kl"></span><strong>Konferenční liga</strong></p>
+      <p style="margin-top:12px">Coeff zná pravidla bodování — půlené body
+        v předkolech, bonusy za postup, dělení počtem klubů — a počítá
+        koeficienty sám z výsledků. Hodnoty sedí na oficiální čísla UEFA.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="radek"><a href="soukromi.html">Zásady ochrany osobních údajů</a> · <a href="privacy.html">Privacy policy</a></div>
+    <div class="radek">Kontakt: <a href="mailto:info@coeff.app">info@coeff.app</a></div>
+    <!-- Jen na české stránce — Strážci jsou česky a pro ČR. -->
+    <div class="radek">Od stejného autora: <a href="https://strazcipramenu.cz" target="_blank" rel="noopener">💧 Strážci pramenů — mapa a záchrana studánek</a></div>
+    <div class="radek">© 2026 Karel Zbíral · Coeff není přidružený k UEFA.</div>
+  </footer>
+
+</body>
+</html>

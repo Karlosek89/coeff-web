@@ -54,3 +54,23 @@ a uvidí rozbité rozložení.
   v DOM (`getBoundingClientRect`) a zkontrolovat, že nikde nepřetéká.
 - Vždy zkontrolovat i mobilní šířku (375 px), ne jen desktop — hlavička
   s vlajkou a odkazem na X se tam zalamuje jinak.
+
+## Generované datové stránky (od 9. 9. 2026)
+
+`zebricek/` (cs) a `ranking/` (en) + blok v `sitemap.xml` mezi značkami
+`GENEROVANO` **NEEDITOVAT** — vyrábí je `tool/generuj_web.dart` v repu
+appky (`uefa_koeficient`) a při dalším běhu se přepíšou. Chceš změnit
+text nebo vzhled? Změň generátor, ne HTML. Odkazy na ně jsou ručně
+v navigaci `index.html`/`en.html` (📊). Sitemap: ruční záznamy zůstávají
+nad blokem, generovaný blok se jen nahrazuje. Zásada „žádné skripty
+třetích stran" platí i pro ně (generátor žádný nevkládá, test to hlídá).
+Pages nasazuje z `main` — stránky se zveřejňují až sloučením do main.
+
+### Vlastní skript v generovaných stránkách („moje země")
+Stránky `/zebricek/` a `/ranking/` mají malý VLASTNÍ skript přímo
+v HTML (žádná třetí strana, nic neodchází ven): výběr země si pamatuje
+v `localStorage` pod klíčem `coeff-zeme` (stejně jako jazyk `coeff-jazyk`),
+`?zeme=CZE` v adrese má přednost. Rozdíl v bodech se počítá stejným
+vzorcem jako v appce (`Repozitar.ztrata`). Zásada „žádné skripty třetích
+stran" platí dál — test v repu appky hlídá, že ve stránkách není
+`<script src=`.
