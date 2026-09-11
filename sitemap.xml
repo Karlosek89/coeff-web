@@ -4,20 +4,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Titulka (/) a /en.html jsou od 11. 9. 2026 generovaný žebříček zemí,
+       jsou v bloku GENEROVANO níže. Tady jen ruční stránky o aplikaci. -->
   <url>
-    <loc>https://coeff.app/</loc>
-    <lastmod>2026-08-08</lastmod>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/en.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/en.html"/>
+    <loc>https://coeff.app/aplikace/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/aplikace/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/app/"/>
   </url>
 
   <url>
-    <loc>https://coeff.app/en.html</loc>
-    <lastmod>2026-08-08</lastmod>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/en.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/en.html"/>
+    <loc>https://coeff.app/app/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/aplikace/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/app/"/>
   </url>
 
   <url>
@@ -101,22 +103,22 @@
 
 <!-- GENEROVANO: zebricek zemi — ZACATEK (tool/generuj_web.dart v repu appky, needitovat rucne) -->
   <url>
-    <loc>https://coeff.app/zebricek/</loc>
+    <loc>https://coeff.app/</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/"/>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/en.html"/>
   </url>
   <url>
-    <loc>https://coeff.app/ranking/</loc>
+    <loc>https://coeff.app/en.html</loc>
     <lastmod>2026-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/zebricek/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/ranking/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/ranking/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/en.html"/>
   </url>
   <url>
     <loc>https://coeff.app/zebricek/anglie/</loc>

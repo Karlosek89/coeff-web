@@ -65,8 +65,13 @@
         radial-gradient(1.5px 1.5px at 66% 70%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 88% 30%, #fff8 50%, transparent 51%),
         linear-gradient(180deg, #060A20 0%, var(--navy-2) 100%); border-bottom: 1px solid #ffffff14; }
     .pruh .znacka img { height: 30px; display: block; }
-    .pruh .back-link, .pruh .jazyk { color: var(--text-2); text-decoration: none; font-size: 0.95rem; }
-    .pruh .back-link:hover, .pruh .jazyk:hover { color: var(--text); }
+    .pruh .menu { display: flex; gap: 4px 18px; flex-wrap: wrap; justify-content: center; }
+    .pruh .menu a, .pruh .jazyk { color: var(--text-2); text-decoration: none; font-size: 0.95rem; white-space: nowrap; }
+    .pruh .menu a:hover, .pruh .jazyk:hover, .pruh .menu a.aktivni { color: var(--text); }
+    .pruh .menu a.aktivni { border-bottom: 2px solid var(--zlata); padding-bottom: 2px; }
+    .pruh .jazyk { border: 1px solid #ffffff33; border-radius: 6px; padding: 2px 8px; font-weight: 700; font-size: 0.85rem; }
+    .zpet { margin: 0 0 12px; font-size: 0.95rem; } .zpet a { color: var(--text-2); text-decoration: none; } .zpet a:hover { color: var(--text); }
+    @media (max-width: 700px) { .pruh { flex-wrap: wrap; justify-content: center; row-gap: 8px; } .pruh .menu { order: 3; width: 100%; } }
     /* Široké rozložení tabulky: hlavní sloupec + postranní karta. */
     .siroka { max-width: 1300px; margin: 0 auto; padding: 28px 20px 60px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
     .siroka .hlavni { min-width: 0; }
@@ -115,12 +120,19 @@
   </style>
 </head>
 <body>
+
   <header class="pruh">
-    <a href="/ranking/" class="back-link">← Full ranking</a>
-    <a href="/" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
-    <a href="/zebricek/zapas/2023-24/austria-wien-legia-warsaw-2023-08-17/" class="jazyk">🇨🇿 Česky</a>
+    <a href="/en.html" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
+    <nav class="menu" aria-label="Main menu">
+      <a href="/en.html">Country ranking</a>
+      <a href="/articles/how-the-uefa-country-coefficient-is-calculated/">How it works</a>
+      <a href="/articles/">Articles</a>
+      <a href="/app/">App</a>
+    </nav>
+    <a href="/zebricek/zapas/2023-24/austria-wien-legia-warsaw-2023-08-17/?lang=cs" class="jazyk">CS</a>
   </header>
   <main class="clanek">
+<p class="zpet"><a href="/en.html">← Full ranking</a></p>
     <h1>Austria Wien 3:5 Legia Warsaw</h1>
     <p class="datum">UECL · 3rd qualifying round · 17 Aug 2023 · season 2023/24</p>
     <div class="zapas-hlava">
@@ -160,13 +172,14 @@
       <div class="cta-tlacitka">
         <a class="cta-tester" href="https://play.google.com/store/apps/details?id=com.coeff.app" target="_blank" rel="noopener">▶ Get it on Google Play</a>
         <a class="cta-tester" href="https://apps.apple.com/app/id6793454420" target="_blank" rel="noopener">🍏 Download on the App Store</a>
-        <a class="cta-tester cta-vedlejsi" href="/en.html">More about the app</a>
+        <a class="cta-tester cta-vedlejsi" href="/app/">More about the app</a>
       </div>
     </div>
   </main>
   <footer>
     <div class="radek"><a href="/">coeff.app</a> ·
-      <a href="/ranking/">Country ranking</a> ·
+      <a href="/en.html">Country ranking</a> ·
+      <a href="/app/">App</a> ·
       <a href="/articles/">Articles</a> ·
       <a href="/privacy.html">Privacy policy</a></div>
     <div class="radek">© 2026 Karel Zbíral · Coeff is not affiliated with UEFA.</div>
