@@ -110,6 +110,8 @@
     /* Mobil: nejdřív výběr země (kompaktní), pak TABULKA, vysvětlivky až pod ní
        (Karel 12. 9. 2026: „aby žebříček vyskočil co nejvýš"). aside má
        display: contents, takže o pořadí rozhodují jeho karty. */
+    .otoc { display: none; margin: 0 0 8px; padding: 6px 10px; border-radius: 8px; background: #3D5AFE22; color: var(--text-2); font-size: 0.88rem; }
+    @media (orientation: landscape) { .otoc { display: none !important; } }
     .sousedi summary { cursor: pointer; list-style: none; } .sousedi summary::-webkit-details-marker { display: none; }
     .sousedi[open] summary { display: none; }
     @media (max-width: 700px) {
@@ -122,7 +124,9 @@
       .karta-zeme .velke { font-size: 1.05rem; font-weight: 700; }
       .sousedi[open] summary { display: block; }
       .hlavni { order: 2; }
-      .legenda-karta { order: 3; margin: 0; }
+      .legenda { display: none; } /* totéž je ve Vysvětlivkách pod tabulkou */
+      /* Na výšku jsou sezony skryté — nápověda, že naležato se ukážou (Karel 12. 9.). */
+      .otoc { display: block; }
       .legenda { display: none; } /* totéž je ve Vysvětlivkách pod tabulkou */
       .sez { display: none !important; }
       .siroka { padding: 16px 10px 40px; }
@@ -181,6 +185,7 @@
     <p class="datum">Aktualizováno 12. 9. 2026 · okno 2022/23–2026/27 · rozhoduje o pohárech 2028/29</p>
     <p class="perex">V hracím týdnu 7. 9. 2026–12. 9. 2026 přidaly do koeficientu nejvíc <a href="/zebricek/anglie/">Anglie</a> (<span class="zluta">+1,111</span>), <a href="/zebricek/nemecko/">Německo</a> (<span class="zluta">+0,857</span>) a <a href="/zebricek/spanelsko/">Španělsko</a> (<span class="zluta">+0,75</span>). Body získalo 10 z 55 zemí. Letošní výsledky posunuly nahoru <a href="/zebricek/andorra/">Andorra</a> <span class="sipka-nahoru">▲5</span>, <a href="/zebricek/estonsko/">Estonsko</a> <span class="sipka-nahoru">▲4</span>, <a href="/zebricek/rakousko/">Rakousko</a> <span class="sipka-nahoru">▲3</span>, dolů <a href="/zebricek/cerna-hora/">Černá Hora</a> <span class="sipka-dolu">▼5</span>, <a href="/zebricek/malta/">Malta</a> <span class="sipka-dolu">▼4</span>, <a href="/zebricek/svedsko/">Švédsko</a> <span class="sipka-dolu">▼3</span>.</p>
     <p class="legenda"><span class="zluta">■</span> Žlutě: body do koeficientu za hrací týden 7. 9. 2026–12. 9. 2026. Šipka: posun způsobený letošními výsledky.</p>
+    <p class="otoc">↻ Otoč telefon naležato a uvidíš i jednotlivé sezony a počet klubů.</p>
     <div class="tabulka-obal">
       <table>
         <thead><tr><th>#</th><th>Země</th><th class="cislo">Σ</th><th class="graf" title="vývoj koeficientu za posledních 8 uzavřených sezon">Trend</th><th class="cislo sez">22/23</th><th class="cislo sez">23/24</th><th class="cislo sez">24/25</th><th class="cislo sez">25/26</th><th class="cislo sez">26/27</th><th class="cislo sez" title="klubů v pohárech letos / z toho ještě ve hře">Kl.</th><th class="cislo rozdil-h" title="kolik bodů musí kluby mé země uhrát, aby ji dorovnaly (+ = má náskok)">Rozdíl</th></tr></thead>
