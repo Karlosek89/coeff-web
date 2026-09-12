@@ -49,7 +49,7 @@
     .skore-velke { font-size: 2.4rem; font-weight: 800; font-variant-numeric: tabular-nums; text-align: center; padding: 6px 16px; background: var(--panel); border-radius: 12px; }
     .prubeh td { padding: 5px 8px; } .prubeh .udalost.l { text-align: right; } .prubeh .minuta { color: var(--text-2); white-space: nowrap; text-align: center; width: 48px; }
     .karta-ik { display: inline-block; font-size: 1.1em; line-height: 1; } .karta-ik.zl { color: #FFD54F; } .karta-ik.cv { color: #E53935; }
-    .sezony-klubu { line-height: 1.9; } .sezony-klubu a { color: var(--text); text-decoration: none; border-bottom: 1px dotted #ffffff44; } .sezony-klubu a:hover { color: var(--modra); border-color: var(--modra); }
+    .sezony-klubu { line-height: 1.9; margin: 6px 0 4px; } .sezony-odkazy { margin: 0 0 14px; } .sezony-odkazy summary { cursor: pointer; } .sezony-odkazy a { color: var(--text); text-decoration: none; border-bottom: 1px dotted #ffffff44; } .sezony-odkazy a:hover { color: var(--modra); }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -107,7 +107,23 @@
     @media (min-width: 1220px) { .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 8px; } }
     /* Mobil: jednotlivé sezony a Kl. skrýt, zůstane pořadí, země s přírůstkem,
        Σ a trend; detail sezon je na stránce země. */
+    /* Mobil: nejdřív výběr země (kompaktní), pak TABULKA, vysvětlivky až pod ní
+       (Karel 12. 9. 2026: „aby žebříček vyskočil co nejvýš"). aside má
+       display: contents, takže o pořadí rozhodují jeho karty. */
+    .sousedi summary { cursor: pointer; list-style: none; } .sousedi summary::-webkit-details-marker { display: none; }
+    .sousedi[open] summary { display: none; }
     @media (max-width: 700px) {
+      .siroka { display: flex; flex-direction: column; gap: 12px; }
+      .siroka .bok { display: contents; }
+      .karta.moje { order: 1; padding: 10px 14px; margin: 0; }
+      .karta.moje h3 { display: none; }
+      .karta.moje .moje-zeme { margin: 0; }
+      .karta-zeme { margin-top: 6px; line-height: 1.4; }
+      .karta-zeme .velke { font-size: 1.05rem; font-weight: 700; }
+      .sousedi[open] summary { display: block; }
+      .hlavni { order: 2; }
+      .legenda-karta { order: 3; margin: 0; }
+      .legenda { display: none; } /* totéž je ve Vysvětlivkách pod tabulkou */
       .sez { display: none !important; }
       .siroka { padding: 16px 10px 40px; }
       .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 5px; font-size: 0.92rem; }
@@ -149,12 +165,12 @@
   </header>
   <div class="siroka">
     <aside class="bok">
-      <div class="karta">
+      <div class="karta moje">
         <h3>My country</h3>
         <p class="moje-zeme"><label for="moje">My country: <select id="moje"><option value="">— choose —</option><option value="ALB">Albania</option><option value="AND">Andorra</option><option value="ARM">Armenia</option><option value="AUT">Austria</option><option value="AZE">Azerbaijan</option><option value="BLR">Belarus</option><option value="BEL">Belgium</option><option value="BIH">Bosnia and Herzegovina</option><option value="BUL">Bulgaria</option><option value="CRO">Croatia</option><option value="CYP">Cyprus</option><option value="CZE">Czechia</option><option value="DEN">Denmark</option><option value="ENG">England</option><option value="EST">Estonia</option><option value="FRO">Faroe Islands</option><option value="FIN">Finland</option><option value="FRA">France</option><option value="GEO">Georgia</option><option value="GER">Germany</option><option value="GIB">Gibraltar</option><option value="GRE">Greece</option><option value="HUN">Hungary</option><option value="ISL">Iceland</option><option value="IRL">Ireland</option><option value="ISR">Israel</option><option value="ITA">Italy</option><option value="KAZ">Kazakhstan</option><option value="KOS">Kosovo</option><option value="LVA">Latvia</option><option value="LIE">Liechtenstein</option><option value="LTU">Lithuania</option><option value="LUX">Luxembourg</option><option value="MLT">Malta</option><option value="MDA">Moldova</option><option value="MNE">Montenegro</option><option value="NED">Netherlands</option><option value="MKD">North Macedonia</option><option value="NIR">Northern Ireland</option><option value="NOR">Norway</option><option value="POL">Poland</option><option value="POR">Portugal</option><option value="ROU">Romania</option><option value="RUS">Russia</option><option value="SMR">San Marino</option><option value="SCO">Scotland</option><option value="SRB">Serbia</option><option value="SVK">Slovakia</option><option value="SVN">Slovenia</option><option value="ESP">Spain</option><option value="SWE">Sweden</option><option value="SUI">Switzerland</option><option value="TUR">Türkiye</option><option value="UKR">Ukraine</option><option value="WAL">Wales</option></select></label></p>
         <div id="karta-zeme" class="karta-zeme"></div>
       </div>
-      <div class="karta drobne">
+      <div class="karta drobne legenda-karta">
         <h3>Legend</h3>
         Yellow next to the name: coefficient points gained in the last match week. Arrow: rank movement caused by this season's results. Gap: points my country's clubs need to catch that country (positive = ahead).
       </div>
@@ -271,11 +287,14 @@
           var z = Math.round((parseFloat(muj.dataset.soucet) - parseFloat(r.dataset.soucet)) * Math.max(1, parseInt(muj.dataset.kluby, 10)) * 2) / 2;
           return pulbody(Math.abs(z));
         }
-        var h = '<div class="velke">' + (cs ? (i + 1) + '. místo' : ordinal(i + 1) + ' place') + '</div>'
-          + '<div>' + jmeno + ' · ' + (cs ? muj.dataset.soucet.replace('.', ',') : muj.dataset.soucet) + '</div>';
+        // Na mobilu je karta nad tabulkou — hlavní číslo menší a sousedi
+        // sbalení v <details>, aby tabulka vyskočila co nejvýš (Karel 12. 9.).
+        var siroke = window.matchMedia('(min-width: 700px)').matches;
+        var h = '<div class="velke">' + (cs ? (i + 1) + '. místo' : ordinal(i + 1) + ' place') + ' <span class="drobne">· ' + jmeno + ' · ' + (cs ? muj.dataset.soucet.replace('.', ',') : muj.dataset.soucet) + '</span></div>'
+          + '<details class="sousedi"' + (siroke ? ' open' : '') + '><summary class="drobne">' + (cs ? 'Náskok a ztráta na sousedy' : 'Gap to neighbours') + '</summary>';
         if (nad) h += '<div class="drobne">' + (cs ? 'Na ' + i + '. místo (' + nad.querySelector('a').textContent + ') chybí ' : 'To ' + ordinal(i) + ' (' + nad.querySelector('a').textContent + '): ') + '<span class="ztrata">' + gap(nad) + (cs ? ' b' : ' pts') + '</span></div>';
         if (pod) h += '<div class="drobne">' + (cs ? 'Náskok na ' + (i + 2) + '. místo (' + pod.querySelector('a').textContent + '): ' : 'Lead over ' + ordinal(i + 2) + ' (' + pod.querySelector('a').textContent + '): ') + '<span class="naskok">' + gap(pod) + (cs ? ' b' : ' pts') + '</span></div>';
-        h += '<div class="drobne"><a href="' + muj.querySelector('a').getAttribute('href') + '">' + (cs ? 'Stránka země →' : 'Country page →') + '</a></div>';
+        h += '<div class="drobne"><a href="' + muj.querySelector('a').getAttribute('href') + '">' + (cs ? 'Stránka země →' : 'Country page →') + '</a></div></details>';
         karta.innerHTML = h;
       }
       function ordinal(n) {

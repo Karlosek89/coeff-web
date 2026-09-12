@@ -49,7 +49,7 @@
     .skore-velke { font-size: 2.4rem; font-weight: 800; font-variant-numeric: tabular-nums; text-align: center; padding: 6px 16px; background: var(--panel); border-radius: 12px; }
     .prubeh td { padding: 5px 8px; } .prubeh .udalost.l { text-align: right; } .prubeh .minuta { color: var(--text-2); white-space: nowrap; text-align: center; width: 48px; }
     .karta-ik { display: inline-block; font-size: 1.1em; line-height: 1; } .karta-ik.zl { color: #FFD54F; } .karta-ik.cv { color: #E53935; }
-    .sezony-klubu { line-height: 1.9; } .sezony-klubu a { color: var(--text); text-decoration: none; border-bottom: 1px dotted #ffffff44; } .sezony-klubu a:hover { color: var(--modra); border-color: var(--modra); }
+    .sezony-klubu { line-height: 1.9; margin: 6px 0 4px; } .sezony-odkazy { margin: 0 0 14px; } .sezony-odkazy summary { cursor: pointer; } .sezony-odkazy a { color: var(--text); text-decoration: none; border-bottom: 1px dotted #ffffff44; } .sezony-odkazy a:hover { color: var(--modra); }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -107,7 +107,23 @@
     @media (min-width: 1220px) { .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 8px; } }
     /* Mobil: jednotlivé sezony a Kl. skrýt, zůstane pořadí, země s přírůstkem,
        Σ a trend; detail sezon je na stránce země. */
+    /* Mobil: nejdřív výběr země (kompaktní), pak TABULKA, vysvětlivky až pod ní
+       (Karel 12. 9. 2026: „aby žebříček vyskočil co nejvýš"). aside má
+       display: contents, takže o pořadí rozhodují jeho karty. */
+    .sousedi summary { cursor: pointer; list-style: none; } .sousedi summary::-webkit-details-marker { display: none; }
+    .sousedi[open] summary { display: none; }
     @media (max-width: 700px) {
+      .siroka { display: flex; flex-direction: column; gap: 12px; }
+      .siroka .bok { display: contents; }
+      .karta.moje { order: 1; padding: 10px 14px; margin: 0; }
+      .karta.moje h3 { display: none; }
+      .karta.moje .moje-zeme { margin: 0; }
+      .karta-zeme { margin-top: 6px; line-height: 1.4; }
+      .karta-zeme .velke { font-size: 1.05rem; font-weight: 700; }
+      .sousedi[open] summary { display: block; }
+      .hlavni { order: 2; }
+      .legenda-karta { order: 3; margin: 0; }
+      .legenda { display: none; } /* totéž je ve Vysvětlivkách pod tabulkou */
       .sez { display: none !important; }
       .siroka { padding: 16px 10px 40px; }
       .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 5px; font-size: 0.92rem; }
@@ -141,7 +157,7 @@
     <h1><img class="vlajka" src="/vlajky/FRO.svg" alt="" width="20" height="14" loading="lazy"> KI Klaksvik 2018/19</h1>
     <p class="datum">Uzavřená sezona · body podle UEFA, zápasy z dat Coeff</p>
     <p class="perex"><a href="/zebricek/faerske-ostrovy/">Faerské ostrovy</a> · <a href="/zebricek/faerske-ostrovy/2018-19/">kluby 2018/19</a> · příspěvek do koeficientu země <strong>2</strong> b.</p>
-    <p class="sezony-klubu"><span class="drobne">Sezony klubu v pohárech:</span> <a href="/zebricek/faerske-ostrovy/2017-18/ki-klaksvik/">2017/18</a> <span class="drobne">(0,5)</span> · <strong>2018/19</strong> <span class="drobne">(2)</span> · <a href="/zebricek/faerske-ostrovy/2019-20/ki-klaksvik/">2019/20</a> <span class="drobne">(3)</span> · <a href="/zebricek/faerske-ostrovy/2020-21/ki-klaksvik/">2020/21</a> <span class="drobne">(4)</span> · <a href="/zebricek/faerske-ostrovy/2021-22/ki-klaksvik/">2021/22</a> <span class="drobne">(1)</span> · <a href="/zebricek/faerske-ostrovy/2022-23/ki-klaksvik/">2022/23</a> <span class="drobne">(3,5)</span> · <a href="/zebricek/faerske-ostrovy/2023-24/ki-klaksvik/">2023/24</a> <span class="drobne">(7)</span> · <a href="/zebricek/faerske-ostrovy/2024-25/ki-klaksvik/">2024/25</a> <span class="drobne">(4)</span> · <a href="/zebricek/faerske-ostrovy/2025-26/ki-klaksvik/">2025/26</a> <span class="drobne">(4,5)</span> · <a href="/zebricek/faerske-ostrovy/2026-27/ki-klaksvik/">2026/27</a> <span class="drobne">(běží)</span></p>
+    <p class="moje-zeme sezony-klubu"><label for="sezona-klubu">Sezona klubu: <select id="sezona-klubu"><option value="/zebricek/faerske-ostrovy/2026-27/ki-klaksvik/">2026/27 (běží)</option><option value="/zebricek/faerske-ostrovy/2025-26/ki-klaksvik/">2025/26 (4,5 b.)</option><option value="/zebricek/faerske-ostrovy/2024-25/ki-klaksvik/">2024/25 (4 b.)</option><option value="/zebricek/faerske-ostrovy/2023-24/ki-klaksvik/">2023/24 (7 b.)</option><option value="/zebricek/faerske-ostrovy/2022-23/ki-klaksvik/">2022/23 (3,5 b.)</option><option value="/zebricek/faerske-ostrovy/2021-22/ki-klaksvik/">2021/22 (1 b.)</option><option value="/zebricek/faerske-ostrovy/2020-21/ki-klaksvik/">2020/21 (4 b.)</option><option value="/zebricek/faerske-ostrovy/2019-20/ki-klaksvik/">2019/20 (3 b.)</option><option value="" selected>2018/19 (2 b.)</option><option value="/zebricek/faerske-ostrovy/2017-18/ki-klaksvik/">2017/18 (0,5 b.)</option></select></label> <span class="drobne">10 sezon v pohárech od 2017/18</span></p><script>document.getElementById("sezona-klubu").addEventListener("change", function () { if (this.value) location.href = this.value; });</script><details class="drobne sezony-odkazy"><summary>Všechny sezony jako odkazy</summary><a href="/zebricek/faerske-ostrovy/2017-18/ki-klaksvik/">2017/18 (0,5 b.)</a> · <strong>2018/19 (2 b.)</strong> · <a href="/zebricek/faerske-ostrovy/2019-20/ki-klaksvik/">2019/20 (3 b.)</a> · <a href="/zebricek/faerske-ostrovy/2020-21/ki-klaksvik/">2020/21 (4 b.)</a> · <a href="/zebricek/faerske-ostrovy/2021-22/ki-klaksvik/">2021/22 (1 b.)</a> · <a href="/zebricek/faerske-ostrovy/2022-23/ki-klaksvik/">2022/23 (3,5 b.)</a> · <a href="/zebricek/faerske-ostrovy/2023-24/ki-klaksvik/">2023/24 (7 b.)</a> · <a href="/zebricek/faerske-ostrovy/2024-25/ki-klaksvik/">2024/25 (4 b.)</a> · <a href="/zebricek/faerske-ostrovy/2025-26/ki-klaksvik/">2025/26 (4,5 b.)</a> · <a href="/zebricek/faerske-ostrovy/2026-27/ki-klaksvik/">2026/27 (běží)</a></details>
     <h2>Z čeho se body skládají</h2>
     <div class="tabulka-obal"><table class="rozpad"><tbody><tr><td>Kvalifikace <span class="drobne">1V–2R–1P</span></td><td class="cislo">2</td></tr><tr><td><strong>Celkem</strong></td><td class="cislo"><strong>2</strong></td></tr></tbody></table></div>
     <h2>Zápasy <span class="drobne">(4)</span></h2>

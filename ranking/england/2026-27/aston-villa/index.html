@@ -49,7 +49,7 @@
     .skore-velke { font-size: 2.4rem; font-weight: 800; font-variant-numeric: tabular-nums; text-align: center; padding: 6px 16px; background: var(--panel); border-radius: 12px; }
     .prubeh td { padding: 5px 8px; } .prubeh .udalost.l { text-align: right; } .prubeh .minuta { color: var(--text-2); white-space: nowrap; text-align: center; width: 48px; }
     .karta-ik { display: inline-block; font-size: 1.1em; line-height: 1; } .karta-ik.zl { color: #FFD54F; } .karta-ik.cv { color: #E53935; }
-    .sezony-klubu { line-height: 1.9; } .sezony-klubu a { color: var(--text); text-decoration: none; border-bottom: 1px dotted #ffffff44; } .sezony-klubu a:hover { color: var(--modra); border-color: var(--modra); }
+    .sezony-klubu { line-height: 1.9; margin: 6px 0 4px; } .sezony-odkazy { margin: 0 0 14px; } .sezony-odkazy summary { cursor: pointer; } .sezony-odkazy a { color: var(--text); text-decoration: none; border-bottom: 1px dotted #ffffff44; } .sezony-odkazy a:hover { color: var(--modra); }
     .sezony-nav { display: flex; justify-content: space-between; gap: 12px; margin: 10px 0 18px; font-size: 0.95rem; }
     .tabulka-obal a:hover { color: var(--modra); }
     .jazyk { float: right; font-size: 0.92rem; }
@@ -107,7 +107,23 @@
     @media (min-width: 1220px) { .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 8px; } }
     /* Mobil: jednotlivé sezony a Kl. skrýt, zůstane pořadí, země s přírůstkem,
        Σ a trend; detail sezon je na stránce země. */
+    /* Mobil: nejdřív výběr země (kompaktní), pak TABULKA, vysvětlivky až pod ní
+       (Karel 12. 9. 2026: „aby žebříček vyskočil co nejvýš"). aside má
+       display: contents, takže o pořadí rozhodují jeho karty. */
+    .sousedi summary { cursor: pointer; list-style: none; } .sousedi summary::-webkit-details-marker { display: none; }
+    .sousedi[open] summary { display: none; }
     @media (max-width: 700px) {
+      .siroka { display: flex; flex-direction: column; gap: 12px; }
+      .siroka .bok { display: contents; }
+      .karta.moje { order: 1; padding: 10px 14px; margin: 0; }
+      .karta.moje h3 { display: none; }
+      .karta.moje .moje-zeme { margin: 0; }
+      .karta-zeme { margin-top: 6px; line-height: 1.4; }
+      .karta-zeme .velke { font-size: 1.05rem; font-weight: 700; }
+      .sousedi[open] summary { display: block; }
+      .hlavni { order: 2; }
+      .legenda-karta { order: 3; margin: 0; }
+      .legenda { display: none; } /* totéž je ve Vysvětlivkách pod tabulkou */
       .sez { display: none !important; }
       .siroka { padding: 16px 10px 40px; }
       .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 5px; font-size: 0.92rem; }
@@ -141,7 +157,7 @@
     <h1><img class="vlajka" src="/vlajky/ENG.svg" alt="" width="20" height="14" loading="lazy"> Aston Villa 2026/27</h1>
     <p class="datum">Running season · updated 12 Sep 2026</p>
     <p class="perex"><a href="/ranking/england/">England</a> · <a href="/ranking/england/#kluby">clubs 2026/27</a> · contribution to the country coefficient <strong>8</strong> pts</p>
-    <p class="sezony-klubu"><span class="drobne">European seasons:</span> <a href="/ranking/england/2008-09/" title="the country's clubs that season">2008/09</a> <span class="drobne">(9.5)</span> · <a href="/ranking/england/2009-10/" title="the country's clubs that season">2009/10</a> <span class="drobne">(1)</span> · <a href="/ranking/england/2010-11/" title="the country's clubs that season">2010/11</a> <span class="drobne">(0.5)</span> · <a href="/ranking/england/2023-24/aston-villa/">2023/24</a> <span class="drobne">(19)</span> · <a href="/ranking/england/2024-25/aston-villa/">2024/25</a> <span class="drobne">(30.25)</span> · <a href="/ranking/england/2025-26/aston-villa/">2025/26</a> <span class="drobne">(35.75)</span> · <strong>2026/27</strong> <span class="drobne">(running)</span></p>
+    <p class="moje-zeme sezony-klubu"><label for="sezona-klubu">Club season: <select id="sezona-klubu"><option value="" selected>2026/27 (running)</option><option value="/ranking/england/2025-26/aston-villa/">2025/26 (35.75 pts)</option><option value="/ranking/england/2024-25/aston-villa/">2024/25 (30.25 pts)</option><option value="/ranking/england/2023-24/aston-villa/">2023/24 (19 pts)</option><option value="/ranking/england/2010-11/">2010/11 (0.5 pts)</option><option value="/ranking/england/2009-10/">2009/10 (1 pts)</option><option value="/ranking/england/2008-09/">2008/09 (9.5 pts)</option></select></label> <span class="drobne">7 European seasons since 2008/09</span></p><script>document.getElementById("sezona-klubu").addEventListener("change", function () { if (this.value) location.href = this.value; });</script><details class="drobne sezony-odkazy"><summary>All seasons as links</summary><a href="/ranking/england/2008-09/">2008/09 (9.5 pts)</a> · <a href="/ranking/england/2009-10/">2009/10 (1 pts)</a> · <a href="/ranking/england/2010-11/">2010/11 (0.5 pts)</a> · <a href="/ranking/england/2023-24/aston-villa/">2023/24 (19 pts)</a> · <a href="/ranking/england/2024-25/aston-villa/">2024/25 (30.25 pts)</a> · <a href="/ranking/england/2025-26/aston-villa/">2025/26 (35.75 pts)</a> · <strong>2026/27 (running)</strong></details>
     <h2>Where the points come from</h2>
     <div class="tabulka-obal"><table class="rozpad"><tbody><tr><td>Main phase <span class="drobne">1W–0D–0L</span></td><td class="cislo">2</td></tr><tr><td>Bonuses <span class="drobne">participation, position, knockout rounds</span></td><td class="cislo">6</td></tr><tr><td><strong>Total</strong></td><td class="cislo"><strong>8</strong></td></tr></tbody></table></div>
     <h2>Matches <span class="drobne">(1)</span></h2>
