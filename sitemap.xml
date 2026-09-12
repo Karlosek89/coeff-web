@@ -121,6 +121,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/en.html"/>
   </url>
   <url>
+    <loc>https://coeff.app/kluby/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/kluby/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/clubs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/clubs/"/>
+  </url>
+  <url>
+    <loc>https://coeff.app/clubs/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/kluby/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/clubs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/clubs/"/>
+  </url>
+  <url>
     <loc>https://coeff.app/zebricek/anglie/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>daily</changefreq>
