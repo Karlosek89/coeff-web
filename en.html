@@ -154,6 +154,13 @@
   <script>
   (function () {
     try {
+      // Vyhledávače (Googlebot ap.) hlásí jazyk prohlížeče jako angličtinu
+      // a bez téhle výjimky by se samy přesměrovaly pryč — Google pak vidí
+      // coeff.app/ jen jako „stránka s přesměrováním", nikdy jako obsah
+      // (nález 12. 9. 2026: coeff.app/ neindexováno kvůli tomu od 18. 8.).
+      // hreflang páry na obou stránkách zajišťují, že se ve výsledcích
+      // ukáže ta jazyková verze, která patří danému hledajícímu.
+      if (/bot|crawl|spider|slurp|googlebot|bingbot|yandex|baiduspider|duckduckbot|facebookexternalhit/i.test(navigator.userAgent)) return;
       var volba = new URL(location.href).searchParams.get('lang');
       if (volba === 'cs' || volba === 'en') { localStorage.setItem('coeff-jazyk', volba); }
       var ulozeny = localStorage.getItem('coeff-jazyk');

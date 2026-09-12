@@ -47,6 +47,10 @@
     // přednost a uloží se, aby se návštěvník nepřesměrovával pořád dokola.
     (function () {
       try {
+        // Vyhledávače hlásí jazyk prohlížeče jako angličtinu a bez téhle
+        // výjimky by se samy přesměrovaly pryč — Google by pak /aplikace/
+        // viděl jen jako přesměrování, nikdy jako obsah (nález 12. 9. 2026).
+        if (/bot|crawl|spider|slurp|googlebot|bingbot|yandex|baiduspider|duckduckbot|facebookexternalhit/i.test(navigator.userAgent)) return;
         // Ruční volba jazyka: „?lang=cs" tu zůstane, „?lang=en" pošle na
         // anglickou verzi (slouží i jako zkušební adresa coeff.app/?lang=en).
         // Od 11. 9. 2026 je tahle stránka na /aplikace/ (titulka je
