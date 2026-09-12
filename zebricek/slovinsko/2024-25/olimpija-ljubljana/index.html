@@ -114,20 +114,26 @@
     @media (orientation: landscape) { .otoc { display: none !important; } }
     .sousedi summary { cursor: pointer; list-style: none; } .sousedi summary::-webkit-details-marker { display: none; }
     .sousedi[open] summary { display: none; }
-    @media (max-width: 700px) {
+    /* Bez postranního sloupce (pod 1220 px) se karty řadí: výběr země →
+       TABULKA → vysvětlivky (Karel 12. 9. 2026: „vysvětlivky mají být pod
+       žebříčkem"). aside má display: contents, o pořadí rozhodují karty. */
+    @media (max-width: 1219px) {
       .siroka { display: flex; flex-direction: column; gap: 12px; }
       .siroka .bok { display: contents; }
-      .karta.moje { order: 1; padding: 10px 14px; margin: 0; }
+      .karta.moje { order: 1; }
+      .hlavni { order: 2; }
+      .legenda-karta { order: 3; margin: 0; }
+    }
+    @media (max-width: 700px) {
+      .karta.moje { padding: 10px 14px; margin: 0; }
       .karta.moje h3 { display: none; }
       .karta.moje .moje-zeme { margin: 0; }
       .karta-zeme { margin-top: 6px; line-height: 1.4; }
       .karta-zeme .velke { font-size: 1.05rem; font-weight: 700; }
       .sousedi[open] summary { display: block; }
-      .hlavni { order: 2; }
       .legenda { display: none; } /* totéž je ve Vysvětlivkách pod tabulkou */
-      /* Na výšku jsou sezony skryté — nápověda, že naležato se ukážou (Karel 12. 9.). */
+      /* Na výšku jsou sezony skryté — nápověda, že naležato se ukážou. */
       .otoc { display: block; }
-      .legenda { display: none; } /* totéž je ve Vysvětlivkách pod tabulkou */
       .sez { display: none !important; }
       .siroka { padding: 16px 10px 40px; }
       .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 5px; font-size: 0.92rem; }
