@@ -99,7 +99,11 @@
        takže obal nesmí být scroll-kontejner (sticky se lepí k němu, ne k oknu). */
     /* Přilepená hlavička: obal nesmí být scroll-kontejner (sticky se lepí k němu). Platí
        jen tam, kde se tabulka i s Rozdílem vejde vedle karty — jinak se rozlézala pod ni. */
-    @media (min-width: 1220px) { .hlavni .tabulka-obal { overflow: visible; } .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 8px; } }
+    /* Tabulka zemí se vejde na šířku všude (na mobilu jsou sezony skryté), takže
+       obal nemusí rolovat do stran — a přilepená hlavička pak drží i na mobilu
+       (Karel 12. 9. 2026: „na mobilu se schová"). */
+    .hlavni .tabulka-obal { overflow: visible; }
+    @media (min-width: 1220px) { .hlavni .tabulka-obal td, .hlavni .tabulka-obal th { padding: 8px 8px; } }
     /* Mobil: jednotlivé sezony a Kl. skrýt, zůstane pořadí, země s přírůstkem,
        Σ a trend; detail sezon je na stránce země. */
     @media (max-width: 700px) {
