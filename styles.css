@@ -382,6 +382,11 @@ footer .radek { margin-top: 6px; }
   margin-bottom: 24px;
 }
 .clanek-hlavicka .back-link { margin-bottom: 0; }
+/* Dva odkazy zpět vedle sebe: na titulku (odtud se sem chodí nejčastěji,
+   „Jak se počítá" je v menu každé generované stránky) a na seznam článků.
+   Obal je nutný — hlavička je flex se space-between, tři děti by druhý
+   odkaz odsunuly doprostřed. */
+.zpet-odkazy { display: inline-flex; gap: 16px; flex-wrap: wrap; }
 
 .znacka {
   display: inline-flex;
