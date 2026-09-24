@@ -406,3 +406,24 @@ footer .radek { margin-top: 6px; }
   .znacka .ikona { width: 44px; height: 44px; border-radius: 11px; }
   .znacka .napis { height: 26px; }
 }
+
+/* --- Horní lišta (rozcestník) -----------------------------------------
+   Ručně psané stránky (články, /aplikace/, soukromí) ji potřebují stejně
+   jako generované — Karel 24. 9. 2026: „ten rozcestník by tam měl být
+   vždy". Generované stránky mají tatáž pravidla ve `stranky.css`, který
+   si píše generátor sám a jehož `?v=` otisk tyhle stránky neznají.
+   Dvě kopie jsou tu schválně: každá strana tak vlastní svůj styl a
+   ruční úprava nemůže shodit vzhled 67 000 generovaných stránek.
+   Kdo mění vzhled lišty, musí ho změnit na OBOU místech. */
+.jazyky { display: flex; gap: 6px; flex-shrink: 0; }
+.pruh { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 20px;
+  background: radial-gradient(1px 1px at 12% 40%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 41% 20%, #fff9 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 66% 70%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 88% 30%, #fff8 50%, transparent 51%),
+    linear-gradient(180deg, #060A20 0%, var(--navy-2) 100%); border-bottom: 1px solid #ffffff14; }
+.pruh .znacka img { height: 30px; display: block; }
+.pruh .menu { display: flex; gap: 4px 18px; flex-wrap: wrap; justify-content: center; }
+.pruh .menu a, .pruh .jazyk { color: var(--text-2); text-decoration: none; font-size: 0.95rem; white-space: nowrap; }
+.pruh .menu a:hover, .pruh .jazyk:hover, .pruh .menu a.aktivni { color: var(--text); }
+.pruh .menu a.aktivni { border-bottom: 2px solid var(--zlata); padding-bottom: 2px; }
+.pruh .jazyk { border: 1px solid #ffffff33; border-radius: 6px; padding: 2px 8px; font-weight: 700; font-size: 0.85rem; }
+@media (max-width: 700px) { .pruh { flex-wrap: wrap; justify-content: center; row-gap: 8px; } .pruh .menu { order: 3; width: 100%; } }
