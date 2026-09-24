@@ -20,6 +20,7 @@
   <link rel="alternate" hreflang="cs" href="https://coeff.app/" />
   <link rel="alternate" hreflang="en" href="https://coeff.app/en.html" />
   <link rel="alternate" hreflang="tr" href="https://coeff.app/tr.html" />
+  <link rel="alternate" hreflang="pl" href="https://coeff.app/pl.html" />
   <link rel="alternate" hreflang="x-default" href="https://coeff.app/en.html" />
 </head>
 <body>
@@ -33,7 +34,7 @@
       // hreflang páry na všech jazykových verzích zajišťují, že se ve
       // výsledcích ukáže ta, která patří danému hledajícímu.
       if (/bot|crawl|spider|slurp|googlebot|bingbot|yandex|baiduspider|duckduckbot|facebookexternalhit/i.test(navigator.userAgent)) return;
-      var cile = {'cs': '/', 'en': '/en.html', 'tr': '/tr.html'};
+      var cile = {'cs': '/', 'en': '/en.html', 'tr': '/tr.html', 'pl': '/pl.html'};
       var volba = new URL(location.href).searchParams.get('lang');
       if (cile[volba]) { localStorage.setItem('coeff-jazyk', volba); }
       var ulozeny = localStorage.getItem('coeff-jazyk');
@@ -55,6 +56,7 @@
     <span class="jazyky">
     <a href="/en.html?lang=en" class="jazyk">EN</a>
     <a href="/tr.html?lang=tr" class="jazyk">TR</a>
+    <a href="/pl.html?lang=pl" class="jazyk">PL</a>
     </span>
   </header>
   <div class="siroka">
