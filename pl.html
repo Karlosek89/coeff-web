@@ -39,7 +39,13 @@
       if (cile[volba]) { localStorage.setItem('coeff-jazyk', volba); }
       var ulozeny = localStorage.getItem('coeff-jazyk');
       var cil = ulozeny || (((navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase().slice(0, 2));
-      var chce = (cil === 'cs' || cil === 'sk') ? 'cs' : (cil === 'tr' ? 'tr' : 'en');
+      // Kam návštěvníka poslat: ŘÍDÍ SE SEZNAMEM `cile`, ne ručním výčtem.
+      // Do 25. 9. 2026 tu stálo natvrdo `cs/sk → cs, tr → tr, jinak en`,
+      // takže polština spadla do „jinak" a Poláka na /pl.html to poslalo
+      // na angličtinu — jazyk byl na webu, ale nikdo se k němu nedostal.
+      // Takhle se pátý jazyk zapojí sám.
+      // Slovenština je jediná výjimka: nemáme ji, ale Slovák rozumí česky.
+      var chce = cil === 'sk' ? 'cs' : (cile[cil] ? cil : 'en');
       if (chce !== 'pl' && cile[chce]) { location.replace(cile[chce]); }
     } catch (e) {}
   })();
