@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0F2D" />
+  <title>Coeff — aplikacja do współczynników UEFA</title>
+  <meta name="description" content="Aplikacja Coeff: rankingi krajowe i klubowe UEFA, na żywo i po ludzku. Kalkulator „co jeśli”, historia pucharów, powiadomienia o twoim kraju." />
+  <meta property="og:title" content="Coeff — aplikacja do współczynników UEFA" />
+  <meta property="og:description" content="Rankingi UEFA na żywo i po ludzku. Kalkulator „co jeśli”, historia pucharów, powiadomienia o twoim kraju." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://coeff.app/aplikacja/" />
+  <meta property="og:image" content="https://coeff.app/app_icon.png" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+  <link rel="stylesheet" href="/styles.css?v=2026-09-24" />
+  <!-- Same page in two languages; x-default (any other language) = English. -->
+  <link rel="canonical" href="https://coeff.app/aplikacja/" />
+  <link rel="alternate" hreflang="cs" href="https://coeff.app/aplikace/" />
+  <link rel="alternate" hreflang="en" href="https://coeff.app/app/" />
+  <link rel="alternate" hreflang="pl" href="https://coeff.app/aplikacja/" />
+  <link rel="alternate" hreflang="x-default" href="https://coeff.app/app/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Coeff",
+    "url": "https://coeff.app/pl.html",
+    "image": "https://coeff.app/app_icon.png",
+    "description": "Rankingi krajowe i klubowe UEFA, na żywo i po ludzku. Kalkulator „co jeśli”, historia pucharów, powiadomienia o twoim kraju.",
+    "operatingSystem": "Android, iOS",
+    "applicationCategory": "SportsApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="pruh">
+    <a href="/en.html" class="znacka" aria-label="Coeff"><img src="/logo.png" alt="Coeff" class="napis" /></a>
+    <nav class="menu" aria-label="Menu główne">
+      <a href="/pl.html">Ranking krajowy</a>
+      <a href="/ranking-klubowy/">Kluby</a>
+      <a href="/articles/how-the-uefa-country-coefficient-is-calculated/">Jak się liczy</a>
+      <a href="/artykuly/">Artykuły</a>
+      <a href="/aplikacja/" class="aktivni">Aplikacja</a>
+    </nav>
+    <span class="jazyky">
+    <a href="/aplikace/?lang=cs" class="jazyk">CS</a>
+    <a href="/tr.html?lang=tr" class="jazyk">TR</a>
+    </span>
+  </header>
+
+  <header class="hero">
+    <nav class="lang-switch">
+      <a href="/pl.html">📊 Ranking krajowy</a>
+      <a href="/artykuly/">📝 Artykuły</a>
+      <a href="/app/">🇬🇧 English</a>
+      <a class="x-link" href="https://x.com/coeffapp" target="_blank"
+         rel="noopener" aria-label="Coeff on X">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        <span>Obserwuj nas na X</span>
+      </a>
+    </nav>
+    <div class="hero-content">
+      <img src="/app_icon.png" alt="Coeff — app logo" class="hero-logo" />
+      <h1 class="hero-wordmark"><img src="/logo.png" alt="Coeff — aplikacja do współczynników UEFA" /></h1>
+      <p class="tagline">Aplikacja Coeff: współczynniki europejskiej piłki — na żywo, przejrzyście i zrozumiale, nawet jeśli nie jesteś maniakiem statystyk.</p>
+      <p class="tagline">Ile miejsc w pucharach wywalczy twój kraj? I co zmienią dzisiejsze mecze?</p>
+      <div class="badges">
+        <a class="badge" href="https://play.google.com/store/apps/details?id=com.coeff.app"
+           target="_blank" rel="noopener">▶ Pobierz z Google Play</a>
+        <!-- Bez /cz/ v adrese: Apple navstevnika presmeruje do jeho
+             vlastniho obchodu podle uctu. -->
+        <a class="badge" href="https://apps.apple.com/app/id6793454420"
+           target="_blank" rel="noopener">🍏 Pobierz z App Store</a>
+      </div>
+      <p class="cta-note">Za darmo, bez reklam, bez rejestracji.</p>
+      <div class="cta-tlacitka">
+        <a class="cta-tester" href="/artykuly/polski-awans-w-rankingu-uefa/">📈 Polski awans w rankingu UEFA</a>
+        <a class="cta-tester" href="/artykuly/polskie-kluby-wspolczynnik-15-lat/">🏆 Które polskie kluby zbudowały współczynnik?</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Co potrafi Coeff</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="emoji">🏆</div>
+        <h3>Ranking krajowy na żywo</h3>
+        <p>Pięcioletni współczynnik UEFA, zmiany pozycji po każdej kolejce i strata punktowa do sąsiadów. Twój kraj wyróżniony, ranking aktualizuje się sam.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🎫</div>
+        <h3>O co toczy się gra</h3>
+        <p>Ile miejsc w Lidze Mistrzów, Lidze Europy i Lidze Konferencji gwarantuje obecna pozycja — jasno i prosto.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🧮</div>
+        <h3>Kalkulator „co jeśli…?”</h3>
+        <p>Wybierz wyniki rozlosowanych już meczów i od razu zobacz, co zrobią z rankingiem. Zapisuj scenariusze i udostępniaj je jako obrazek — także w mediach społecznościowych.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🛡️</div>
+        <h3>Kluby i ich współczynniki</h3>
+        <p>Pięcioletni ranking klubowy (rozstawienie w losowaniach), profil każdego klubu z punktami sezon po sezonie i wszystkimi meczami w Europie.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">📖</div>
+        <h3>Historia pucharów</h3>
+        <p>Drabinki kwalifikacji i fazy pucharowej, tabele fazy ligowej, najlepsi strzelcy i asystenci — sezon po sezonie.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🔔</div>
+        <h3>Wiadomości o twoim kraju</h3>
+        <p>Powiadomienia push po każdej kolejce: wyniki klubów twojego kraju i zmiany w rankingu. Bez konta, bez e-maila.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Zajrzyj do aplikacji</h2>
+    <div class="shots">
+      <img src="/shots/en/01-ranking.png" alt="Live UEFA country ranking with England highlighted" loading="lazy" />
+      <img src="/shots/en/02-england-detail.png" alt="Country detail — what's at stake right now" loading="lazy" />
+      <img src="/shots/en/03-what-if.png" alt="What if…? calculator with match predictions" loading="lazy" />
+      <img src="/shots/en/04-what-if-result.png" alt="Ranking after your predictions" loading="lazy" />
+      <img src="/shots/en/05-history.png" alt="Historia pucharów — knockout bracket" loading="lazy" />
+      <img src="/shots/en/06-fixtures.png" alt="Fixtures — who plays whom" loading="lazy" />
+      <img src="/shots/en/07-predictions-preview.png" alt="Shareable predictions preview" loading="lazy" />
+    </div>
+    <p class="shots-hint">Przesuń w bok, by zobaczyć więcej →</p>
+  </section>
+
+  <section>
+    <h2>Trzy rozgrywki, jedna aplikacja</h2>
+    <div class="proc">
+      <p><span class="tecka lm"></span><strong>Liga Mistrzów</strong> ·
+         <span class="tecka el"></span><strong>Liga Europy</strong> ·
+         <span class="tecka kl"></span><strong>Liga Konferencji</strong></p>
+      <p style="margin-top:12px">Coeff zna zasady punktacji — połówkowe punkty w kwalifikacjach, bonusy za awans, dzielenie przez liczbę klubów — i sam wylicza współczynniki z wyników. Wartości zgadzają się z oficjalnymi danymi UEFA.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="radek"><a href="privacy.html">Privacy policy</a> · <a href="soukromi.html">Zásady ochrany osobních údajů</a></div>
+    <div class="radek">Contact: <a href="mailto:info@coeff.app">info@coeff.app</a></div>
+    <div class="radek">© 2026 Karel Zbíral · Coeff nie jest powiązany z UEFA.</div>
+  </footer>
+
+</body>
+</html>

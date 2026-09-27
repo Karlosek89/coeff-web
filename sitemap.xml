@@ -101,6 +101,83 @@
   </url>
 
 
+  <url>
+    <loc>https://coeff.app/uygulama/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/aplikace/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/app/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://coeff.app/uygulama/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://coeff.app/aplikacja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/app/"/>
+  </url>
+
+  <url>
+    <loc>https://coeff.app/aplikacja/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/aplikace/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/app/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://coeff.app/uygulama/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://coeff.app/aplikacja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/app/"/>
+  </url>
+
+  <url>
+    <loc>https://coeff.app/makaleler/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/clanky/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/articles/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://coeff.app/makaleler/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://coeff.app/artykuly/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/articles/"/>
+  </url>
+
+  <url>
+    <loc>https://coeff.app/artykuly/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/clanky/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/articles/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://coeff.app/makaleler/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://coeff.app/artykuly/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/articles/"/>
+  </url>
+
+  <url>
+    <loc>https://coeff.app/makaleler/uefa-ulke-katsayisi-nasil-hesaplanir/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/clanky/jak-se-pocita-koeficient-uefa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/articles/how-the-uefa-country-coefficient-is-calculated/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://coeff.app/makaleler/uefa-ulke-katsayisi-nasil-hesaplanir/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://coeff.app/artykuly/jak-liczy-sie-wspolczynnik-uefa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/articles/how-the-uefa-country-coefficient-is-calculated/"/>
+  </url>
+
+  <url>
+    <loc>https://coeff.app/artykuly/jak-liczy-sie-wspolczynnik-uefa/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/clanky/jak-se-pocita-koeficient-uefa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/articles/how-the-uefa-country-coefficient-is-calculated/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://coeff.app/makaleler/uefa-ulke-katsayisi-nasil-hesaplanir/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://coeff.app/artykuly/jak-liczy-sie-wspolczynnik-uefa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/articles/how-the-uefa-country-coefficient-is-calculated/"/>
+  </url>
+
+  <url>
+    <loc>https://coeff.app/artykuly/polski-awans-w-rankingu-uefa/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/articles/how-poland-climbed-the-coefficient-ranking/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://coeff.app/artykuly/polski-awans-w-rankingu-uefa/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://coeff.app/clanky/polsky-vzestup-v-koeficientu-uefa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/articles/how-poland-climbed-the-coefficient-ranking/"/>
+  </url>
+
+  <url>
+    <loc>https://coeff.app/artykuly/polskie-kluby-wspolczynnik-15-lat/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coeff.app/articles/polish-clubs-15-year-coefficient-table/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://coeff.app/artykuly/polskie-kluby-wspolczynnik-15-lat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coeff.app/articles/polish-clubs-15-year-coefficient-table/"/>
+  </url>
+
 <!-- GENEROVANO: zebricek zemi — ZACATEK (tool/generuj_web.dart v repu appky, needitovat rucne) -->
   <url>
     <loc>https://coeff.app/</loc>
