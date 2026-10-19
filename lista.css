@@ -1,0 +1,30 @@
+.appka-lista { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+  background: var(--panel); border-top: 1px solid #ffffff22;
+  box-shadow: 0 -6px 24px #0006;
+  transform: translateY(110%); transition: transform .28s ease; }
+.appka-lista.videt { transform: translateY(0); }
+.appka-lista .ikona { width: 38px; height: 38px; flex: 0 0 38px; border-radius: 9px;
+  background: var(--navy-2); border: 1px solid #ffffff1a;
+  display: grid; place-items: center; font-size: 1.1rem; }
+.appka-lista .text { flex: 1 1 auto; min-width: 0; line-height: 1.25; }
+.appka-lista .text strong { display: block; color: var(--text); font-size: 0.95rem; }
+.appka-lista .text span { display: block; color: var(--text-2); font-size: 0.8rem;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.appka-lista .btny { display: flex; gap: 8px; flex: 0 0 auto; }
+.appka-lista .btn { background: var(--zlata); color: var(--navy); font-weight: 700;
+  font-size: 0.9rem; text-decoration: none; padding: 9px 16px; border-radius: 8px;
+  white-space: nowrap; }
+/* Na PC jsou obchody dva a ani jeden není „ten hlavní" — druhý je proto
+   obtažený, ať lišta nejsou dvě stejně hlasitá tlačítka vedle sebe. */
+.appka-lista .btn.druhy { background: none; color: var(--text);
+  border: 1px solid #ffffff33; font-weight: 600; }
+.appka-lista .zavrit { flex: 0 0 auto; background: none; border: 0; cursor: pointer;
+  color: var(--text-2); font-size: 1.3rem; line-height: 1; padding: 4px 6px;
+  border-radius: 6px; }
+.appka-lista .zavrit:hover { color: var(--text); }
+/* Úzký displej: podtitulek ustoupí, ať se vejde tlačítko. */
+@media (max-width: 460px) { .appka-lista .text span { display: none; } }
+/* Aby lišta nezakrývala patičku, když je člověk úplně dole. */
+body.ma-listu { padding-bottom: 64px; }
