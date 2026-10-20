@@ -112,7 +112,7 @@
     <div class="clanek-cta">
       <p>Tenhle žebříček máš v aplikaci Coeff živě, s notifikacemi o své zemi a kalkulačkou „co když". Zdarma, bez registrace.</p>
       <div class="cta-tlacitka">
-        <a class="cta-tester" href="https://play.google.com/store/apps/details?id=com.coeff.app" target="_blank" rel="noopener">▶ Stáhnout na Google Play</a>
+        <a class="cta-tester" href="https://play.google.com/store/apps/details?id=com.coeff.app&referrer=utm_source%3Dcoeff.app%26utm_medium%3Dweb%26utm_campaign%3Dweb-paticka" target="_blank" rel="noopener">▶ Stáhnout na Google Play</a>
         <a class="cta-tester" href="https://apps.apple.com/app/id6793454420" target="_blank" rel="noopener">🍏 Stáhnout v App Storu</a>
         <a class="cta-tester cta-vedlejsi" href="/aplikace/">Zjistit víc o aplikaci</a>
       </div>
@@ -134,7 +134,7 @@
       <span>Notifikace o tvé zemi · kalkulačka · zdarma</span>
     </span>
     <span class="btny">
-      <a class="btn" id="appkaPlay" href="https://play.google.com/store/apps/details?id=com.coeff.app" target="_blank" rel="noopener">Android</a>
+      <a class="btn" id="appkaPlay" href="https://play.google.com/store/apps/details?id=com.coeff.app&referrer=utm_source%3Dcoeff.app%26utm_medium%3Dweb%26utm_campaign%3Dweb-lista" target="_blank" rel="noopener">Android</a>
       <a class="btn druhy" id="appkaIos" href="https://apps.apple.com/app/id6793454420" target="_blank" rel="noopener">iPhone</a>
     </span>
     <button class="zavrit" id="appkaZavrit" aria-label="Zavřít">&times;</button>
@@ -143,7 +143,15 @@
   (function () {
     var lista = document.getElementById('appkaLista');
     if (!lista) return;
-    try { if (localStorage.getItem('coeff-lista') === 'pryc') return; } catch (e) {}
+    // Zavřená lišta se vrátí po 30 dnech (Karel 19. 10. 2026). Natrvalo
+    // zhasnout by znamenalo, že kdo ji jednou odklikl, nedozví se
+    // o aplikaci nikdy — a za měsíc už si to rozmyslet může.
+    // Ukládá se čas; starší hodnota 'pryc' (z prvního nasazení) dá
+    // z parseInt NaN, tedy se bere jako dávno prošlá.
+    try {
+      var zavreno = parseInt(localStorage.getItem('coeff-lista'), 10);
+      if (zavreno && Date.now() - zavreno < 30 * 24 * 3600 * 1000) return;
+    } catch (e) {}
     var ua = navigator.userAgent || '';
     // iPadOS 13+ se hlásí jako Mac — pozná se podle dotykové obrazovky.
     var iOS = /iPad|iPhone|iPod/.test(ua) ||
@@ -168,7 +176,7 @@
     document.getElementById('appkaZavrit').addEventListener('click', function () {
       lista.classList.remove('videt');
       document.body.classList.remove('ma-listu');
-      try { localStorage.setItem('coeff-lista', 'pryc'); } catch (e) {}
+      try { localStorage.setItem('coeff-lista', String(Date.now())); } catch (e) {}
     });
   })();
   </script>
